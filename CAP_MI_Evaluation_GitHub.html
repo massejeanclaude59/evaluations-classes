@@ -322,6 +322,118 @@
   .gh-input:focus { outline:none; border-color:var(--accent2); }
   .gh-row { display:flex; gap:8px; margin-top:4px; }
 
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE MOBILE  (≤ 768px)
+  ══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* Header : logo + nav + boutons empilés */
+    header {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 8px 12px;
+      gap: 8px;
+    }
+    .logo { font-size: 15px; }
+    .logo span { display: none; }
+
+    /* Navigation : scroll horizontal */
+    .header-nav {
+      order: 3;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 2px;
+      padding-bottom: 2px;
+      flex-wrap: nowrap;
+    }
+    .nav-btn {
+      font-size: 11px;
+      padding: 5px 9px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Boutons header : scroll horizontal */
+    header > div:last-child {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+      gap: 4px;
+    }
+    .btn-sm { font-size: 11px; padding: 4px 8px; }
+
+    /* Layout : sidebar au-dessus du main */
+    .app {
+      flex-direction: column;
+      height: auto;
+      min-height: calc(100vh - 110px);
+    }
+
+    /* Sidebar : hauteur fixe avec scroll */
+    .sidebar {
+      width: 100% !important;
+      min-width: unset !important;
+      max-height: 220px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .classes-list { padding: 6px; }
+    .class-item { padding: 7px 10px; font-size: 13px; }
+
+    /* Main : prend toute la hauteur restante */
+    .main { flex: 1; overflow-y: auto; padding: 12px; }
+
+    /* Cards et formulaires */
+    .form-row { flex-direction: column; gap: 8px; }
+    .card { padding: 12px; }
+    .main-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .section-header { flex-wrap: wrap; gap: 6px; }
+
+    /* Tableaux : scroll horizontal */
+    .table-wrapper, table { overflow-x: auto; display: block; }
+    table { min-width: 500px; }
+
+    /* Modales : plein écran sur mobile */
+    .modal {
+      width: 95vw !important;
+      max-width: 95vw !important;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .modal-lg { width: 95vw !important; }
+
+    /* Startup modal */
+    .startup-modal { padding: 24px 18px; }
+    .startup-logo { font-size: 22px; }
+
+    /* Fiche contrat overlay */
+    #ficheContratOverlay > div {
+      width: 95vw !important;
+      max-width: 95vw !important;
+      padding: 14px !important;
+    }
+
+    /* Eval sidebar */
+    .eval-sidebar { max-height: 180px; overflow-y: auto; }
+
+    /* Boutons dans les listes */
+    .btn-group { flex-wrap: wrap; gap: 4px; }
+    .project-actions { flex-wrap: wrap; }
+
+    /* Touch-friendly : boutons plus hauts */
+    .btn { min-height: 36px; }
+    .btn-sm { min-height: 30px; }
+    select, input[type="text"], input[type="date"], textarea {
+      font-size: 16px !important; /* évite le zoom auto iOS */
+    }
+
+    /* Badge GitHub dans header */
+    .gh-status-badge { display: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -8217,7 +8329,12 @@ async function ghLoad() {
     if (r.status === 404) { toast('ℹ️ Pas encore de données sur GitHub pour ce fichier'); return; }
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const meta = await r.json();
-    const content = JSON.parse(atob(meta.content.replace(/\n/g,'')));
+    // Décodage UTF-8 correct pour les accents
+    const b64clean = meta.content.replace(/\n/g,'');
+    const binary = atob(b64clean);
+    const bytes2 = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes2[i] = binary.charCodeAt(i);
+    const content = JSON.parse(new TextDecoder('utf-8').decode(bytes2));
     data = content;
     if (!data.professors)  data.professors  = [];
     if (!data.classes)     data.classes     = [];
@@ -8243,7 +8360,12 @@ async function ghSave() {
   if (!token) { toast('⚠️ Configurez d\'abord le token GitHub'); openGhModal(); return; }
   const file = ghJsonFile();
   const json = JSON.stringify(data, null, 2);
-  const b64  = btoa(unescape(encodeURIComponent(json)));
+  // Encodage UTF-8 correct pour les accents
+  const encoder = new TextEncoder();
+  const bytes = encoder.encode(json);
+  let binary = '';
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  const b64 = btoa(binary);
   toast('⏳ Sauvegarde sur GitHub…');
   try {
     // Récupérer le SHA actuel (nécessaire pour mettre à jour)
