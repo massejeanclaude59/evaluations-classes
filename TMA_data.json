@@ -68,7 +68,7 @@
     {
       "id": "s2",
       "nom": "MOISEZ",
-      "prenom": "ClÃ©ment",
+      "prenom": "Clément",
       "classId": "c1",
       "statut": "normal",
       "genre": "M",
@@ -87,7 +87,7 @@
     {
       "id": "s1779263676513",
       "nom": "GROUX",
-      "prenom": "LÃ©na",
+      "prenom": "Léna",
       "genre": "F",
       "classId": "c1",
       "statut": "normal",
@@ -128,7 +128,7 @@
     {
       "id": "proj1779254858994",
       "nom": "Assemblage en croix",
-      "descriptif": "RÃ©alisation d'un assemblage Ã  mi-bois, en croix.\nLes dÃ©coupes et entaillages sont effectuÃ©s avec de l'outillage manuel.",
+      "descriptif": "Réalisation d'un assemblage à mi-bois, en croix.\nLes découpes et entaillages sont effectués avec de l'outillage manuel.",
       "blocs": [
         {
           "capId": "C1",
@@ -142,7 +142,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "TraÃ§age des pieces",
+          "contexte": "Traçage des pieces",
           "itemIds": [
             "C2.21"
           ],
@@ -151,7 +151,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser les entailles",
+          "contexte": "Réaliser les entailles",
           "itemIds": [
             "C3.42",
             "C3.44"
@@ -161,7 +161,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Sciage a 90Â° et 45Â°",
+          "contexte": "Sciage a 90° et 45°",
           "itemIds": [
             "C3.42"
           ],
@@ -190,10 +190,10 @@
       "ficheContrat": {
         "activite": "Assemblage en croix",
         "duree": "3 heures",
-        "objectif": "RÃ©alisation d'un assemblage Ã  mi-bois, en croix. Les dÃ©coupes et entaillages sont effectuÃ©s avec de l'outillage manuel.",
+        "objectif": "Réalisation d'un assemblage à mi-bois, en croix. Les découpes et entaillages sont effectués avec de l'outillage manuel.",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©"
+          "Les plans de définition",
+          "Le bois corroyé"
         ],
         "lignes": [
           {
@@ -204,55 +204,55 @@
           {
             "id": "l17812668649270.7525254221140222",
             "groupe": "",
-            "onDemande": "Identifier les caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles",
-            "onExige": "Le recensement des caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles est exact.",
+            "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
+            "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
             "competence": "C1.15",
             "estEntete": false
           },
           {
             "id": "h17812668649270.4849103705769271",
-            "groupe": "TraÃ§age des pieces",
+            "groupe": "Traçage des pieces",
             "estEntete": true
           },
           {
             "id": "l17812668649270.4966244416515767",
             "groupe": "",
-            "onDemande": "RÃ©aliser les tracÃ©s d'atelier.",
-            "onExige": "Les tracÃ©s sont exploitables. Les tracÃ©s respectent le cahier des charges.",
+            "onDemande": "Réaliser les tracés d'atelier.",
+            "onExige": "Les tracés sont exploitables. Les tracés respectent le cahier des charges.",
             "competence": "C2.21",
             "estEntete": false
           },
           {
             "id": "h17812668649270.7465998251456271",
-            "groupe": "RÃ©aliser les entailles",
+            "groupe": "Réaliser les entailles",
             "estEntete": true
           },
           {
             "id": "l17812668649270.45477924324604224",
             "groupe": "",
-            "onDemande": "RÃ©aliser les dÃ©coupes",
-            "onExige": "Les coupes respectent les tracÃ©s.\nElles sont droites et d'Ã©querres.",
+            "onDemande": "Réaliser les découpes",
+            "onExige": "Les coupes respectent les tracés.\nElles sont droites et d'équerres.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17812668649270.5348622669147245",
             "groupe": "",
-            "onDemande": "Effectuer les actions correctives nÃ©cessaires",
-            "onExige": "L'assemblage est serrant.\nLes actions correctives apportÃ©es sont adaptÃ©es aux anomalies constatÃ©es.",
+            "onDemande": "Effectuer les actions correctives nécessaires",
+            "onExige": "L'assemblage est serrant.\nLes actions correctives apportées sont adaptées aux anomalies constatées.",
             "competence": "C3.44",
             "estEntete": false
           },
           {
             "id": "h17812668649270.49789865450660686",
-            "groupe": "Sciage a 90Â° et 45Â°",
+            "groupe": "Sciage a 90° et 45°",
             "estEntete": true
           },
           {
             "id": "l17812668649270.9579948197313063",
             "groupe": "",
-            "onDemande": "RÃ©aliser les dÃ©coupes",
-            "onExige": "Les coupes respectent les tracÃ©s.\nElles sont droites et d'Ã©querres.",
+            "onDemande": "Réaliser les découpes",
+            "onExige": "Les coupes respectent les tracés.\nElles sont droites et d'équerres.",
             "competence": "C3.42",
             "estEntete": false
           },
@@ -264,16 +264,16 @@
           {
             "id": "l17812668649270.6465183980316125",
             "groupe": "",
-            "onDemande": "SÃ©lectionner les piÃ¨ces ou composants Ã  monter, Ã  finir",
-            "onExige": "Les piÃ¨ces sÃ©lectionnÃ©es permettent le montage.",
+            "onDemande": "Sélectionner les pièces ou composants à monter, à finir",
+            "onExige": "Les pièces sélectionnées permettent le montage.",
             "competence": "C3.61",
             "estEntete": false
           },
           {
             "id": "l17812668649270.02287595105415663",
             "groupe": "",
-            "onDemande": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age, Ã©grainageâ¦)",
-            "onExige": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©.",
+            "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
             "estEntete": false
           },
@@ -285,8 +285,8 @@
           {
             "id": "l17812668649270.926826864852634",
             "groupe": "",
-            "onDemande": "Remettre la zone de travail dans son Ã©tat initial",
-            "onExige": "La zone de travail est propre et opÃ©rationnelle.",
+            "onDemande": "Remettre la zone de travail dans son état initial",
+            "onExige": "La zone de travail est propre et opérationnelle.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -296,7 +296,7 @@
     {
       "id": "proj1779255148489",
       "nom": "Tabouret 1ere partie",
-      "descriptif": "RÃ©alisation d'un tabouret en frÃªne, dessus stratifiÃ©.\n1ere partie: Ã©tude de plan, dÃ©bit, corroyage et traÃ§age des piÃ¨ces.",
+      "descriptif": "Réalisation d'un tabouret en frêne, dessus stratifié.\n1ere partie: étude de plan, débit, corroyage et traçage des pièces.",
       "blocs": [
         {
           "capId": "C1",
@@ -310,7 +310,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Etablir la feuille de dÃ©bit",
+          "contexte": "Etablir la feuille de débit",
           "itemIds": [
             "C2.31"
           ],
@@ -328,7 +328,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©ligner les piÃ¨ces",
+          "contexte": "Déligner les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -337,7 +337,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©gauchir les piÃ¨ces",
+          "contexte": "Dégauchir les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -346,7 +346,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Raboter les piÃ¨ces",
+          "contexte": "Raboter les pièces",
           "itemIds": [
             "C3.42",
             "C3.43"
@@ -356,7 +356,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -375,11 +375,11 @@
       "ficheContrat": {
         "activite": "Tabouret 1ere partie",
         "duree": "",
-        "objectif": "RÃ©alisation d'un tabouret en frÃªne, dessus stratifiÃ©. 1ere partie: Ã©tude de plan, dÃ©bit, corroyage et traÃ§age des piÃ¨ces.",
+        "objectif": "Réalisation d'un tabouret en frêne, dessus stratifié. 1ere partie: étude de plan, débit, corroyage et traçage des pièces.",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©",
-          "Le parc machine est Ã  votre disposition"
+          "Les plans de définition",
+          "Le bois corroyé",
+          "Le parc machine est à votre disposition"
         ],
         "lignes": [
           {
@@ -390,20 +390,20 @@
           {
             "id": "l17812081582150.37602696782671796",
             "groupe": "",
-            "onDemande": "DÃ©coder et interprÃ©ter des documents",
+            "onDemande": "Décoder et interpréter des documents",
             "onExige": "L'analyse est pertinente.",
             "competence": "C1.12",
             "estEntete": false
           },
           {
             "id": "h17812081582150.8029962153342489",
-            "groupe": "Etablir la feuille de dÃ©bit",
+            "groupe": "Etablir la feuille de débit",
             "estEntete": true
           },
           {
             "id": "l17812081582150.23769840102357065",
             "groupe": "",
-            "onDemande": "RÃ©pertorier, quantifier les composants",
+            "onDemande": "Répertorier, quantifier les composants",
             "onExige": "L'inventaire des besoins est exhaustif.",
             "competence": "C2.31",
             "estEntete": false
@@ -416,68 +416,68 @@
           {
             "id": "l17812081582150.9452176478220748",
             "groupe": "",
-            "onDemande": "Mettre en Åuvre les mesures de prÃ©vention",
-            "onExige": "Les mesures de prÃ©vention sont adaptÃ©es aux risques identifiÃ©s.",
+            "onDemande": "Mettre en œuvre les mesures de prévention",
+            "onExige": "Les mesures de prévention sont adaptées aux risques identifiés.",
             "competence": "C3.12",
             "estEntete": false
           },
           {
             "id": "h17812081582150.876155338784055",
-            "groupe": "DÃ©ligner les piÃ¨ces",
+            "groupe": "Déligner les pièces",
             "estEntete": true
           },
           {
             "id": "l17812081582150.13137886478200922",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "h17812081582150.32415128634436896",
-            "groupe": "DÃ©gauchir les piÃ¨ces",
+            "groupe": "Dégauchir les pièces",
             "estEntete": true
           },
           {
             "id": "l17812081582150.5535936791608369",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "h17812081582150.11333238439927817",
-            "groupe": "Raboter les piÃ¨ces",
+            "groupe": "Raboter les pièces",
             "estEntete": true
           },
           {
             "id": "l17812081582150.857305576932279",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17812081582150.8608215591639975",
             "groupe": "",
-            "onDemande": "ContrÃ´ler les Ã©lÃ©ments usinÃ©s",
-            "onExige": "Les rÃ©sultats sont conformes aux spÃ©cifications.",
+            "onDemande": "Contrôler les éléments usinés",
+            "onExige": "Les résultats sont conformes aux spécifications.",
             "competence": "C3.43",
             "estEntete": false
           },
           {
             "id": "h17812081582150.140467474784139",
-            "groupe": "Tracer les piÃ¨ces",
+            "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
             "id": "l17812081582150.6727153525567987",
             "groupe": "",
-            "onDemande": "RÃ©aliser les tracÃ©s d'atelier",
-            "onExige": "Les tracÃ©s respectent le cahier des charges et les normes en vigueur.",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur.",
             "competence": "C2.21",
             "estEntete": false
           },
@@ -489,8 +489,8 @@
           {
             "id": "l17812081582150.026264378311501413",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -500,12 +500,12 @@
     {
       "id": "proj1779258604776",
       "nom": "Affutage",
-      "descriptif": "AffÃ»tage d'un ciseau Ã  bois",
+      "descriptif": "Affûtage d'un ciseau à bois",
       "blocs": [
         {
           "capId": "C5",
           "ctId": "C5.2",
-          "contexte": "AffÃ»tage ciseau Ã  bois",
+          "contexte": "Affûtage ciseau à bois",
           "itemIds": [
             "C5.26"
           ],
@@ -515,22 +515,22 @@
       "ficheContrat": {
         "activite": "Affutage",
         "duree": "",
-        "objectif": "AffÃ»tage d'un ciseau Ã  bois",
+        "objectif": "Affûtage d'un ciseau à bois",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©"
+          "Les plans de définition",
+          "Le bois corroyé"
         ],
         "lignes": [
           {
             "id": "h17804369739840.28939122441874676",
-            "groupe": "AffÃ»tage ciseau Ã  bois",
+            "groupe": "Affûtage ciseau à bois",
             "estEntete": true
           },
           {
             "id": "l17804369739840.9519399428950388",
             "groupe": "",
             "onDemande": "Nettoyer et assurer l'entretien quotidien",
-            "onExige": "L'entretien est correctement assurÃ© et rend les Ã©quipements opÃ©rationnels.",
+            "onExige": "L'entretien est correctement assuré et rend les équipements opérationnels.",
             "competence": "C5.28",
             "estEntete": false
           }
@@ -554,7 +554,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "TraÃ§age des pieces",
+          "contexte": "Traçage des pieces",
           "itemIds": [
             "C2.21"
           ],
@@ -563,7 +563,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser et ajuster les dÃ©coupes d'assemblage",
+          "contexte": "Réaliser et ajuster les découpes d'assemblage",
           "itemIds": [
             "C3.42",
             "C3.44"
@@ -594,9 +594,9 @@
         "duree": "",
         "objectif": "",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©",
-          "Le parc machine est Ã  votre disposition"
+          "Les plans de définition",
+          "Le bois corroyé",
+          "Le parc machine est à votre disposition"
         ],
         "lignes": [
           {
@@ -607,42 +607,42 @@
           {
             "id": "l17804748856660.20244803776572906",
             "groupe": "",
-            "onDemande": "Identifier les caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles",
-            "onExige": "Le recensement des caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles est exact.",
+            "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
+            "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
             "competence": "C1.15",
             "estEntete": false
           },
           {
             "id": "h17804748856660.8966336028089483",
-            "groupe": "TraÃ§age des pieces",
+            "groupe": "Traçage des pieces",
             "estEntete": true
           },
           {
             "id": "l17804748856660.9664284313070689",
             "groupe": "",
-            "onDemande": "RÃ©aliser les tracÃ©s d'atelier.",
-            "onExige": "Les tracÃ©s sont exploitables.\nLes tracÃ©s respectent le cahier des charges.",
+            "onDemande": "Réaliser les tracés d'atelier.",
+            "onExige": "Les tracés sont exploitables.\nLes tracés respectent le cahier des charges.",
             "competence": "C2.21",
             "estEntete": false
           },
           {
             "id": "h17804748856660.062377574776164235",
-            "groupe": "RÃ©aliser et ajuster les dÃ©coupes d'assemblage",
+            "groupe": "Réaliser et ajuster les découpes d'assemblage",
             "estEntete": true
           },
           {
             "id": "l17804748856660.8344417526124718",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17804748856660.5434005575046813",
             "groupe": "",
-            "onDemande": "Effectuer les actions correctives nÃ©cessaires",
-            "onExige": "Les actions correctives apportÃ©es sont adaptÃ©es aux anomalies constatÃ©es.",
+            "onDemande": "Effectuer les actions correctives nécessaires",
+            "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
             "competence": "C3.44",
             "estEntete": false
           },
@@ -654,8 +654,8 @@
           {
             "id": "l17804748856660.8644420721434974",
             "groupe": "",
-            "onDemande": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age, Ã©grainageâ¦)",
-            "onExige": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©.",
+            "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
             "estEntete": false
           },
@@ -667,8 +667,8 @@
           {
             "id": "l17804748856660.4312787178474671",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est Propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est Propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -678,7 +678,7 @@
     {
       "id": "proj1781209440893",
       "nom": "Tabouret 2eme partie",
-      "descriptif": "RÃ©alisation d'un tabouret en frÃªne, dessus stratifiÃ©. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
+      "descriptif": "Réalisation d'un tabouret en frêne, dessus stratifié. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
       "blocs": [
         {
           "capId": "C3",
@@ -702,7 +702,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "Assembler et coller les Ã©lÃ©ments",
+          "contexte": "Assembler et coller les éléments",
           "itemIds": [
             "C3.62"
           ],
@@ -711,7 +711,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "RÃ©aliser la finition (ponÃ§age)",
+          "contexte": "Réaliser la finition (ponçage)",
           "itemIds": [
             "C3.63"
           ],
@@ -741,11 +741,11 @@
       "ficheContrat": {
         "activite": "Tabouret 2eme partie",
         "duree": "",
-        "objectif": "RÃ©alisation d'un tabouret en frÃªne, dessus stratifiÃ©. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
+        "objectif": "Réalisation d'un tabouret en frêne, dessus stratifié. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©",
-          "Le parc machine est Ã  votre disposition"
+          "Les plans de définition",
+          "Le bois corroyé",
+          "Le parc machine est à votre disposition"
         ],
         "lignes": [
           {
@@ -756,8 +756,8 @@
           {
             "id": "l17812103293800.06596797200169568",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
@@ -769,42 +769,42 @@
           {
             "id": "l17812103293800.90288956276112",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17812103293800.7160634716416866",
             "groupe": "",
-            "onDemande": "Effectuer les actions correctives nÃ©cessaires",
-            "onExige": "Les actions correctives apportÃ©es sont adaptÃ©es aux anomalies constatÃ©es.",
+            "onDemande": "Effectuer les actions correctives nécessaires",
+            "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
             "competence": "C3.44",
             "estEntete": false
           },
           {
             "id": "h17812103293800.9393748494653922",
-            "groupe": "Assembler et coller les Ã©lÃ©ments",
+            "groupe": "Assembler et coller les éléments",
             "estEntete": true
           },
           {
             "id": "l17812103293800.6072051072174421",
             "groupe": "",
             "onDemande": "Cadrer, monter et solidariser les sous-ensembles",
-            "onExige": "La mÃ©thodologie est respectÃ©e.",
+            "onExige": "La méthodologie est respectée.",
             "competence": "C3.62",
             "estEntete": false
           },
           {
             "id": "h17812103293800.034322665221252824",
-            "groupe": "RÃ©aliser la finition (ponÃ§age)",
+            "groupe": "Réaliser la finition (ponçage)",
             "estEntete": true
           },
           {
             "id": "l17812103293800.06387011849072666",
             "groupe": "",
-            "onDemande": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age)",
-            "onExige": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©.",
+            "onDemande": "Préparer les surfaces à traiter (ponçage)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
             "estEntete": false
           },
@@ -816,7 +816,7 @@
           {
             "id": "l17812103293800.35352643515302484",
             "groupe": "",
-            "onDemande": "Encoller et/ou insÃ©rer les piÃ¨ces et les composants",
+            "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
             "competence": "C3.52",
             "estEntete": false
@@ -824,16 +824,16 @@
           {
             "id": "l17812103293800.6876957205763712",
             "groupe": "",
-            "onDemande": "Cadrer, presser et solidariser les piÃ¨ces et les composants",
-            "onExige": "La mÃ©thodologie est respectÃ©e.",
+            "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
+            "onExige": "La méthodologie est respectée.",
             "competence": "C3.53",
             "estEntete": false
           },
           {
             "id": "l17812103293800.6027102716038765",
             "groupe": "",
-            "onDemande": "Affleurer le stratifiÃ©",
-            "onExige": "Les corrections apportÃ©es sont pertinentes.",
+            "onDemande": "Affleurer le stratifié",
+            "onExige": "Les corrections apportées sont pertinentes.",
             "competence": "C3.55",
             "estEntete": false
           },
@@ -845,8 +845,8 @@
           {
             "id": "l17812103293800.7614678278970475",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -856,12 +856,12 @@
     {
       "id": "proj1781214661309",
       "nom": "Dessous de plat",
-      "descriptif": "RÃ©alisation d'un dessous de plat en frÃªne. L'objectif est dÃ©couvrir le tracÃ©, et l'utilisation de l'outillage manuel",
+      "descriptif": "Réalisation d'un dessous de plat en frêne. L'objectif est découvrir le tracé, et l'utilisation de l'outillage manuel",
       "blocs": [
         {
           "capId": "C1",
           "ctId": "C1.1",
-          "contexte": "ComprÃ©hension",
+          "contexte": "Compréhension",
           "itemIds": [
             "C1.15"
           ],
@@ -870,7 +870,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -879,7 +879,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser les entailles",
+          "contexte": "Réaliser les entailles",
           "itemIds": [
             "C3.42"
           ],
@@ -925,48 +925,48 @@
       "ficheContrat": {
         "activite": "Dessous de plat",
         "duree": "",
-        "objectif": "RÃ©alisation d'un dessous de plat en frÃªne. L'objectif est dÃ©couvrir le tracÃ©, et l'utilisation de l'outillage manuel",
+        "objectif": "Réalisation d'un dessous de plat en frêne. L'objectif est découvrir le tracé, et l'utilisation de l'outillage manuel",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©"
+          "Les plans de définition",
+          "Le bois corroyé"
         ],
         "lignes": [
           {
             "id": "h17812155666040.3522451211033114",
-            "groupe": "ComprÃ©hension",
+            "groupe": "Compréhension",
             "estEntete": true
           },
           {
             "id": "l17812155666040.8971387812652748",
             "groupe": "",
-            "onDemande": "Identifier les caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles",
-            "onExige": "Le recensement des caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles est exact.",
+            "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
+            "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
             "competence": "C1.15",
             "estEntete": false
           },
           {
             "id": "h17812155666040.7657008434019619",
-            "groupe": "Tracer les piÃ¨ces",
+            "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
             "id": "l17812155666040.6349312978306142",
             "groupe": "",
-            "onDemande": "RÃ©aliser les tracÃ©s d'atelier",
-            "onExige": "Les tracÃ©s respectent le cahier des charges et les normes en vigueur.",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur.",
             "competence": "C2.21",
             "estEntete": false
           },
           {
             "id": "h17812155666040.2651855225437828",
-            "groupe": "RÃ©aliser les entailles",
+            "groupe": "Réaliser les entailles",
             "estEntete": true
           },
           {
             "id": "l17812155666040.3781034650503321",
             "groupe": "",
-            "onDemande": "entailler les Ã©lÃ©ments",
-            "onExige": "La conduite de l'entaillage est maÃ®trisÃ©e.",
+            "onDemande": "entailler les éléments",
+            "onExige": "La conduite de l'entaillage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
@@ -978,7 +978,7 @@
           {
             "id": "l17812155666040.1954618663396941",
             "groupe": "",
-            "onDemande": "Encoller et/ou insÃ©rer les piÃ¨ces et les composants",
+            "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
             "competence": "C3.52",
             "estEntete": false
@@ -991,8 +991,8 @@
           {
             "id": "l17812155666040.8510373224697272",
             "groupe": "",
-            "onDemande": "Cadrer, presser et solidariser les piÃ¨ces et les composants",
-            "onExige": "La mÃ©thodologie est respectÃ©e.",
+            "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
+            "onExige": "La méthodologie est respectée.",
             "competence": "C3.53",
             "estEntete": false
           },
@@ -1004,8 +1004,8 @@
           {
             "id": "l17812155666040.046543616705917557",
             "groupe": "",
-            "onDemande": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age)",
-            "onExige": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©.",
+            "onDemande": "Préparer les surfaces à traiter (ponçage)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
             "estEntete": false
           },
@@ -1017,8 +1017,8 @@
           {
             "id": "l17812155666040.21392111701772754",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -1028,7 +1028,7 @@
     {
       "id": "proj1781268800849",
       "nom": "Mini gondoles",
-      "descriptif": "RÃ©alisation de 8 mini gondoles pour le LycÃ©e Pro du Cateau. Mobilier en mÃ©laminÃ©, tourillonnÃ©s et collÃ©s",
+      "descriptif": "Réalisation de 8 mini gondoles pour le Lycée Pro du Cateau. Mobilier en mélaminé, tourillonnés et collés",
       "blocs": [
         {
           "capId": "C1",
@@ -1045,7 +1045,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Feuille de dÃ©bit et optimisation",
+          "contexte": "Feuille de débit et optimisation",
           "itemIds": [
             "C2.32",
             "C2.31"
@@ -1064,7 +1064,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©biter les panneaux",
+          "contexte": "Débiter les panneaux",
           "itemIds": [
             "C3.42",
             "C3.43",
@@ -1101,7 +1101,7 @@
     {
       "id": "proj1782208971667",
       "nom": "Tabouret Japonais - 1ere partie",
-      "descriptif": "RÃ©alisation d'un tabouret en frÃªne.\n1ere partie: Ã©tude de plan, dÃ©bit, corroyage et traÃ§age des piÃ¨ces.",
+      "descriptif": "Réalisation d'un tabouret en frêne.\n1ere partie: étude de plan, débit, corroyage et traçage des pièces.",
       "blocs": [
         {
           "capId": "C1",
@@ -1115,7 +1115,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Etablir la feuille de dÃ©bit",
+          "contexte": "Etablir la feuille de débit",
           "itemIds": [
             "C2.31"
           ],
@@ -1133,7 +1133,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©ligner les piÃ¨ces",
+          "contexte": "Déligner les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -1142,7 +1142,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©gauchir les piÃ¨ces",
+          "contexte": "Dégauchir les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -1151,7 +1151,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Raboter les piÃ¨ces",
+          "contexte": "Raboter les pièces",
           "itemIds": [
             "C3.42",
             "C3.43"
@@ -1161,7 +1161,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -1180,13 +1180,13 @@
       "ficheContrat": {
         "activite": "Tabouret Japonais - 1ere partie",
         "duree": "",
-        "objectif": "RÃ©alisation d'un tabouret en frÃªne.\n1ere partie: Ã©tude de plan, dÃ©bit, corroyage et traÃ§age des piÃ¨ces.",
+        "objectif": "Réalisation d'un tabouret en frêne.\n1ere partie: étude de plan, débit, corroyage et traçage des pièces.",
         "_srcNom": "Tabouret Japonais - 1ere partie",
-        "_srcDescriptif": "RÃ©alisation d'un tabouret en frÃªne.\n1ere partie: Ã©tude de plan, dÃ©bit, corroyage et traÃ§age des piÃ¨ces.",
+        "_srcDescriptif": "Réalisation d'un tabouret en frêne.\n1ere partie: étude de plan, débit, corroyage et traçage des pièces.",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©",
-          "Le parc machine est Ã  votre disposition"
+          "Les plans de définition",
+          "Le bois corroyé",
+          "Le parc machine est à votre disposition"
         ],
         "lignes": [
           {
@@ -1197,20 +1197,20 @@
           {
             "id": "l17822090153790.4003548245888048",
             "groupe": "",
-            "onDemande": "DÃ©coder et interprÃ©ter des documents",
+            "onDemande": "Décoder et interpréter des documents",
             "onExige": "L'analyse est pertinente.",
             "competence": "C1.12",
             "estEntete": false
           },
           {
             "id": "h17822090153790.3176279002878545",
-            "groupe": "Etablir la feuille de dÃ©bit",
+            "groupe": "Etablir la feuille de débit",
             "estEntete": true
           },
           {
             "id": "l17822090153790.7357278086591104",
             "groupe": "",
-            "onDemande": "RÃ©pertorier, quantifier les composants",
+            "onDemande": "Répertorier, quantifier les composants",
             "onExige": "L'inventaire des besoins est exhaustif.",
             "competence": "C2.31",
             "estEntete": false
@@ -1223,68 +1223,68 @@
           {
             "id": "l17822090153800.451569944100114",
             "groupe": "",
-            "onDemande": "Mettre en Åuvre les mesures de prÃ©vention",
-            "onExige": "Les mesures de prÃ©vention sont adaptÃ©es aux risques identifiÃ©s.",
+            "onDemande": "Mettre en œuvre les mesures de prévention",
+            "onExige": "Les mesures de prévention sont adaptées aux risques identifiés.",
             "competence": "C3.12",
             "estEntete": false
           },
           {
             "id": "h17822090153800.5376940260727079",
-            "groupe": "DÃ©ligner les piÃ¨ces",
+            "groupe": "Déligner les pièces",
             "estEntete": true
           },
           {
             "id": "l17822090153800.14129484357406386",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "h17822090153800.44472907522154104",
-            "groupe": "DÃ©gauchir les piÃ¨ces",
+            "groupe": "Dégauchir les pièces",
             "estEntete": true
           },
           {
             "id": "l17822090153800.7468246731339052",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "h17822090153800.3375499216124346",
-            "groupe": "Raboter les piÃ¨ces",
+            "groupe": "Raboter les pièces",
             "estEntete": true
           },
           {
             "id": "l17822090153800.48842595770745445",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17822090153800.798073687736221",
             "groupe": "",
-            "onDemande": "ContrÃ´ler les Ã©lÃ©ments usinÃ©s",
-            "onExige": "Les rÃ©sultats sont conformes aux spÃ©cifications.",
+            "onDemande": "Contrôler les éléments usinés",
+            "onExige": "Les résultats sont conformes aux spécifications.",
             "competence": "C3.43",
             "estEntete": false
           },
           {
             "id": "h17822090153800.4073912831838955",
-            "groupe": "Tracer les piÃ¨ces",
+            "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
             "id": "l17822090153800.06788009188534305",
             "groupe": "",
-            "onDemande": "RÃ©aliser les tracÃ©s d'atelier",
-            "onExige": "Les tracÃ©s respectent le cahier des charges et les normes en vigueur.",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur.",
             "competence": "C2.21",
             "estEntete": false
           },
@@ -1296,8 +1296,8 @@
           {
             "id": "l17822090153800.6387764504931678",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -1307,7 +1307,7 @@
     {
       "id": "proj1782209107699",
       "nom": "Tabouret Japonais - 2eme partie",
-      "descriptif": "RÃ©alisation d'un tabouret en frÃªne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
+      "descriptif": "Réalisation d'un tabouret en frêne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
       "blocs": [
         {
           "capId": "C3",
@@ -1341,7 +1341,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "Assembler et coller les Ã©lÃ©ments",
+          "contexte": "Assembler et coller les éléments",
           "itemIds": [
             "C3.62"
           ],
@@ -1350,7 +1350,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "RÃ©aliser la finition (ponÃ§age)",
+          "contexte": "Réaliser la finition (ponçage)",
           "itemIds": [
             "C3.63"
           ],
@@ -1369,13 +1369,13 @@
       "ficheContrat": {
         "activite": "Tabouret Japonais - 2eme partie",
         "duree": "",
-        "objectif": "RÃ©alisation d'un tabouret en frÃªne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
+        "objectif": "Réalisation d'un tabouret en frêne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
         "_srcNom": "Tabouret Japonais - 2eme partie",
-        "_srcDescriptif": "RÃ©alisation d'un tabouret en frÃªne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
+        "_srcDescriptif": "Réalisation d'un tabouret en frêne. 2eme partie: Usinage des assemblage, montage, finition, placage du dessus",
         "onDonne": [
-          "Les plans de dÃ©finition",
-          "Le bois corroyÃ©",
-          "Le parc machine est Ã  votre disposition"
+          "Les plans de définition",
+          "Le bois corroyé",
+          "Le parc machine est à votre disposition"
         ],
         "lignes": [
           {
@@ -1386,8 +1386,8 @@
           {
             "id": "l17822093143880.07827496788394783",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
@@ -1400,15 +1400,15 @@
             "id": "l17822093143880.906877701833214",
             "groupe": "",
             "onDemande": "Positionnement du gabarit et lancement du programme",
-            "onExige": "La procÃ©dure est respectÃ©e.",
+            "onExige": "La procédure est respectée.",
             "competence": "C3.41",
             "estEntete": false
           },
           {
             "id": "l17822093143880.7834040256836453",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
@@ -1420,42 +1420,42 @@
           {
             "id": "l17822093143880.7423124386664953",
             "groupe": "",
-            "onDemande": "Usiner les Ã©lÃ©ments",
-            "onExige": "La conduite de l'usinage est maÃ®trisÃ©e.",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
             "id": "l17822093143880.8242125045853402",
             "groupe": "",
-            "onDemande": "Effectuer les actions correctives nÃ©cessaires",
-            "onExige": "Les actions correctives apportÃ©es sont adaptÃ©es aux anomalies constatÃ©es.",
+            "onDemande": "Effectuer les actions correctives nécessaires",
+            "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
             "competence": "C3.44",
             "estEntete": false
           },
           {
             "id": "h17822093143880.7864123339038259",
-            "groupe": "Assembler et coller les Ã©lÃ©ments",
+            "groupe": "Assembler et coller les éléments",
             "estEntete": true
           },
           {
             "id": "l17822093143880.9084122987642771",
             "groupe": "",
             "onDemande": "Cadrer, monter et solidariser les sous-ensembles",
-            "onExige": "La mÃ©thodologie est respectÃ©e.",
+            "onExige": "La méthodologie est respectée.",
             "competence": "C3.62",
             "estEntete": false
           },
           {
             "id": "h17822093143880.36337652119046016",
-            "groupe": "RÃ©aliser la finition (ponÃ§age)",
+            "groupe": "Réaliser la finition (ponçage)",
             "estEntete": true
           },
           {
             "id": "l17822093143880.03621442024992483",
             "groupe": "",
-            "onDemande": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age)",
-            "onExige": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©.",
+            "onDemande": "Préparer les surfaces à traiter (ponçage)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
             "estEntete": false
           },
@@ -1467,8 +1467,8 @@
           {
             "id": "l17822093143880.4945372008088278",
             "groupe": "",
-            "onDemande": "Remettre le poste de travail dans son Ã©tat initial",
-            "onExige": "Le poste de travail est propre et opÃ©rationnel.",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
             "competence": "C3.66",
             "estEntete": false
           }
@@ -1478,16 +1478,16 @@
   ],
   "referentiel": {
     "RAP": {
-      "titre": "RÃ©fÃ©rentiel des ActivitÃ©s Professionnelles",
+      "titre": "Référentiel des Activités Professionnelles",
       "activites": [
         {
           "id": "A1",
-          "titre": "PrÃ©paration",
-          "description": "ContrÃ´le et rÃ©ception de l'existant, dÃ©finition du produit, dÃ©finition de la mÃ©thode de mise en Åuvre, planification de la rÃ©alisation de l'ouvrage",
+          "titre": "Préparation",
+          "description": "Contrôle et réception de l'existant, définition du produit, définition de la méthode de mise en œuvre, planification de la réalisation de l'ouvrage",
           "taches": [
             {
               "id": "A1.T1",
-              "intitule": "Prendre connaissance des documents, des consignes Ã©crites et orales",
+              "intitule": "Prendre connaissance des documents, des consignes écrites et orales",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1"
@@ -1495,8 +1495,8 @@
             },
             {
               "id": "A1.T2",
-              "intitule": "Analyser des donnÃ©es techniques relatives Ã  la fabrication, Ã  la pose et/ou aux installations",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Analyser des données techniques relatives à la fabrication, à la pose et/ou aux installations",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1505,8 +1505,8 @@
             },
             {
               "id": "A1.T3",
-              "intitule": "Relever des cotes pour l'exÃ©cution d'ouvrages ou d'espaces Ã  agencer",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Relever des cotes pour l'exécution d'ouvrages ou d'espaces à agencer",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.4"
@@ -1514,7 +1514,7 @@
             },
             {
               "id": "A1.T4",
-              "intitule": "VÃ©rifier les supports d'un ouvrage, d'un espace Ã  agencer",
+              "intitule": "Vérifier les supports d'un ouvrage, d'un espace à agencer",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1524,8 +1524,8 @@
             },
             {
               "id": "A1.T5",
-              "intitule": "Identifier les moyens humains et matÃ©riels de l'entreprise",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Identifier les moyens humains et matériels de l'entreprise",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.2"
               ]
@@ -1541,7 +1541,7 @@
             },
             {
               "id": "A1.T7",
-              "intitule": "Ãtablir ou complÃ©ter les plans d'exÃ©cution (croquis, dessin de dÃ©tailâ¦)",
+              "intitule": "Établir ou compléter les plans d'exécution (croquis, dessin de détail…)",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1551,7 +1551,7 @@
             },
             {
               "id": "A1.T8",
-              "intitule": "RÃ©aliser les tracÃ©s d'atelier ou de chantier",
+              "intitule": "Réaliser les tracés d'atelier ou de chantier",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1561,7 +1561,7 @@
             },
             {
               "id": "A1.T9",
-              "intitule": "Ãtablir le quantitatif des matÃ©riels et des matÃ©riaux Ã  mettre en Åuvre",
+              "intitule": "Établir le quantitatif des matériels et des matériaux à mettre en œuvre",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1571,7 +1571,7 @@
             },
             {
               "id": "A1.T10",
-              "intitule": "DÃ©finir une mÃ©thode de travail",
+              "intitule": "Définir une méthode de travail",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.2",
@@ -1581,7 +1581,7 @@
             },
             {
               "id": "A1.T11",
-              "intitule": "Ãlaborer un processus et/ou un mode opÃ©ratoire de fabrication, de poseâ¦",
+              "intitule": "Élaborer un processus et/ou un mode opératoire de fabrication, de pose…",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.2",
@@ -1592,8 +1592,8 @@
             },
             {
               "id": "A1.T12",
-              "intitule": "Planifier une rÃ©alisation, un agencement (fabrication, mise en Åuvre)",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Planifier une réalisation, un agencement (fabrication, mise en œuvre)",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.3",
                 "C2.5"
@@ -1601,7 +1601,7 @@
             },
             {
               "id": "A1.T13",
-              "intitule": "Ãtablir les documents de fabrication, de mise en Åuvre et de suivi",
+              "intitule": "Établir les documents de fabrication, de mise en œuvre et de suivi",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.2",
@@ -1617,12 +1617,12 @@
         {
           "id": "A2",
           "titre": "Fabrication",
-          "description": "Organisation et prÃ©paration de la fabrication, usinage, mise en forme, placage des Ã©lÃ©ments, montage, installation des quincailleries, des accessoires, finition et traitement, logistique",
+          "description": "Organisation et préparation de la fabrication, usinage, mise en forme, placage des éléments, montage, installation des quincailleries, des accessoires, finition et traitement, logistique",
           "taches": [
             {
               "id": "A2.T1",
-              "intitule": "PrÃ©parer les postes de travail : usinage, montage, finition, contrÃ´le",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Préparer les postes de travail : usinage, montage, finition, contrôle",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1632,7 +1632,7 @@
             },
             {
               "id": "A2.T2",
-              "intitule": "RÃ©aliser des gabarits, des appareillages et des montages",
+              "intitule": "Réaliser des gabarits, des appareillages et des montages",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1643,7 +1643,7 @@
             },
             {
               "id": "A2.T3",
-              "intitule": "Optimiser et prÃ©parer les matÃ©riaux et les produits",
+              "intitule": "Optimiser et préparer les matériaux et les produits",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1654,7 +1654,7 @@
             },
             {
               "id": "A2.T4",
-              "intitule": "Usiner des profils, des liaisons et des formes sur des machines conventionnelles, Ã  positionnement numÃ©rique et Ã  commande numÃ©rique",
+              "intitule": "Usiner des profils, des liaisons et des formes sur des machines conventionnelles, à positionnement numérique et à commande numérique",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1665,7 +1665,7 @@
             },
             {
               "id": "A2.T5",
-              "intitule": "Mettre en forme des Ã©lÃ©ments cintrÃ©s sur un seul plan dans un moule",
+              "intitule": "Mettre en forme des éléments cintrés sur un seul plan dans un moule",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1689,7 +1689,7 @@
             },
             {
               "id": "A2.T7",
-              "intitule": "Effectuer les opÃ©rations de montage",
+              "intitule": "Effectuer les opérations de montage",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1702,8 +1702,8 @@
             },
             {
               "id": "A2.T8",
-              "intitule": "PrÃ©parer les surfaces et appliquer les produits de traitement et de finition",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Préparer les surfaces et appliquer les produits de traitement et de finition",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1725,7 +1725,7 @@
             },
             {
               "id": "A2.T10",
-              "intitule": "Effectuer le remplissage de parties claires, d'ossaturesâ¦ (vitres, miroirs, panneaux dÃ©coratifsâ¦)",
+              "intitule": "Effectuer le remplissage de parties claires, d'ossatures… (vitres, miroirs, panneaux décoratifs…)",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1736,8 +1736,8 @@
             },
             {
               "id": "A2.T11",
-              "intitule": "Adapter, intÃ©grer un produit semi-fini et/ou sous-traitÃ©",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Adapter, intégrer un produit semi-fini et/ou sous-traité",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1748,8 +1748,8 @@
             },
             {
               "id": "A2.T12",
-              "intitule": "Conditionner, stocker, charger et dÃ©charger les ouvrages et assurer leur livraison",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Conditionner, stocker, charger et décharger les ouvrages et assurer leur livraison",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.3",
                 "C3.1",
@@ -1761,13 +1761,13 @@
         },
         {
           "id": "A3",
-          "titre": "Pose, installation de menuiseries et rÃ©alisation d'agencements intÃ©rieurs et extÃ©rieurs",
-          "description": "Organisation, mise en Åuvre et suivi du chantier",
+          "titre": "Pose, installation de menuiseries et réalisation d'agencements intérieurs et extérieurs",
+          "description": "Organisation, mise en œuvre et suivi du chantier",
           "taches": [
             {
               "id": "A3.T1",
-              "intitule": "VÃ©rifier et mettre en place les dispositifs de sÃ©curitÃ© et de protection individuelle et collective",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Vérifier et mettre en place les dispositifs de sécurité et de protection individuelle et collective",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1777,7 +1777,7 @@
             {
               "id": "A3.T2",
               "intitule": "Organiser les zones d'intervention",
-              "niveau": "ResponsabilitÃ©",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1787,8 +1787,8 @@
             },
             {
               "id": "A3.T3",
-              "intitule": "DÃ©poser les ouvrages existants, stocker et trier les dÃ©chets",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Déposer les ouvrages existants, stocker et trier les déchets",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1800,8 +1800,8 @@
             },
             {
               "id": "A3.T4",
-              "intitule": "Approvisionner les ouvrages, les matÃ©riaux, les produits",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Approvisionner les ouvrages, les matériaux, les produits",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -1813,7 +1813,7 @@
             },
             {
               "id": "A3.T5",
-              "intitule": "Relever ou tracer les rÃ©fÃ©rentiels et implanter l'ouvrage",
+              "intitule": "Relever ou tracer les référentiels et implanter l'ouvrage",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1825,7 +1825,7 @@
             },
             {
               "id": "A3.T6",
-              "intitule": "PrÃ©parer les supports nÃ©cessaires Ã  la pose",
+              "intitule": "Préparer les supports nécessaires à la pose",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1837,7 +1837,7 @@
             },
             {
               "id": "A3.T7",
-              "intitule": "PrÃ©parer et ajuster les ouvrages",
+              "intitule": "Préparer et ajuster les ouvrages",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1849,7 +1849,7 @@
             },
             {
               "id": "A3.T8",
-              "intitule": "RÃ©partir et tracer les fixations",
+              "intitule": "Répartir et tracer les fixations",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1884,7 +1884,7 @@
             },
             {
               "id": "A3.T11",
-              "intitule": "Mettre en Åuvre les produits d'Ã©tanchÃ©itÃ©, d'isolation et de jointoiement",
+              "intitule": "Mettre en œuvre les produits d'étanchéité, d'isolation et de jointoiement",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1912,7 +1912,7 @@
             },
             {
               "id": "A3.T13",
-              "intitule": "Installer des Ã©quipements techniques intÃ©grÃ©s, des Ã©lÃ©ments de dÃ©coration et des accessoires",
+              "intitule": "Installer des équipements techniques intégrés, des éléments de décoration et des accessoires",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1927,7 +1927,7 @@
             },
             {
               "id": "A3.T14",
-              "intitule": "Effectuer des opÃ©rations de finition pÃ©riphÃ©riques aux travaux d'agencement",
+              "intitule": "Effectuer des opérations de finition périphériques aux travaux d'agencement",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -1942,13 +1942,13 @@
         },
         {
           "id": "A4",
-          "titre": "Suivi de rÃ©alisation et contrÃ´le qualitÃ©",
+          "titre": "Suivi de réalisation et contrôle qualité",
           "description": "",
           "taches": [
             {
               "id": "A4.T1",
-              "intitule": "ContrÃ´ler la qualitÃ© et la quantitÃ© des matÃ©riels, des matÃ©riaux et des produits",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Contrôler la qualité et la quantité des matériels, des matériaux et des produits",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.3",
                 "C2.5",
@@ -1958,8 +1958,8 @@
             },
             {
               "id": "A4.T2",
-              "intitule": "Ãvaluer l'avancement des travaux et proposer des ajustements",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Évaluer l'avancement des travaux et proposer des ajustements",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.3",
                 "C2.5"
@@ -1976,8 +1976,8 @@
             },
             {
               "id": "A4.T4",
-              "intitule": "VÃ©rifier la conformitÃ© d'une rÃ©alisation finie",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Vérifier la conformité d'une réalisation finie",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.3",
@@ -1988,8 +1988,8 @@
             },
             {
               "id": "A4.T5",
-              "intitule": "Participer aux rÃ©unions de chantier",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Participer aux réunions de chantier",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.3",
@@ -2004,13 +2004,13 @@
         },
         {
           "id": "A5",
-          "titre": "Maintenance des matÃ©riels et des ouvrages ou des installations existantes",
+          "titre": "Maintenance des matériels et des ouvrages ou des installations existantes",
           "description": "",
           "taches": [
             {
               "id": "A5.T1",
               "intitule": "Effectuer la maintenance de premier niveau des machines fixes, portatives et des outillages",
-              "niveau": "ResponsabilitÃ©",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -2021,8 +2021,8 @@
             },
             {
               "id": "A5.T2",
-              "intitule": "Identifier un dysfonctionnement et participer Ã  la recherche de solutions correctives",
-              "niveau": "Sous contrÃ´le",
+              "intitule": "Identifier un dysfonctionnement et participer à la recherche de solutions correctives",
+              "niveau": "Sous contrôle",
               "ctLiees": [
                 "C1.1",
                 "C1.2",
@@ -2034,7 +2034,7 @@
             },
             {
               "id": "A5.T3",
-              "intitule": "VÃ©rifier et maintenir en bon Ã©tat l'aire de travail, en atelier et sur chantier",
+              "intitule": "Vérifier et maintenir en bon état l'aire de travail, en atelier et sur chantier",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C3.1",
@@ -2058,7 +2058,7 @@
             },
             {
               "id": "A5.T5",
-              "intitule": "Proposer des amÃ©liorations et rÃ©parer l'ouvrage",
+              "intitule": "Proposer des améliorations et réparer l'ouvrage",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C1.1",
@@ -2087,7 +2087,7 @@
             },
             {
               "id": "A6.T2",
-              "intitule": "Communiquer avec les diffÃ©rents partenaires",
+              "intitule": "Communiquer avec les différents partenaires",
               "niveau": "Autonomie",
               "ctLiees": [
                 "C6.2",
@@ -2097,8 +2097,8 @@
             },
             {
               "id": "A6.T3",
-              "intitule": "Participer Ã  des groupes de travail",
-              "niveau": "ResponsabilitÃ©",
+              "intitule": "Participer à des groupes de travail",
+              "niveau": "Responsabilité",
               "ctLiees": [
                 "C6.1",
                 "C6.2",
@@ -2111,7 +2111,7 @@
       ]
     },
     "competences": {
-      "titre": "RÃ©fÃ©rentiel de Certification",
+      "titre": "Référentiel de Certification",
       "capacites": [
         {
           "id": "C1",
@@ -2119,110 +2119,110 @@
           "competences_terminales": [
             {
               "id": "C1.1",
-              "titre": "DÃ©coder et analyser les donnÃ©es de dÃ©finition",
+              "titre": "Décoder et analyser les données de définition",
               "items": [
                 {
                   "id": "C1.11",
-                  "etre_capable_de": "Identifier le contexte de l'intervention liÃ© Ã  la fabrication et Ã  la mise en Åuvre sur le chantier",
-                  "critere_evaluation": "L'identification du contexte est correctement effectuÃ©e."
+                  "etre_capable_de": "Identifier le contexte de l'intervention lié à la fabrication et à la mise en œuvre sur le chantier",
+                  "critere_evaluation": "L'identification du contexte est correctement effectuée."
                 },
                 {
                   "id": "C1.12",
-                  "etre_capable_de": "DÃ©coder et interprÃ©ter des documents",
+                  "etre_capable_de": "Décoder et interpréter des documents",
                   "critere_evaluation": "L'analyse est pertinente."
                 },
                 {
                   "id": "C1.13",
                   "etre_capable_de": "Extraire et classer les informations",
-                  "critere_evaluation": "L'ensemble des informations nÃ©cessaires est recensÃ© et classÃ©."
+                  "critere_evaluation": "L'ensemble des informations nécessaires est recensé et classé."
                 },
                 {
                   "id": "C1.14",
-                  "etre_capable_de": "Identifier les ouvrages, les sous-ensembles, les Ã©lÃ©ments",
-                  "critere_evaluation": "L'identification est correctement rÃ©alisÃ©e."
+                  "etre_capable_de": "Identifier les ouvrages, les sous-ensembles, les éléments",
+                  "critere_evaluation": "L'identification est correctement réalisée."
                 },
                 {
                   "id": "C1.15",
-                  "etre_capable_de": "Identifier les caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles",
-                  "critere_evaluation": "Le recensement des caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles est exact."
+                  "etre_capable_de": "Identifier les caractéristiques géométriques et dimensionnelles",
+                  "critere_evaluation": "Le recensement des caractéristiques géométriques et dimensionnelles est exact."
                 },
                 {
                   "id": "C1.16",
-                  "etre_capable_de": "Identifier et rÃ©pertorier les liaisons",
-                  "critere_evaluation": "L'ensemble des liaisons relatif Ã  la fabrication et Ã  la pose est rÃ©pertoriÃ©."
+                  "etre_capable_de": "Identifier et répertorier les liaisons",
+                  "critere_evaluation": "L'ensemble des liaisons relatif à la fabrication et à la pose est répertorié."
                 },
                 {
                   "id": "C1.17",
-                  "etre_capable_de": "Identifier les conditions de fonctionnement (mobilitÃ©â¦)",
-                  "critere_evaluation": "Les contraintes de fonctionnement sont recensÃ©es."
+                  "etre_capable_de": "Identifier les conditions de fonctionnement (mobilité…)",
+                  "critere_evaluation": "Les contraintes de fonctionnement sont recensées."
                 }
               ]
             },
             {
               "id": "C1.2",
-              "titre": "DÃ©coder et analyser les donnÃ©es opÃ©ratoires",
+              "titre": "Décoder et analyser les données opératoires",
               "items": [
                 {
                   "id": "C1.21",
-                  "etre_capable_de": "Identifier et analyser les Ã©tapes de fabrication, de pose, de dÃ©pose, de maintenance",
-                  "critere_evaluation": "L'analyse des Ã©tapes est effectuÃ©e sans erreur."
+                  "etre_capable_de": "Identifier et analyser les étapes de fabrication, de pose, de dépose, de maintenance",
+                  "critere_evaluation": "L'analyse des étapes est effectuée sans erreur."
                 },
                 {
                   "id": "C1.22",
-                  "etre_capable_de": "Identifier et classer les tÃ¢ches ou les interventions des secteurs d'activitÃ©s connexes",
-                  "critere_evaluation": "Le recensement des tÃ¢ches connexes est correctement effectuÃ©."
+                  "etre_capable_de": "Identifier et classer les tâches ou les interventions des secteurs d'activités connexes",
+                  "critere_evaluation": "Le recensement des tâches connexes est correctement effectué."
                 },
                 {
                   "id": "C1.23",
-                  "etre_capable_de": "Identifier et recenser les moyens de fabrication et de mise en Åuvre",
-                  "critere_evaluation": "Les moyens recensÃ©s sont compatibles avec la fabrication et la mise en Åuvre."
+                  "etre_capable_de": "Identifier et recenser les moyens de fabrication et de mise en œuvre",
+                  "critere_evaluation": "Les moyens recensés sont compatibles avec la fabrication et la mise en œuvre."
                 }
               ]
             },
             {
               "id": "C1.3",
-              "titre": "DÃ©coder et analyser les donnÃ©es de gestion",
+              "titre": "Décoder et analyser les données de gestion",
               "items": [
                 {
                   "id": "C1.31",
-                  "etre_capable_de": "DÃ©coder et analyser les documents de gestion",
-                  "critere_evaluation": "Les donnÃ©es de gestion sont judicieusement exploitÃ©es."
+                  "etre_capable_de": "Décoder et analyser les documents de gestion",
+                  "critere_evaluation": "Les données de gestion sont judicieusement exploitées."
                 },
                 {
                   "id": "C1.32",
-                  "etre_capable_de": "Mettre en relation les donnÃ©es de dÃ©finition et les moyens de fabrication et de pose, la chronologie des opÃ©rations et les approvisionnements",
-                  "critere_evaluation": "La mise en relation des donnÃ©es est pertinente. L'ordonnancement des opÃ©rations permet le respect de la date de fin de travaux."
+                  "etre_capable_de": "Mettre en relation les données de définition et les moyens de fabrication et de pose, la chronologie des opérations et les approvisionnements",
+                  "critere_evaluation": "La mise en relation des données est pertinente. L'ordonnancement des opérations permet le respect de la date de fin de travaux."
                 }
               ]
             },
             {
               "id": "C1.4",
-              "titre": "Relever et rÃ©ceptionner une situation de chantier",
+              "titre": "Relever et réceptionner une situation de chantier",
               "items": [
                 {
                   "id": "C1.41",
-                  "etre_capable_de": "Identifier l'environnement du chantier (accÃ¨s, arrivÃ©es des Ã©nergies, stockageâ¦)",
-                  "critere_evaluation": "Les donnÃ©es sont correctement identifiÃ©es."
+                  "etre_capable_de": "Identifier l'environnement du chantier (accès, arrivées des énergies, stockage…)",
+                  "critere_evaluation": "Les données sont correctement identifiées."
                 },
                 {
                   "id": "C1.42",
-                  "etre_capable_de": "Relever les caractÃ©ristiques dimensionnelles, gÃ©omÃ©triques et physiques des supports et des espaces Ã  agencer",
-                  "critere_evaluation": "Les relevÃ©s sont effectuÃ©s avec exactitude."
+                  "etre_capable_de": "Relever les caractéristiques dimensionnelles, géométriques et physiques des supports et des espaces à agencer",
+                  "critere_evaluation": "Les relevés sont effectués avec exactitude."
                 },
                 {
                   "id": "C1.43",
-                  "etre_capable_de": "RÃ©ceptionner les supports",
-                  "critere_evaluation": "Les Ã©lÃ©ments consignÃ©s permettent de qualifier les supports. Les Ã©carts constatÃ©s sont signalÃ©s."
+                  "etre_capable_de": "Réceptionner les supports",
+                  "critere_evaluation": "Les éléments consignés permettent de qualifier les supports. Les écarts constatés sont signalés."
                 },
                 {
                   "id": "C1.44",
-                  "etre_capable_de": "Relever les positions de l'ouvrage Ã  installer",
-                  "critere_evaluation": "Les positions sont convenablement repÃ©rÃ©es."
+                  "etre_capable_de": "Relever les positions de l'ouvrage à installer",
+                  "critere_evaluation": "Les positions sont convenablement repérées."
                 },
                 {
                   "id": "C1.45",
-                  "etre_capable_de": "Consigner les contraintes techniques, mÃ©caniques et esthÃ©tiques (charges, passage des rÃ©seauxâ¦)",
-                  "critere_evaluation": "Les contraintes sont clairement dÃ©finies."
+                  "etre_capable_de": "Consigner les contraintes techniques, mécaniques et esthétiques (charges, passage des réseaux…)",
+                  "critere_evaluation": "Les contraintes sont clairement définies."
                 }
               ]
             }
@@ -2231,7 +2231,7 @@
         },
         {
           "id": "C2",
-          "titre": "Traiter / DÃ©cider / PrÃ©parer",
+          "titre": "Traiter / Décider / Préparer",
           "competences_terminales": [
             {
               "id": "C2.1",
@@ -2239,97 +2239,97 @@
               "items": [
                 {
                   "id": "C2.11",
-                  "etre_capable_de": "Inventorier les caractÃ©ristiques techniques relatives aux matÃ©riaux, produits, supports et Ã©quipements Ã  disposition, aux ouvrages et Ã  leurs spÃ©cificitÃ©s, au type de matÃ©riel Ã  utiliser, Ã  la qualitÃ© exigÃ©e, Ã  la mise en sÃ©curitÃ© du personnel",
-                  "critere_evaluation": "L'inventaire des caractÃ©ristiques techniques est correctement effectuÃ©."
+                  "etre_capable_de": "Inventorier les caractéristiques techniques relatives aux matériaux, produits, supports et équipements à disposition, aux ouvrages et à leurs spécificités, au type de matériel à utiliser, à la qualité exigée, à la mise en sécurité du personnel",
+                  "critere_evaluation": "L'inventaire des caractéristiques techniques est correctement effectué."
                 },
                 {
                   "id": "C2.12",
-                  "etre_capable_de": "Comparer les performances techniques sur le plan esthÃ©tique, technologique, ergonomique et Ã©conomique",
-                  "critere_evaluation": "Le rÃ©sultat de l'analyse est rationnelle et exploitable."
+                  "etre_capable_de": "Comparer les performances techniques sur le plan esthétique, technologique, ergonomique et économique",
+                  "critere_evaluation": "Le résultat de l'analyse est rationnelle et exploitable."
                 },
                 {
                   "id": "C2.13",
-                  "etre_capable_de": "Choisir, proposer et/ou adapter une ou des solutions techniques relatives aux matÃ©riaux, produits, supports et Ã©quipements, aux ouvrages avec leurs valeurs, dimensionnements, liaisons et principes de pose, au type de matÃ©riel Ã  utiliser",
-                  "critere_evaluation": "Les choix sont conformes et compatibles avec les donnÃ©es techniques et le cahier des charges."
+                  "etre_capable_de": "Choisir, proposer et/ou adapter une ou des solutions techniques relatives aux matériaux, produits, supports et équipements, aux ouvrages avec leurs valeurs, dimensionnements, liaisons et principes de pose, au type de matériel à utiliser",
+                  "critere_evaluation": "Les choix sont conformes et compatibles avec les données techniques et le cahier des charges."
                 },
                 {
                   "id": "C2.14",
                   "etre_capable_de": "Justifier les choix et/ou les solutions techniques",
-                  "critere_evaluation": "Les solutions proposÃ©es sont pertinentes et rÃ©alisables."
+                  "critere_evaluation": "Les solutions proposées sont pertinentes et réalisables."
                 }
               ]
             },
             {
               "id": "C2.2",
-              "titre": "Ãtablir les plans et les tracÃ©s d'exÃ©cution d'un ouvrage",
+              "titre": "Établir les plans et les tracés d'exécution d'un ouvrage",
               "items": [
                 {
                   "id": "C2.21",
-                  "etre_capable_de": "ReprÃ©senter et rÃ©aliser sous forme papier ou informatisÃ©e et autres supports : les relevÃ©s de situation de chantiers, les tracÃ©s d'atelier, les dessins de fabrication, les tracÃ©s des formes complexes.",
-                  "critere_evaluation": "Les relevÃ©s, tracÃ©s, dessins de fabrication et formes complexes sont exploitables. Les tracÃ©s respectent le cahier des charges et les normes en vigueur."
+                  "etre_capable_de": "Représenter et réaliser sous forme papier ou informatisée et autres supports : les relevés de situation de chantiers, les tracés d'atelier, les dessins de fabrication, les tracés des formes complexes.",
+                  "critere_evaluation": "Les relevés, tracés, dessins de fabrication et formes complexes sont exploitables. Les tracés respectent le cahier des charges et les normes en vigueur."
                 }
               ]
             },
             {
               "id": "C2.3",
-              "titre": "Ãtablir les quantitatifs de matÃ©riaux et de composants",
+              "titre": "Établir les quantitatifs de matériaux et de composants",
               "items": [
                 {
                   "id": "C2.31",
-                  "etre_capable_de": "RÃ©pertorier, quantifier produits, matÃ©riaux, matÃ©riels et/ou composants",
+                  "etre_capable_de": "Répertorier, quantifier produits, matériaux, matériels et/ou composants",
                   "critere_evaluation": "L'inventaire des besoins est exhaustif."
                 },
                 {
                   "id": "C2.32",
-                  "etre_capable_de": "Optimiser les dÃ©bits et les quantitÃ©s",
+                  "etre_capable_de": "Optimiser les débits et les quantités",
                   "critere_evaluation": "Les rendements sont optimaux."
                 },
                 {
                   "id": "C2.33",
-                  "etre_capable_de": "Ãtablir et renseigner les documents techniques permettant la fabrication, la pose et/ou le suivi (feuille de dÃ©bit, bon de commande, plan de calepinage)",
+                  "etre_capable_de": "Établir et renseigner les documents techniques permettant la fabrication, la pose et/ou le suivi (feuille de débit, bon de commande, plan de calepinage)",
                   "critere_evaluation": "Les documents sont exploitables."
                 }
               ]
             },
             {
               "id": "C2.4",
-              "titre": "Ãtablir le processus de fabrication, de dÃ©pose et de pose",
+              "titre": "Établir le processus de fabrication, de dépose et de pose",
               "items": [
                 {
                   "id": "C2.41",
-                  "etre_capable_de": "RÃ©pertorier les phases de la fabrication, de la pose et/ou de la dÃ©pose",
+                  "etre_capable_de": "Répertorier les phases de la fabrication, de la pose et/ou de la dépose",
                   "critere_evaluation": "L'inventaire des phases est complet."
                 },
                 {
                   "id": "C2.42",
-                  "etre_capable_de": "Recenser les moyens humains et matÃ©riels",
-                  "critere_evaluation": "Les moyens humains sont adaptÃ©s."
+                  "etre_capable_de": "Recenser les moyens humains et matériels",
+                  "critere_evaluation": "Les moyens humains sont adaptés."
                 },
                 {
                   "id": "C2.43",
-                  "etre_capable_de": "Ãtablir les antÃ©rioritÃ©s",
-                  "critere_evaluation": "Les antÃ©rioritÃ©s sont justes et pertinentes."
+                  "etre_capable_de": "Établir les antériorités",
+                  "critere_evaluation": "Les antériorités sont justes et pertinentes."
                 },
                 {
                   "id": "C2.44",
-                  "etre_capable_de": "Ãlaborer le processus de fabrication de pose ou de dÃ©pose",
-                  "critere_evaluation": "L'Ã©laboration et la chronologie des phases sont justes. Le processus est exploitable."
+                  "etre_capable_de": "Élaborer le processus de fabrication de pose ou de dépose",
+                  "critere_evaluation": "L'élaboration et la chronologie des phases sont justes. Le processus est exploitable."
                 }
               ]
             },
             {
               "id": "C2.5",
-              "titre": "Ãtablir les documents de suivi de rÃ©alisation",
+              "titre": "Établir les documents de suivi de réalisation",
               "items": [
                 {
                   "id": "C2.51",
-                  "etre_capable_de": "Identifier les diffÃ©rents documents de suivi (planning, fiche suiveuse, fiche de stock, fiche qualitÃ©, fiche de maintenanceâ¦)",
+                  "etre_capable_de": "Identifier les différents documents de suivi (planning, fiche suiveuse, fiche de stock, fiche qualité, fiche de maintenance…)",
                   "critere_evaluation": "L'identification des documents est pertinente."
                 },
                 {
                   "id": "C2.52",
-                  "etre_capable_de": "Recenser les donnÃ©es liÃ©es Ã  la matiÃ¨re d'Åuvre, aux moyens humains et matÃ©riels, aux processus de fabrication et de mise en Åuvre sur chantier, aux contraintes de temps, Ã  la coordination avec les autres corps d'Ã©tat",
-                  "critere_evaluation": "L'ensemble des informations nÃ©cessaires est recensÃ©."
+                  "etre_capable_de": "Recenser les données liées à la matière d'œuvre, aux moyens humains et matériels, aux processus de fabrication et de mise en œuvre sur chantier, aux contraintes de temps, à la coordination avec les autres corps d'état",
+                  "critere_evaluation": "L'ensemble des informations nécessaires est recensé."
                 },
                 {
                   "id": "C2.53",
@@ -2339,7 +2339,7 @@
                 {
                   "id": "C2.54",
                   "etre_capable_de": "Proposer des ajustements",
-                  "critere_evaluation": "Les propositions d'ajustement permettent d'optimiser les rÃ©alisations."
+                  "critere_evaluation": "Les propositions d'ajustement permettent d'optimiser les réalisations."
                 }
               ]
             }
@@ -2352,207 +2352,207 @@
           "competences_terminales": [
             {
               "id": "C3.1",
-              "titre": "Organiser et mettre en sÃ©curitÃ© les postes de travail",
+              "titre": "Organiser et mettre en sécurité les postes de travail",
               "items": [
                 {
                   "id": "C3.11",
-                  "etre_capable_de": "Identifier les risques d'accident et les risques d'atteinte Ã  la santÃ© liÃ©s au poste de travail",
-                  "critere_evaluation": "Les risques sont identifiÃ©s et localisÃ©s."
+                  "etre_capable_de": "Identifier les risques d'accident et les risques d'atteinte à la santé liés au poste de travail",
+                  "critere_evaluation": "Les risques sont identifiés et localisés."
                 },
                 {
                   "id": "C3.12",
-                  "etre_capable_de": "Mettre en Åuvre les mesures de prÃ©vention",
-                  "critere_evaluation": "Les mesures de prÃ©vention sont adaptÃ©es aux risques identifiÃ©s."
+                  "etre_capable_de": "Mettre en œuvre les mesures de prévention",
+                  "critere_evaluation": "Les mesures de prévention sont adaptées aux risques identifiés."
                 },
                 {
                   "id": "C3.13",
-                  "etre_capable_de": "Choisir et prÃ©parer les outillages et/ou accessoires nÃ©cessaires au poste de travail (repÃ©rage et dÃ©bit, usinage, contrÃ´le, montage, mise en forme, finition, conditionnementâ¦)",
-                  "critere_evaluation": "Les outillages et accessoires prÃ©parÃ©s sont conformes aux donnÃ©es opÃ©ratoires."
+                  "etre_capable_de": "Choisir et préparer les outillages et/ou accessoires nécessaires au poste de travail (repérage et débit, usinage, contrôle, montage, mise en forme, finition, conditionnement…)",
+                  "critere_evaluation": "Les outillages et accessoires préparés sont conformes aux données opératoires."
                 },
                 {
                   "id": "C3.14",
-                  "etre_capable_de": "Organiser les cheminements de la matiÃ¨re d'Åuvre",
-                  "critere_evaluation": "Le cheminement de la matiÃ¨re d'Åuvre est optimisÃ©."
+                  "etre_capable_de": "Organiser les cheminements de la matière d'œuvre",
+                  "critere_evaluation": "Le cheminement de la matière d'œuvre est optimisé."
                 },
                 {
                   "id": "C3.15",
                   "etre_capable_de": "Disposer rationnellement les supports et les accessoires en amont et en aval des postes de travail",
-                  "critere_evaluation": "Les rÃ¨gles d'ergonomie sont respectÃ©es. Les rÃ¨gles de prÃ©vention et de sÃ©curitÃ© sont respectÃ©es."
+                  "critere_evaluation": "Les règles d'ergonomie sont respectées. Les règles de prévention et de sécurité sont respectées."
                 },
                 {
                   "id": "C3.16",
-                  "etre_capable_de": "Proposer des solutions d'amÃ©lioration des postes de travail",
-                  "critere_evaluation": "Les solutions proposÃ©es sont pertinentes."
+                  "etre_capable_de": "Proposer des solutions d'amélioration des postes de travail",
+                  "critere_evaluation": "Les solutions proposées sont pertinentes."
                 }
               ]
             },
             {
               "id": "C3.2",
-              "titre": "PrÃ©parer les matÃ©riaux, les quincailleries et les accessoires",
+              "titre": "Préparer les matériaux, les quincailleries et les accessoires",
               "items": [
                 {
                   "id": "C3.21",
-                  "etre_capable_de": "SÃ©lectionner et contrÃ´ler les matÃ©riaux, les quincailleries et les accessoires",
-                  "critere_evaluation": "Les regroupements et le contrÃ´le des produits sont conformes aux documents de prÃ©paration."
+                  "etre_capable_de": "Sélectionner et contrôler les matériaux, les quincailleries et les accessoires",
+                  "critere_evaluation": "Les regroupements et le contrôle des produits sont conformes aux documents de préparation."
                 },
                 {
                   "id": "C3.22",
-                  "etre_capable_de": "Approvisionner les matÃ©riaux, quincailleries et accessoires suivant les postes de travail",
-                  "critere_evaluation": "Les quantitÃ©s dÃ©diÃ©es Ã  chaque poste sont exactes."
+                  "etre_capable_de": "Approvisionner les matériaux, quincailleries et accessoires suivant les postes de travail",
+                  "critere_evaluation": "Les quantités dédiées à chaque poste sont exactes."
                 },
                 {
                   "id": "C3.23",
-                  "etre_capable_de": "Orienter et repÃ©rer les piÃ¨ces et/ou sous-ensembles Ã  usiner, Ã  monter, Ã  finir",
-                  "critere_evaluation": "L'orientation des piÃ¨ces respecte les contraintes de mise en Åuvre."
+                  "etre_capable_de": "Orienter et repérer les pièces et/ou sous-ensembles à usiner, à monter, à finir",
+                  "critere_evaluation": "L'orientation des pièces respecte les contraintes de mise en œuvre."
                 }
               ]
             },
             {
               "id": "C3.3",
-              "titre": "Installer et rÃ©gler les outillages",
+              "titre": "Installer et régler les outillages",
               "items": [
                 {
                   "id": "C3.31",
                   "etre_capable_de": "Choisir les outils",
-                  "critere_evaluation": "Le choix des outils est conforme Ã  la dÃ©finition du produit (forme, qualitÃ©)."
+                  "critere_evaluation": "Le choix des outils est conforme à la définition du produit (forme, qualité)."
                 },
                 {
                   "id": "C3.32",
-                  "etre_capable_de": "PrÃ©rÃ©gler les outils associÃ©s",
-                  "critere_evaluation": "Les cotes outils sont respectÃ©es."
+                  "etre_capable_de": "Prérégler les outils associés",
+                  "critere_evaluation": "Les cotes outils sont respectées."
                 },
                 {
                   "id": "C3.33",
-                  "etre_capable_de": "Identifier sur la machine les organes de rÃ©glage et de commande",
-                  "critere_evaluation": "L'identification des organes de rÃ©glage et de commande est correcte."
+                  "etre_capable_de": "Identifier sur la machine les organes de réglage et de commande",
+                  "critere_evaluation": "L'identification des organes de réglage et de commande est correcte."
                 },
                 {
                   "id": "C3.34",
                   "etre_capable_de": "Mettre et maintenir en position le ou les montages d'usinage, le ou les appareillages",
-                  "critere_evaluation": "La mise et le maintien en position tiennent compte des caractÃ©ristiques physiques et mÃ©caniques des matÃ©riaux ainsi que des efforts de coupe."
+                  "critere_evaluation": "La mise et le maintien en position tiennent compte des caractéristiques physiques et mécaniques des matériaux ainsi que des efforts de coupe."
                 },
                 {
                   "id": "C3.35",
-                  "etre_capable_de": "Installer les outils et rÃ©gler les positions relatives au couple outil/piÃ¨ce",
-                  "critere_evaluation": "La mÃ©thode d'installation et de rÃ©glage des outils est correcte. Le rÃ©glage respecte le contrat de fabrication (contrat de phase, dessin de fabrication, croquisâ¦)."
+                  "etre_capable_de": "Installer les outils et régler les positions relatives au couple outil/pièce",
+                  "critere_evaluation": "La méthode d'installation et de réglage des outils est correcte. Le réglage respecte le contrat de fabrication (contrat de phase, dessin de fabrication, croquis…)."
                 },
                 {
                   "id": "C3.36",
-                  "etre_capable_de": "Identifier, sÃ©lectionner et/ou modifier les donnÃ©es nÃ©cessaires Ã  l'opÃ©ration (vitesse, cyclesâ¦)",
-                  "critere_evaluation": "Le choix des donnÃ©es est adaptÃ© aux outils et aux matÃ©riaux."
+                  "etre_capable_de": "Identifier, sélectionner et/ou modifier les données nécessaires à l'opération (vitesse, cycles…)",
+                  "critere_evaluation": "Le choix des données est adapté aux outils et aux matériaux."
                 }
               ]
             },
             {
               "id": "C3.4",
-              "titre": "Conduire les opÃ©rations d'usinage : machines conventionnelles, machines Ã  positionnement numÃ©rique (PN) et Ã  commande numÃ©rique (CN)",
+              "titre": "Conduire les opérations d'usinage : machines conventionnelles, machines à positionnement numérique (PN) et à commande numérique (CN)",
               "items": [
                 {
                   "id": "C3.41",
-                  "etre_capable_de": "ProcÃ©der Ã  la mise en route des mouvements nÃ©cessaires Ã  l'opÃ©ration d'usinage",
-                  "critere_evaluation": "La procÃ©dure de mise en route est respectÃ©e."
+                  "etre_capable_de": "Procéder à la mise en route des mouvements nécessaires à l'opération d'usinage",
+                  "critere_evaluation": "La procédure de mise en route est respectée."
                 },
                 {
                   "id": "C3.42",
-                  "etre_capable_de": "Usiner les Ã©lÃ©ments",
-                  "critere_evaluation": "La conduite de l'usinage est maÃ®trisÃ©e."
+                  "etre_capable_de": "Usiner les éléments",
+                  "critere_evaluation": "La conduite de l'usinage est maîtrisée."
                 },
                 {
                   "id": "C3.43",
-                  "etre_capable_de": "ContrÃ´ler les Ã©lÃ©ments usinÃ©s",
-                  "critere_evaluation": "Les rÃ©sultats sont conformes aux spÃ©cifications."
+                  "etre_capable_de": "Contrôler les éléments usinés",
+                  "critere_evaluation": "Les résultats sont conformes aux spécifications."
                 },
                 {
                   "id": "C3.44",
-                  "etre_capable_de": "Effectuer les actions correctives nÃ©cessaires",
-                  "critere_evaluation": "Les actions correctives apportÃ©es sont adaptÃ©es aux anomalies constatÃ©es."
+                  "etre_capable_de": "Effectuer les actions correctives nécessaires",
+                  "critere_evaluation": "Les actions correctives apportées sont adaptées aux anomalies constatées."
                 },
                 {
                   "id": "C3.45",
-                  "etre_capable_de": "Remettre les postes de travail dans leur Ã©tat initial",
-                  "critere_evaluation": "Le poste de travail est opÃ©rationnel."
+                  "etre_capable_de": "Remettre les postes de travail dans leur état initial",
+                  "critere_evaluation": "Le poste de travail est opérationnel."
                 }
               ]
             },
             {
               "id": "C3.5",
-              "titre": "Conduire les opÃ©rations de mise en forme et de placage",
+              "titre": "Conduire les opérations de mise en forme et de placage",
               "items": [
                 {
                   "id": "C3.51",
-                  "etre_capable_de": "Positionner et rÃ©gler les systÃ¨mes de serrage, de pressage, d'assemblage, de cadrage",
-                  "critere_evaluation": "Les positions, les rÃ©glages respectent les prescriptions et les rÃ¨gles d'ergonomie."
+                  "etre_capable_de": "Positionner et régler les systèmes de serrage, de pressage, d'assemblage, de cadrage",
+                  "critere_evaluation": "Les positions, les réglages respectent les prescriptions et les règles d'ergonomie."
                 },
                 {
                   "id": "C3.52",
-                  "etre_capable_de": "Encoller et/ou insÃ©rer les piÃ¨ces et les composants",
+                  "etre_capable_de": "Encoller et/ou insérer les pièces et les composants",
                   "critere_evaluation": "L'encollage est conforme aux prescriptions."
                 },
                 {
                   "id": "C3.53",
-                  "etre_capable_de": "Cadrer, presser et solidariser les piÃ¨ces et les composants",
-                  "critere_evaluation": "La mÃ©thodologie est respectÃ©e."
+                  "etre_capable_de": "Cadrer, presser et solidariser les pièces et les composants",
+                  "critere_evaluation": "La méthodologie est respectée."
                 },
                 {
                   "id": "C3.54",
-                  "etre_capable_de": "ContrÃ´ler les caractÃ©ristiques mÃ©caniques dimensionnelles, gÃ©omÃ©triques et esthÃ©tiques",
-                  "critere_evaluation": "L'ouvrage est conforme aux spÃ©cifications de fabrication."
+                  "etre_capable_de": "Contrôler les caractéristiques mécaniques dimensionnelles, géométriques et esthétiques",
+                  "critere_evaluation": "L'ouvrage est conforme aux spécifications de fabrication."
                 },
                 {
                   "id": "C3.55",
-                  "etre_capable_de": "Effectuer si nÃ©cessaire les actions correctives",
-                  "critere_evaluation": "Les corrections apportÃ©es sont pertinentes."
+                  "etre_capable_de": "Effectuer si nécessaire les actions correctives",
+                  "critere_evaluation": "Les corrections apportées sont pertinentes."
                 },
                 {
                   "id": "C3.56",
                   "etre_capable_de": "Desserrer et extraire l'ouvrage",
-                  "critere_evaluation": "L'ouvrage est dÃ©posÃ© sans dommage."
+                  "critere_evaluation": "L'ouvrage est déposé sans dommage."
                 },
                 {
                   "id": "C3.57",
-                  "etre_capable_de": "Remettre le poste de travail dans son Ã©tat initial",
-                  "critere_evaluation": "Le poste de travail est opÃ©rationnel."
+                  "etre_capable_de": "Remettre le poste de travail dans son état initial",
+                  "critere_evaluation": "Le poste de travail est opérationnel."
                 }
               ]
             },
             {
               "id": "C3.6",
-              "titre": "Conduire les opÃ©rations de montage et de finition",
+              "titre": "Conduire les opérations de montage et de finition",
               "items": [
                 {
                   "id": "C3.61",
-                  "etre_capable_de": "SÃ©lectionner les piÃ¨ces ou composants Ã  monter, Ã  finir",
-                  "critere_evaluation": "Les piÃ¨ces sÃ©lectionnÃ©es permettent le montage."
+                  "etre_capable_de": "Sélectionner les pièces ou composants à monter, à finir",
+                  "critere_evaluation": "Les pièces sélectionnées permettent le montage."
                 },
                 {
                   "id": "C3.62",
                   "etre_capable_de": "Cadrer, monter et solidariser les sous-ensembles",
-                  "critere_evaluation": "La mÃ©thodologie est respectÃ©e."
+                  "critere_evaluation": "La méthodologie est respectée."
                 },
                 {
                   "id": "C3.63",
-                  "etre_capable_de": "PrÃ©parer les surfaces Ã  traiter (ponÃ§age, Ã©grainageâ¦)",
-                  "critere_evaluation": "Les surfaces sont prÃ©parÃ©es selon le niveau de qualitÃ© demandÃ©."
+                  "etre_capable_de": "Préparer les surfaces à traiter (ponçage, égrainage…)",
+                  "critere_evaluation": "Les surfaces sont préparées selon le niveau de qualité demandé."
                 },
                 {
                   "id": "C3.64",
-                  "etre_capable_de": "Mettre en Åuvre les produits et les matÃ©riels d'application",
-                  "critere_evaluation": "L'application des produits est conforme aux spÃ©cifications."
+                  "etre_capable_de": "Mettre en œuvre les produits et les matériels d'application",
+                  "critere_evaluation": "L'application des produits est conforme aux spécifications."
                 },
                 {
                   "id": "C3.65",
-                  "etre_capable_de": "ContrÃ´ler en cours, en fin de montage et de finition : les caractÃ©ristiques fonctionnelles, dimensionnelles, gÃ©omÃ©triques, esthÃ©tiques",
-                  "critere_evaluation": "Les organes de liaison et les Ã©quipements sont correctement installÃ©s. Les contrÃ´les effectuÃ©s permettent de valider les caractÃ©ristiques et le bon fonctionnement de l'ouvrage."
+                  "etre_capable_de": "Contrôler en cours, en fin de montage et de finition : les caractéristiques fonctionnelles, dimensionnelles, géométriques, esthétiques",
+                  "critere_evaluation": "Les organes de liaison et les équipements sont correctement installés. Les contrôles effectués permettent de valider les caractéristiques et le bon fonctionnement de l'ouvrage."
                 },
                 {
                   "id": "C3.66",
-                  "etre_capable_de": "Remettre le poste de travail dans son Ã©tat initial",
-                  "critere_evaluation": "Le poste de travail est opÃ©rationnel."
+                  "etre_capable_de": "Remettre le poste de travail dans son état initial",
+                  "critere_evaluation": "Le poste de travail est opérationnel."
                 },
                 {
                   "id": "C3.67",
                   "etre_capable_de": "Conditionner et stocker les ouvrages finis",
-                  "critere_evaluation": "Le conditionnement protÃ¨ge efficacement l'ouvrage. Le stockage est rationnel."
+                  "critere_evaluation": "Le conditionnement protège efficacement l'ouvrage. Le stockage est rationnel."
                 }
               ]
             }
@@ -2561,72 +2561,72 @@
         },
         {
           "id": "C4",
-          "titre": "Mettre en Åuvre sur chantier",
+          "titre": "Mettre en œuvre sur chantier",
           "competences_terminales": [
             {
               "id": "C4.1",
-              "titre": "Organiser et mettre en sÃ©curitÃ© la zone d'intervention",
+              "titre": "Organiser et mettre en sécurité la zone d'intervention",
               "items": [
                 {
                   "id": "C4.11",
-                  "etre_capable_de": "PrÃ©parer les matÃ©riels, machines Ã©lectroportatives et outillages adaptÃ©s au chantier",
-                  "critere_evaluation": "Les matÃ©riels et les machines prÃ©parÃ©s correspondent aux besoins."
+                  "etre_capable_de": "Préparer les matériels, machines électroportatives et outillages adaptés au chantier",
+                  "critere_evaluation": "Les matériels et les machines préparés correspondent aux besoins."
                 },
                 {
                   "id": "C4.12",
-                  "etre_capable_de": "PrÃ©parer les accessoires de mise en Åuvre",
-                  "critere_evaluation": "L'ensemble est prÃ©parÃ© sans erreur."
+                  "etre_capable_de": "Préparer les accessoires de mise en œuvre",
+                  "critere_evaluation": "L'ensemble est préparé sans erreur."
                 },
                 {
                   "id": "C4.13",
-                  "etre_capable_de": "VÃ©rifier les dispositifs de protection collective du chantier et proposer si nÃ©cessaire des modifications",
-                  "critere_evaluation": "L'organisation du poste et de son environnement est conforme aux donnÃ©es et aux rÃ¨gles d'ergonomie. Le PPSPS est respectÃ©."
+                  "etre_capable_de": "Vérifier les dispositifs de protection collective du chantier et proposer si nécessaire des modifications",
+                  "critere_evaluation": "L'organisation du poste et de son environnement est conforme aux données et aux règles d'ergonomie. Le PPSPS est respecté."
                 },
                 {
                   "id": "C4.14",
-                  "etre_capable_de": "ProtÃ©ger l'environnement immÃ©diat de pose et de dÃ©pose : locaux habitÃ©s ou non, installations et matÃ©riels",
-                  "critere_evaluation": "Les locaux et les biens sont correctement protÃ©gÃ©s."
+                  "etre_capable_de": "Protéger l'environnement immédiat de pose et de dépose : locaux habités ou non, installations et matériels",
+                  "critere_evaluation": "Les locaux et les biens sont correctement protégés."
                 },
                 {
                   "id": "C4.15",
-                  "etre_capable_de": "Installer les moyens d'accÃ¨s et Ã©chafaudages de travail adaptÃ©s",
-                  "critere_evaluation": "L'installation des moyens d'accÃ¨s et des Ã©chafaudages est conforme et adaptÃ©e Ã  la situation du chantier."
+                  "etre_capable_de": "Installer les moyens d'accès et échafaudages de travail adaptés",
+                  "critere_evaluation": "L'installation des moyens d'accès et des échafaudages est conforme et adaptée à la situation du chantier."
                 },
                 {
                   "id": "C4.16",
-                  "etre_capable_de": "S'Ã©quiper des protections individuelles adaptÃ©es Ã  la situation du chantier",
-                  "critere_evaluation": "Les Ã©quipements de protection individuels sont correctement utilisÃ©s."
+                  "etre_capable_de": "S'équiper des protections individuelles adaptées à la situation du chantier",
+                  "critere_evaluation": "Les équipements de protection individuels sont correctement utilisés."
                 },
                 {
                   "id": "C4.17",
-                  "etre_capable_de": "DÃ©sinstaller le poste de travail",
-                  "critere_evaluation": "Les matÃ©riels sont dÃ©sinstallÃ©s conformÃ©ment aux procÃ©dures et consignes de sÃ©curitÃ©."
+                  "etre_capable_de": "Désinstaller le poste de travail",
+                  "critere_evaluation": "Les matériels sont désinstallés conformément aux procédures et consignes de sécurité."
                 },
                 {
                   "id": "C4.18",
-                  "etre_capable_de": "ContrÃ´ler et ranger les matÃ©riels, machines et outillages",
-                  "critere_evaluation": "Les matÃ©riels, machines et outillages sont contrÃ´lÃ©s, rangÃ©s pour une nouvelle utilisation."
+                  "etre_capable_de": "Contrôler et ranger les matériels, machines et outillages",
+                  "critere_evaluation": "Les matériels, machines et outillages sont contrôlés, rangés pour une nouvelle utilisation."
                 }
               ]
             },
             {
               "id": "C4.2",
-              "titre": "ContrÃ´ler la conformitÃ© des supports et des ouvrages",
+              "titre": "Contrôler la conformité des supports et des ouvrages",
               "items": [
                 {
                   "id": "C4.21",
-                  "etre_capable_de": "ContrÃ´ler et rÃ©ceptionner les ouvrages et les produits : leurs caractÃ©ristiques gÃ©omÃ©triques et dimensionnelles, l'aspect, la finition, l'absence de dÃ©gradations",
-                  "critere_evaluation": "Les caractÃ©ristiques des ouvrages et des produits sont conformes. La procÃ©dure de rÃ©ception est fiable."
+                  "etre_capable_de": "Contrôler et réceptionner les ouvrages et les produits : leurs caractéristiques géométriques et dimensionnelles, l'aspect, la finition, l'absence de dégradations",
+                  "critere_evaluation": "Les caractéristiques des ouvrages et des produits sont conformes. La procédure de réception est fiable."
                 },
                 {
                   "id": "C4.22",
-                  "etre_capable_de": "VÃ©rifier les rÃ©fÃ©rentiels et les rÃ©servations existants : niveau de sol brut, sol finiâ¦, aplomb des murs, gÃ©omÃ©trie des baies et trÃ©miesâ¦, axes et alignement",
-                  "critere_evaluation": "Les rÃ©fÃ©rentiels existants et les rÃ©servations sont correctement identifiÃ©s et vÃ©rifiÃ©s."
+                  "etre_capable_de": "Vérifier les référentiels et les réservations existants : niveau de sol brut, sol fini…, aplomb des murs, géométrie des baies et trémies…, axes et alignement",
+                  "critere_evaluation": "Les référentiels existants et les réservations sont correctement identifiés et vérifiés."
                 },
                 {
                   "id": "C4.23",
-                  "etre_capable_de": "Identifier les contraintes de mise en Åuvre : obstacles, rÃ©seaux, travaux, en coursâ¦",
-                  "critere_evaluation": "Les diffÃ©rentes contraintes sont identifiÃ©es et prises en compte."
+                  "etre_capable_de": "Identifier les contraintes de mise en œuvre : obstacles, réseaux, travaux, en cours…",
+                  "critere_evaluation": "Les différentes contraintes sont identifiées et prises en compte."
                 }
               ]
             },
@@ -2636,158 +2636,158 @@
               "items": [
                 {
                   "id": "C4.31",
-                  "etre_capable_de": "Tracer l'implantation des ouvrages : axes, alignements, Ã©paisseurs, niveau, aplomb, surfaces de rÃ©fÃ©rence, rÃ©partition, calepinageâ¦",
-                  "critere_evaluation": "Les tracÃ©s sont effectuÃ©s avec mÃ©thode et sont justes."
+                  "etre_capable_de": "Tracer l'implantation des ouvrages : axes, alignements, épaisseurs, niveau, aplomb, surfaces de référence, répartition, calepinage…",
+                  "critere_evaluation": "Les tracés sont effectués avec méthode et sont justes."
                 },
                 {
                   "id": "C4.32",
-                  "etre_capable_de": "Distribuer, stocker les ouvrages, les produits et les matÃ©riaux sur la zone d'intervention",
-                  "critere_evaluation": "La distribution est juste. Les quantitÃ©s sont exactes. Les risques de dÃ©formation ou de dÃ©gradation sont pris en compte lors du stockage provisoire."
+                  "etre_capable_de": "Distribuer, stocker les ouvrages, les produits et les matériaux sur la zone d'intervention",
+                  "critere_evaluation": "La distribution est juste. Les quantités sont exactes. Les risques de déformation ou de dégradation sont pris en compte lors du stockage provisoire."
                 }
               ]
             },
             {
               "id": "C4.4",
-              "titre": "PrÃ©parer, adapter, ajuster les ouvrages",
+              "titre": "Préparer, adapter, ajuster les ouvrages",
               "items": [
                 {
                   "id": "C4.41",
-                  "etre_capable_de": "PrÃ©parer et/ou assembler les ouvrages et les quincailleries",
-                  "critere_evaluation": "Les ouvrages sont correctement prÃ©parÃ©s et assemblÃ©s."
+                  "etre_capable_de": "Préparer et/ou assembler les ouvrages et les quincailleries",
+                  "critere_evaluation": "Les ouvrages sont correctement préparés et assemblés."
                 },
                 {
                   "id": "C4.42",
-                  "etre_capable_de": "PrÃ©senter de faÃ§on provisoire les ouvrages de menuiserie, d'agencement",
+                  "etre_capable_de": "Présenter de façon provisoire les ouvrages de menuiserie, d'agencement",
                   "critere_evaluation": "Le positionnement de l'ouvrage est conforme aux plans et/ou aux instructions."
                 },
                 {
                   "id": "C4.43",
-                  "etre_capable_de": "RÃ©gler les ouvrages : niveau et aplomb, alignements, jeux, Ã©paisseurs, mobilitÃ©s et fonctionnement",
-                  "critere_evaluation": "Les rÃ©glages respectent les conditions fonctionnelles de l'ouvrage."
+                  "etre_capable_de": "Régler les ouvrages : niveau et aplomb, alignements, jeux, épaisseurs, mobilités et fonctionnement",
+                  "critere_evaluation": "Les réglages respectent les conditions fonctionnelles de l'ouvrage."
                 },
                 {
                   "id": "C4.44",
-                  "etre_capable_de": "Maintenir en position temporaire les diffÃ©rents Ã©lÃ©ments ou composants",
-                  "critere_evaluation": "Le maintien en position est conforme aux contraintes et aux spÃ©cifications."
+                  "etre_capable_de": "Maintenir en position temporaire les différents éléments ou composants",
+                  "critere_evaluation": "Le maintien en position est conforme aux contraintes et aux spécifications."
                 },
                 {
                   "id": "C4.45",
                   "etre_capable_de": "Positionner les fixations",
-                  "critere_evaluation": "Le positionnement des fixations est effectuÃ© sans erreur."
+                  "critere_evaluation": "Le positionnement des fixations est effectué sans erreur."
                 },
                 {
                   "id": "C4.46",
-                  "etre_capable_de": "Adapter, ajuster, traÃ®ner les ouvrages aux supports",
+                  "etre_capable_de": "Adapter, ajuster, traîner les ouvrages aux supports",
                   "critere_evaluation": "L'ajustage est correct."
                 }
               ]
             },
             {
               "id": "C4.5",
-              "titre": "Conduire les opÃ©rations de pose sur chantier",
+              "titre": "Conduire les opérations de pose sur chantier",
               "items": [
                 {
                   "id": "C4.51",
-                  "etre_capable_de": "RÃ©gler dÃ©finitivement les ouvrages : niveau et aplomb, alignements, jeux, Ã©paisseurs, mobilitÃ©s et fonctionnement",
-                  "critere_evaluation": "Les rÃ©glages respectent les conditions fonctionnelles de l'ouvrage."
+                  "etre_capable_de": "Régler définitivement les ouvrages : niveau et aplomb, alignements, jeux, épaisseurs, mobilités et fonctionnement",
+                  "critere_evaluation": "Les réglages respectent les conditions fonctionnelles de l'ouvrage."
                 },
                 {
                   "id": "C4.52",
-                  "etre_capable_de": "Mettre en Åuvre les fixations sur les supports : scellement hydraulique, scellement chimique, fixation mÃ©canique",
-                  "critere_evaluation": "Les fixations sont correctement posÃ©es."
+                  "etre_capable_de": "Mettre en œuvre les fixations sur les supports : scellement hydraulique, scellement chimique, fixation mécanique",
+                  "critere_evaluation": "Les fixations sont correctement posées."
                 },
                 {
                   "id": "C4.53",
-                  "etre_capable_de": "Mettre en Åuvre les produits d'Ã©tanchÃ©itÃ©",
-                  "critere_evaluation": "Les produits d'Ã©tanchÃ©itÃ© sont convenablement appliquÃ©s."
+                  "etre_capable_de": "Mettre en œuvre les produits d'étanchéité",
+                  "critere_evaluation": "Les produits d'étanchéité sont convenablement appliqués."
                 },
                 {
                   "id": "C4.54",
                   "etre_capable_de": "Solidariser les ouvrages aux supports",
-                  "critere_evaluation": "Les fixations respectent les contraintes imposÃ©es."
+                  "critere_evaluation": "Les fixations respectent les contraintes imposées."
                 },
                 {
                   "id": "C4.55",
-                  "etre_capable_de": "VÃ©rifier les mobilitÃ©s et le bon fonctionnement des ouvrages",
-                  "critere_evaluation": "Le bon fonctionnement de l'ouvrage est assurÃ©."
+                  "etre_capable_de": "Vérifier les mobilités et le bon fonctionnement des ouvrages",
+                  "critere_evaluation": "Le bon fonctionnement de l'ouvrage est assuré."
                 }
               ]
             },
             {
               "id": "C4.6",
-              "titre": "Installer les Ã©quipements techniques, les accessoires",
+              "titre": "Installer les équipements techniques, les accessoires",
               "items": [
                 {
                   "id": "C4.61",
-                  "etre_capable_de": "PrÃ©parer les Ã©quipements et les accessoires",
-                  "critere_evaluation": "Les Ã©quipements sont correctement prÃ©parÃ©s."
+                  "etre_capable_de": "Préparer les équipements et les accessoires",
+                  "critere_evaluation": "Les équipements sont correctement préparés."
                 },
                 {
                   "id": "C4.62",
-                  "etre_capable_de": "Positionner et rÃ©gler les Ã©quipements et les accessoires",
-                  "critere_evaluation": "Les cotes de pose sont respectÃ©es."
+                  "etre_capable_de": "Positionner et régler les équipements et les accessoires",
+                  "critere_evaluation": "Les cotes de pose sont respectées."
                 },
                 {
                   "id": "C4.63",
-                  "etre_capable_de": "Fixer ou installer les garnitures, les Ã©quipements, les accessoires, les Ã©lÃ©ments de dÃ©coration",
-                  "critere_evaluation": "La pose respecte les critÃ¨res esthÃ©tiques, fonctionnels et mÃ©caniques."
+                  "etre_capable_de": "Fixer ou installer les garnitures, les équipements, les accessoires, les éléments de décoration",
+                  "critere_evaluation": "La pose respecte les critères esthétiques, fonctionnels et mécaniques."
                 }
               ]
             },
             {
               "id": "C4.7",
-              "titre": "Assurer les opÃ©rations de finition pÃ©riphÃ©riques Ã  l'ouvrage",
+              "titre": "Assurer les opérations de finition périphériques à l'ouvrage",
               "items": [
                 {
                   "id": "C4.71",
-                  "etre_capable_de": "Identifier les opÃ©rations de finition Ã  mettre en Åuvre (raccords : parquet, carrelage, faÃ¯ence, plÃ¢tre, produits de finitionâ¦)",
-                  "critere_evaluation": "Toutes les opÃ©rations sont recensÃ©es."
+                  "etre_capable_de": "Identifier les opérations de finition à mettre en œuvre (raccords : parquet, carrelage, faïence, plâtre, produits de finition…)",
+                  "critere_evaluation": "Toutes les opérations sont recensées."
                 },
                 {
                   "id": "C4.72",
-                  "etre_capable_de": "ProtÃ©ger les ouvrages et les zones d'intervention",
-                  "critere_evaluation": "La protection des ouvrages et de la zone d'intervention est efficace et adaptÃ©e."
+                  "etre_capable_de": "Protéger les ouvrages et les zones d'intervention",
+                  "critere_evaluation": "La protection des ouvrages et de la zone d'intervention est efficace et adaptée."
                 },
                 {
                   "id": "C4.73",
-                  "etre_capable_de": "PrÃ©parer les supports Ã  retoucher, Ã  finir, Ã  raccorderâ¦",
-                  "critere_evaluation": "La prÃ©paration des supports permet l'application des produits."
+                  "etre_capable_de": "Préparer les supports à retoucher, à finir, à raccorder…",
+                  "critere_evaluation": "La préparation des supports permet l'application des produits."
                 },
                 {
                   "id": "C4.74",
-                  "etre_capable_de": "RÃ©aliser les opÃ©rations de finition",
-                  "critere_evaluation": "Les opÃ©rations de finition sont bien exÃ©cutÃ©es. L'esthÃ©tique est respectÃ©e."
+                  "etre_capable_de": "Réaliser les opérations de finition",
+                  "critere_evaluation": "Les opérations de finition sont bien exécutées. L'esthétique est respectée."
                 },
                 {
                   "id": "C4.75",
                   "etre_capable_de": "Nettoyer les ouvrages et les zones de l'intervention",
-                  "critere_evaluation": "Le nettoyage est correctement effectuÃ©."
+                  "critere_evaluation": "Le nettoyage est correctement effectué."
                 }
               ]
             },
             {
               "id": "C4.8",
-              "titre": "GÃ©rer la dÃ©pose des ouvrages et l'environnement du chantier",
+              "titre": "Gérer la dépose des ouvrages et l'environnement du chantier",
               "items": [
                 {
                   "id": "C4.81",
-                  "etre_capable_de": "Identifier et prÃ©parer les opÃ©rations de dÃ©pose",
-                  "critere_evaluation": "Toutes les opÃ©rations sont recensÃ©es."
+                  "etre_capable_de": "Identifier et préparer les opérations de dépose",
+                  "critere_evaluation": "Toutes les opérations sont recensées."
                 },
                 {
                   "id": "C4.82",
-                  "etre_capable_de": "DÃ©poser les ouvrages existants en respectant les locaux, les biens, l'environnement et les matÃ©riaux de rÃ©emploi",
-                  "critere_evaluation": "La dÃ©sinstallation est parfaitement maÃ®trisÃ©e."
+                  "etre_capable_de": "Déposer les ouvrages existants en respectant les locaux, les biens, l'environnement et les matériaux de réemploi",
+                  "critere_evaluation": "La désinstallation est parfaitement maîtrisée."
                 },
                 {
                   "id": "C4.83",
-                  "etre_capable_de": "Trier et stocker les dÃ©chets de chantier selon diffÃ©rents types : produits revalorisÃ©s, produits dÃ©truits, produits rÃ©employÃ©s",
-                  "critere_evaluation": "Le tri sÃ©lectif des dÃ©chets est effectuÃ© suivant la rÃ©glementation en vigueur. Les ouvrages Ã  revaloriser et Ã  rÃ©employer sont stockÃ©s suivant les consignes."
+                  "etre_capable_de": "Trier et stocker les déchets de chantier selon différents types : produits revalorisés, produits détruits, produits réemployés",
+                  "critere_evaluation": "Le tri sélectif des déchets est effectué suivant la réglementation en vigueur. Les ouvrages à revaloriser et à réemployer sont stockés suivant les consignes."
                 },
                 {
                   "id": "C4.84",
-                  "etre_capable_de": "Ãvacuer les dÃ©chets selon les conditions du chantier",
-                  "critere_evaluation": "L'Ã©vacuation est effectuÃ©e avec les moyens adaptÃ©s."
+                  "etre_capable_de": "Évacuer les déchets selon les conditions du chantier",
+                  "critere_evaluation": "L'évacuation est effectuée avec les moyens adaptés."
                 }
               ]
             }
@@ -2796,52 +2796,52 @@
         },
         {
           "id": "C5",
-          "titre": "Maintenir et remettre en Ã©tat",
+          "titre": "Maintenir et remettre en état",
           "competences_terminales": [
             {
               "id": "C5.1",
-              "titre": "Assurer la maintenance pÃ©riodique des ouvrages",
+              "titre": "Assurer la maintenance périodique des ouvrages",
               "items": [
                 {
                   "id": "C5.11",
                   "etre_capable_de": "Effectuer un diagnostic",
-                  "critere_evaluation": "Le diagnostic est pertinent. La panne est identifiÃ©e."
+                  "critere_evaluation": "Le diagnostic est pertinent. La panne est identifiée."
                 },
                 {
                   "id": "C5.12",
-                  "etre_capable_de": "Localiser les organes Ã  entretenir et/ou Ã  rÃ©parer des ouvrages",
-                  "critere_evaluation": "Les organes Ã  entretenir sont repÃ©rÃ©s et correspondent au contrat de maintenance. La localisation des organes se fait en toute sÃ©curitÃ©."
+                  "etre_capable_de": "Localiser les organes à entretenir et/ou à réparer des ouvrages",
+                  "critere_evaluation": "Les organes à entretenir sont repérés et correspondent au contrat de maintenance. La localisation des organes se fait en toute sécurité."
                 },
                 {
                   "id": "C5.13",
-                  "etre_capable_de": "ProtÃ©ger les existants",
-                  "critere_evaluation": "La protection des ouvrages et de la zone d'intervention est efficace et adaptÃ©e."
+                  "etre_capable_de": "Protéger les existants",
+                  "critere_evaluation": "La protection des ouvrages et de la zone d'intervention est efficace et adaptée."
                 },
                 {
                   "id": "C5.14",
-                  "etre_capable_de": "Effectuer les opÃ©rations de maintenance et/ou de rÃ©paration : dÃ©montage et montage, remplacement d'organes simples (ferme-porte, poignÃ©e, barilletâ¦), remplacement d'Ã©lÃ©ments dÃ©fectueux (bois, verreâ¦), graissage, rÃ©glage des jeux fonctionnels",
-                  "critere_evaluation": "Les habillages et les accessoires sont dÃ©montÃ©s sans dÃ©tÃ©rioration et leurs emplacements sont repÃ©rÃ©s. Le remplacement des Ã©lÃ©ments dÃ©fectueux est adaptÃ©. Les points de graissage sont identifiÃ©s et la lubrification est correctement effectuÃ©e. AprÃ¨s remontage, essais effectuÃ©s, l'ouvrage retrouve sa fonctionnalitÃ© et sa configuration d'origine."
+                  "etre_capable_de": "Effectuer les opérations de maintenance et/ou de réparation : démontage et montage, remplacement d'organes simples (ferme-porte, poignée, barillet…), remplacement d'éléments défectueux (bois, verre…), graissage, réglage des jeux fonctionnels",
+                  "critere_evaluation": "Les habillages et les accessoires sont démontés sans détérioration et leurs emplacements sont repérés. Le remplacement des éléments défectueux est adapté. Les points de graissage sont identifiés et la lubrification est correctement effectuée. Après remontage, essais effectués, l'ouvrage retrouve sa fonctionnalité et sa configuration d'origine."
                 }
               ]
             },
             {
               "id": "C5.2",
-              "titre": "Maintenir en Ã©tat les matÃ©riels, les Ã©quipements et les outillages (maintenance de premier niveau â NF X 60-010)",
+              "titre": "Maintenir en état les matériels, les équipements et les outillages (maintenance de premier niveau – NF X 60-010)",
               "items": [
                 {
                   "id": "C5.21",
-                  "etre_capable_de": "Mettre en sÃ©curitÃ© la zone d'intervention (machineâ¦)",
-                  "critere_evaluation": "La zone de l'intervention est protÃ©gÃ©e et sÃ©curisÃ©e (isolation de la machine, coupure des Ã©nergiesâ¦)."
+                  "etre_capable_de": "Mettre en sécurité la zone d'intervention (machine…)",
+                  "critere_evaluation": "La zone de l'intervention est protégée et sécurisée (isolation de la machine, coupure des énergies…)."
                 },
                 {
                   "id": "C5.22",
-                  "etre_capable_de": "VÃ©rifier l'Ã©tat de fonctionnement des matÃ©riels, des Ã©quipements, des outillages",
-                  "critere_evaluation": "La vÃ©rification est mÃ©thodique. L'Ã©tat des Ã©quipements et des matÃ©riels est correctement Ã©valuÃ©."
+                  "etre_capable_de": "Vérifier l'état de fonctionnement des matériels, des équipements, des outillages",
+                  "critere_evaluation": "La vérification est méthodique. L'état des équipements et des matériels est correctement évalué."
                 },
                 {
                   "id": "C5.23",
-                  "etre_capable_de": "ContrÃ´ler l'Ã©tat de coupe et le rangement des outillages",
-                  "critere_evaluation": "Les outils garantissent une coupe parfaite de la matiÃ¨re. Le stockage rend les outils accessibles et assure une longÃ©vitÃ© optimale."
+                  "etre_capable_de": "Contrôler l'état de coupe et le rangement des outillages",
+                  "critere_evaluation": "Les outils garantissent une coupe parfaite de la matière. Le stockage rend les outils accessibles et assure une longévité optimale."
                 },
                 {
                   "id": "C5.24",
@@ -2850,23 +2850,23 @@
                 },
                 {
                   "id": "C5.25",
-                  "etre_capable_de": "Ãvaluer et proposer des solutions de remise en Ã©tat",
-                  "critere_evaluation": "Les solutions proposÃ©es de remise en Ã©tat sont adaptÃ©es au dysfonctionnement."
+                  "etre_capable_de": "Évaluer et proposer des solutions de remise en état",
+                  "critere_evaluation": "Les solutions proposées de remise en état sont adaptées au dysfonctionnement."
                 },
                 {
                   "id": "C5.26",
-                  "etre_capable_de": "AffÃ»ter les outillages manuels",
-                  "critere_evaluation": "L'affÃ»tage des outillages manuels permet une coupe parfaite de la matiÃ¨re."
+                  "etre_capable_de": "Affûter les outillages manuels",
+                  "critere_evaluation": "L'affûtage des outillages manuels permet une coupe parfaite de la matière."
                 },
                 {
                   "id": "C5.27",
-                  "etre_capable_de": "Remplacer, rÃ©gler les outillages de machines d'atelier et d'Ã©quipements portatifs",
-                  "critere_evaluation": "Le remplacement et le rÃ©glage des outillages assurent une bonne utilisation des machines et des Ã©quipements."
+                  "etre_capable_de": "Remplacer, régler les outillages de machines d'atelier et d'équipements portatifs",
+                  "critere_evaluation": "Le remplacement et le réglage des outillages assurent une bonne utilisation des machines et des équipements."
                 },
                 {
                   "id": "C5.28",
                   "etre_capable_de": "Nettoyer et assurer l'entretien quotidien",
-                  "critere_evaluation": "L'entretien est correctement assurÃ© et rend les Ã©quipements opÃ©rationnels."
+                  "critere_evaluation": "L'entretien est correctement assuré et rend les équipements opérationnels."
                 }
               ]
             }
@@ -2879,79 +2879,79 @@
           "competences_terminales": [
             {
               "id": "C6.1",
-              "titre": "Animer une Ã©quipe",
+              "titre": "Animer une équipe",
               "items": [
                 {
                   "id": "C6.11",
                   "etre_capable_de": "Proposer et expliquer un lancement de travail et/ou de pose",
-                  "critere_evaluation": "L'explication et la dÃ©marche mÃ©thodique sont adaptÃ©es Ã  la situation et Ã  l'ampleur de l'activitÃ©."
+                  "critere_evaluation": "L'explication et la démarche méthodique sont adaptées à la situation et à l'ampleur de l'activité."
                 },
                 {
                   "id": "C6.12",
                   "etre_capable_de": "Exposer et argumenter des solutions de modifications",
-                  "critere_evaluation": "Les consignes sont claires et prÃ©cises."
+                  "critere_evaluation": "Les consignes sont claires et précises."
                 },
                 {
                   "id": "C6.13",
-                  "etre_capable_de": "VÃ©rifier la bonne comprÃ©hension des consignes",
-                  "critere_evaluation": "Le rÃ©sultat est conforme aux attentes."
+                  "etre_capable_de": "Vérifier la bonne compréhension des consignes",
+                  "critere_evaluation": "Le résultat est conforme aux attentes."
                 }
               ]
             },
             {
               "id": "C6.2",
-              "titre": "Animer les actions qualitÃ© et sÃ©curitÃ©",
+              "titre": "Animer les actions qualité et sécurité",
               "items": [
                 {
                   "id": "C6.21",
-                  "etre_capable_de": "PrÃ©parer une action",
-                  "critere_evaluation": "L'action contribue Ã  l'amÃ©lioration de la qualitÃ©."
+                  "etre_capable_de": "Préparer une action",
+                  "critere_evaluation": "L'action contribue à l'amélioration de la qualité."
                 },
                 {
                   "id": "C6.22",
-                  "etre_capable_de": "Animer un groupe de travail pour l'amÃ©lioration de la qualitÃ©",
-                  "critere_evaluation": "Toutes les idÃ©es sont Ã©tudiÃ©es. Les temps de parole sont coordonnÃ©s. Les interlocuteurs sont Ã©coutÃ©s et valorisÃ©s."
+                  "etre_capable_de": "Animer un groupe de travail pour l'amélioration de la qualité",
+                  "critere_evaluation": "Toutes les idées sont étudiées. Les temps de parole sont coordonnés. Les interlocuteurs sont écoutés et valorisés."
                 },
                 {
                   "id": "C6.23",
-                  "etre_capable_de": "Informer sur la sÃ©curitÃ© pour l'utilisation des machines et des matÃ©riels Ã  l'atelier et sur chantier",
+                  "etre_capable_de": "Informer sur la sécurité pour l'utilisation des machines et des matériels à l'atelier et sur chantier",
                   "critere_evaluation": "Les informations sont transmises avec pertinence."
                 },
                 {
                   "id": "C6.24",
-                  "etre_capable_de": "Ãvaluer les rÃ©sultats",
-                  "critere_evaluation": "Les actions permettent d'amÃ©liorer l'efficacitÃ© de l'entreprise."
+                  "etre_capable_de": "Évaluer les résultats",
+                  "critere_evaluation": "Les actions permettent d'améliorer l'efficacité de l'entreprise."
                 }
               ]
             },
             {
               "id": "C6.3",
-              "titre": "Rendre compte d'une activitÃ©",
+              "titre": "Rendre compte d'une activité",
               "items": [
                 {
                   "id": "C6.31",
-                  "etre_capable_de": "Exposer et expliciter la mise en service et le fonctionnement d'appareils et de matÃ©riels",
-                  "critere_evaluation": "Le compte-rendu est clair, prÃ©cis. Les informations, les observations Ã©crites et orales sont fiables et exploitables."
+                  "etre_capable_de": "Exposer et expliciter la mise en service et le fonctionnement d'appareils et de matériels",
+                  "critere_evaluation": "Le compte-rendu est clair, précis. Les informations, les observations écrites et orales sont fiables et exploitables."
                 },
                 {
                   "id": "C6.32",
-                  "etre_capable_de": "Exposer et expliciter l'ensemble des informations et des dÃ©cisions relatives Ã  la gestion du suivi de l'ajustement, de la fabrication et de la pose",
-                  "critere_evaluation": "Le compte-rendu est clair, prÃ©cis."
+                  "etre_capable_de": "Exposer et expliciter l'ensemble des informations et des décisions relatives à la gestion du suivi de l'ajustement, de la fabrication et de la pose",
+                  "critere_evaluation": "Le compte-rendu est clair, précis."
                 }
               ]
             },
             {
               "id": "C6.4",
-              "titre": "Communiquer avec les diffÃ©rents partenaires",
+              "titre": "Communiquer avec les différents partenaires",
               "items": [
                 {
                   "id": "C6.41",
-                  "etre_capable_de": "Savoir prendre contact avec un client, un fournisseur ou une autoritÃ© hiÃ©rarchique",
+                  "etre_capable_de": "Savoir prendre contact avec un client, un fournisseur ou une autorité hiérarchique",
                   "critere_evaluation": "La prise de contact est correcte."
                 },
                 {
                   "id": "C6.42",
-                  "etre_capable_de": "Identifier les services destinataires. SÃ©lectionner et rÃ©diger l'information. Diffuser l'information. S'assurer de la rÃ©ception de l'information.",
+                  "etre_capable_de": "Identifier les services destinataires. Sélectionner et rédiger l'information. Diffuser l'information. S'assurer de la réception de l'information.",
                   "critere_evaluation": "Les informations sont transmises aux bons destinataires. Les informations sont fiables, pertinentes et exploitables."
                 }
               ]
@@ -2962,7 +2962,7 @@
       ]
     },
     "savoirs": {
-      "titre": "Savoirs Technologiques AssociÃ©s",
+      "titre": "Savoirs Technologiques Associés",
       "domaines": [
         {
           "id": "S1",
@@ -2970,7 +2970,7 @@
           "sous_domaines": [
             {
               "id": "S1.1",
-              "titre": "Les systÃ¨mes de reprÃ©sentation"
+              "titre": "Les systèmes de représentation"
             },
             {
               "id": "S1.2",
@@ -2996,11 +2996,11 @@
             },
             {
               "id": "S2.3",
-              "titre": "L'Ã©tanchÃ©itÃ© Ã  l'eau"
+              "titre": "L'étanchéité à l'eau"
             },
             {
               "id": "S2.4",
-              "titre": "L'Ã©tanchÃ©itÃ© Ã  l'air"
+              "titre": "L'étanchéité à l'air"
             },
             {
               "id": "S2.5",
@@ -3008,7 +3008,7 @@
             },
             {
               "id": "S2.6",
-              "titre": "L'aÃ©ration et la ventilation des logements"
+              "titre": "L'aération et la ventilation des logements"
             },
             {
               "id": "S2.7",
@@ -3016,7 +3016,7 @@
             },
             {
               "id": "S2.8",
-              "titre": "L'accessibilitÃ© et la sÃ©curitÃ© des personnes"
+              "titre": "L'accessibilité et la sécurité des personnes"
             },
             {
               "id": "S2.9",
@@ -3026,11 +3026,11 @@
         },
         {
           "id": "S3",
-          "titre": "La mÃ©canique et la rÃ©sistance des matÃ©riaux",
+          "titre": "La mécanique et la résistance des matériaux",
           "sous_domaines": [
             {
               "id": "S3.1",
-              "titre": "Le systÃ¨me constructif de l'ouvrage"
+              "titre": "Le système constructif de l'ouvrage"
             },
             {
               "id": "S3.2",
@@ -3038,15 +3038,15 @@
             },
             {
               "id": "S3.3",
-              "titre": "La rÃ©sistance des matÃ©riaux"
+              "titre": "La résistance des matériaux"
             },
             {
               "id": "S3.4",
-              "titre": "Les liaisons et la stabilitÃ© de l'ouvrage"
+              "titre": "Les liaisons et la stabilité de l'ouvrage"
             },
             {
               "id": "S3.5",
-              "titre": "La vÃ©rification et le dimensionnement"
+              "titre": "La vérification et le dimensionnement"
             }
           ]
         },
@@ -3056,25 +3056,25 @@
           "sous_domaines": [
             {
               "id": "S4.1",
-              "titre": "Les gÃ©nÃ©ralitÃ©s"
+              "titre": "Les généralités"
             },
             {
               "id": "S4.2",
-              "titre": "L'Ã©tude des ouvrages"
+              "titre": "L'étude des ouvrages"
             }
           ]
         },
         {
           "id": "S5",
-          "titre": "Les matÃ©riaux, les produits et les composants",
+          "titre": "Les matériaux, les produits et les composants",
           "sous_domaines": [
             {
               "id": "S5.1",
-              "titre": "Les matÃ©riaux"
+              "titre": "Les matériaux"
             },
             {
               "id": "S5.2",
-              "titre": "Les matÃ©riaux connexes"
+              "titre": "Les matériaux connexes"
             },
             {
               "id": "S5.3",
@@ -3088,7 +3088,7 @@
         },
         {
           "id": "S6",
-          "titre": "Les moyens et les techniques de fabrication et de mise en Åuvre sur chantier",
+          "titre": "Les moyens et les techniques de fabrication et de mise en œuvre sur chantier",
           "sous_domaines": [
             {
               "id": "S6.1",
@@ -3100,7 +3100,7 @@
             },
             {
               "id": "S6.3",
-              "titre": "La cinÃ©matique de la coupe"
+              "titre": "La cinématique de la coupe"
             },
             {
               "id": "S6.4",
@@ -3116,7 +3116,7 @@
             },
             {
               "id": "S6.7",
-              "titre": "Les moyens et les techniques de contrÃ´le"
+              "titre": "Les moyens et les techniques de contrôle"
             },
             {
               "id": "S6.8",
@@ -3124,25 +3124,25 @@
             },
             {
               "id": "S6.9",
-              "titre": "Les moyens et les techniques de mise en Åuvre sur chantier"
+              "titre": "Les moyens et les techniques de mise en œuvre sur chantier"
             }
           ]
         },
         {
           "id": "S7",
-          "titre": "La santÃ© et la sÃ©curitÃ© au travail",
+          "titre": "La santé et la sécurité au travail",
           "sous_domaines": [
             {
               "id": "S7.1",
-              "titre": "Les principes gÃ©nÃ©raux prÃ©vention, connaissances des risques"
+              "titre": "Les principes généraux prévention, connaissances des risques"
             },
             {
               "id": "S7.2",
-              "titre": "La conduite Ã  tenir en cas d'accident"
+              "titre": "La conduite à tenir en cas d'accident"
             },
             {
               "id": "S7.3",
-              "titre": "Les manutentions manuelles et mÃ©caniques, l'organisation du poste de travail"
+              "titre": "Les manutentions manuelles et mécaniques, l'organisation du poste de travail"
             },
             {
               "id": "S7.4",
@@ -3150,7 +3150,7 @@
             },
             {
               "id": "S7.5",
-              "titre": "Les risques spÃ©cifiques"
+              "titre": "Les risques spécifiques"
             }
           ]
         },
@@ -3160,19 +3160,19 @@
           "sous_domaines": [
             {
               "id": "S8.1",
-              "titre": "L'organisation du processus de fabrication et de mise en Åuvre sur chantier"
+              "titre": "L'organisation du processus de fabrication et de mise en œuvre sur chantier"
             },
             {
               "id": "S8.2",
-              "titre": "La gestion des temps et des dÃ©lais"
+              "titre": "La gestion des temps et des délais"
             },
             {
               "id": "S8.3",
-              "titre": "La gestion des coÃ»ts"
+              "titre": "La gestion des coûts"
             },
             {
               "id": "S8.4",
-              "titre": "La gestion de la qualitÃ©"
+              "titre": "La gestion de la qualité"
             },
             {
               "id": "S8.5",
@@ -3180,7 +3180,7 @@
             },
             {
               "id": "S8.6",
-              "titre": "La gestion de la sÃ©curitÃ©"
+              "titre": "La gestion de la sécurité"
             }
           ]
         }
@@ -3244,7 +3244,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "TraÃ§age des pieces",
+          "contexte": "Traçage des pieces",
           "itemIds": [
             "C2.21"
           ],
@@ -3253,7 +3253,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser les entailles",
+          "contexte": "Réaliser les entailles",
           "itemIds": [
             "C3.42",
             "C3.44"
@@ -3263,7 +3263,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Sciage a 90Â° et 45Â°",
+          "contexte": "Sciage a 90° et 45°",
           "itemIds": [
             "C3.42"
           ],
@@ -3313,7 +3313,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "TraÃ§age des pieces",
+          "contexte": "Traçage des pieces",
           "itemIds": [
             "C2.21"
           ],
@@ -3322,7 +3322,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser les entailles",
+          "contexte": "Réaliser les entailles",
           "itemIds": [
             "C3.42",
             "C3.44"
@@ -3383,7 +3383,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Etablir la feuille de dÃ©bit",
+          "contexte": "Etablir la feuille de débit",
           "itemIds": [
             "C2.31"
           ],
@@ -3401,7 +3401,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©ligner les piÃ¨ces",
+          "contexte": "Déligner les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -3410,7 +3410,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©gauchir les piÃ¨ces",
+          "contexte": "Dégauchir les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -3419,7 +3419,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Raboter les piÃ¨ces",
+          "contexte": "Raboter les pièces",
           "itemIds": [
             "C3.42",
             "C3.43"
@@ -3429,7 +3429,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -3500,7 +3500,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "Assembler et coller les Ã©lÃ©ments",
+          "contexte": "Assembler et coller les éléments",
           "itemIds": [
             "C3.62"
           ],
@@ -3509,7 +3509,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "RÃ©aliser la finition (ponÃ§age)",
+          "contexte": "Réaliser la finition (ponçage)",
           "itemIds": [
             "C3.63"
           ],
@@ -3592,7 +3592,7 @@
         {
           "capId": "C1",
           "ctId": "C1.1",
-          "contexte": "ComprÃ©hension",
+          "contexte": "Compréhension",
           "itemIds": [
             "C1.15"
           ],
@@ -3601,7 +3601,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -3610,7 +3610,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "RÃ©aliser les entailles",
+          "contexte": "Réaliser les entailles",
           "itemIds": [
             "C3.42"
           ],
@@ -3674,13 +3674,13 @@
           "C3.66": null
         },
         "s2": {
-          "C1.12": "0",
-          "C2.31": "0",
-          "C3.12": "MI",
-          "C3.42": "MI",
+          "C1.12": null,
+          "C2.31": null,
+          "C3.12": null,
+          "C3.42": null,
           "C3.43": null,
           "C2.21": null,
-          "C3.66": "0"
+          "C3.66": null
         },
         "s1779263718381": {
           "C1.12": null,
@@ -3714,7 +3714,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Etablir la feuille de dÃ©bit",
+          "contexte": "Etablir la feuille de débit",
           "itemIds": [
             "C2.31"
           ],
@@ -3732,7 +3732,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©ligner les piÃ¨ces",
+          "contexte": "Déligner les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -3741,7 +3741,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©gauchir les piÃ¨ces",
+          "contexte": "Dégauchir les pièces",
           "itemIds": [
             "C3.42"
           ],
@@ -3750,7 +3750,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "Raboter les piÃ¨ces",
+          "contexte": "Raboter les pièces",
           "itemIds": [
             "C3.42",
             "C3.43"
@@ -3760,7 +3760,7 @@
         {
           "capId": "C2",
           "ctId": "C2.2",
-          "contexte": "Tracer les piÃ¨ces",
+          "contexte": "Tracer les pièces",
           "itemIds": [
             "C2.21"
           ],
@@ -3821,7 +3821,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "Assembler et coller les Ã©lÃ©ments",
+          "contexte": "Assembler et coller les éléments",
           "itemIds": [
             "C3.62"
           ],
@@ -3830,7 +3830,7 @@
         {
           "capId": "C3",
           "ctId": "C3.6",
-          "contexte": "RÃ©aliser la finition (ponÃ§age)",
+          "contexte": "Réaliser la finition (ponçage)",
           "itemIds": [
             "C3.63"
           ],
@@ -3901,7 +3901,7 @@
         {
           "capId": "C2",
           "ctId": "C2.3",
-          "contexte": "Feuille de dÃ©bit et optimisation",
+          "contexte": "Feuille de débit et optimisation",
           "itemIds": [
             "C2.32",
             "C2.31"
@@ -3920,7 +3920,7 @@
         {
           "capId": "C3",
           "ctId": "C3.4",
-          "contexte": "DÃ©biter les panneaux",
+          "contexte": "Débiter les panneaux",
           "itemIds": [
             "C3.42",
             "C3.43",
@@ -4200,7 +4200,7 @@
         "att7": null
       },
       "signatureProf": null,
-      "signatureTuteur": null
+      "signatureTuteur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAB4AcsDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k="
     },
     {
       "id": "pfmp1779399339056_s1779263676513",
@@ -4783,7 +4783,7 @@
       "chef": "",
       "telBureau": "",
       "telMobile": "",
-      "adresse": "75bis Rue Jean JaurÃ¨s, 59410 Anzin",
+      "adresse": "75bis Rue Jean Jaurès, 59410 Anzin",
       "tuteur": "Mr Fareneau",
       "telTuteur": "",
       "note": "",
@@ -4826,7 +4826,7 @@
       "telBureau": "",
       "telMobile": "",
       "adresse": "7 Boulevard Dampierre 59410 ANZIN",
-      "tuteur": "SÃ©bastien DELBASSE",
+      "tuteur": "Sébastien DELBASSE",
       "telTuteur": "06 64 12 51 44",
       "note": "",
       "id": "ent1781204889971"
@@ -4836,7 +4836,7 @@
       "chef": "",
       "telBureau": "09 72 85 53 87",
       "telMobile": "",
-      "adresse": "211 Rue Emile TABARY, 59690 Vieux-CondÃ©",
+      "adresse": "211 Rue Emile TABARY, 59690 Vieux-Condé",
       "tuteur": "Mr Reinhardt",
       "telTuteur": "06 65 56 52 05",
       "note": "",
@@ -4860,7 +4860,7 @@
       "telBureau": "03 17 49 99 17",
       "telMobile": "",
       "adresse": "2 cour de la gare 59144 GOMMEGNIES",
-      "tuteur": "JÃ©rÃ©my BOUTEAU",
+      "tuteur": "Jérémy BOUTEAU",
       "telTuteur": "",
       "note": "",
       "id": "ent1779357205381",
@@ -4882,11 +4882,11 @@
       ]
     },
     {
-      "nom": "Pompe FunÃ¨bres SEMAILLE",
+      "nom": "Pompe Funèbres SEMAILLE",
       "chef": "Aurelien SEMAILLE",
       "telBureau": "03 27 35 35 69",
       "telMobile": "",
-      "adresse": "Rue Jean JaurÃ¨s 59264 ONNAING",
+      "adresse": "Rue Jean Jaurès 59264 ONNAING",
       "tuteur": "Aurelien SEMAILLE",
       "telTuteur": "",
       "note": "",
@@ -4941,17 +4941,17 @@
   ],
   "u31s": [],
   "_onDonnePresets": [
-    "Les plans de dÃ©finition",
-    "Le bois corroyÃ©",
+    "Les plans de définition",
+    "Le bois corroyé",
     "Le bois brut",
     "Les fiches techniques",
-    "Les panneaux dÃ©bitÃ©s",
+    "Les panneaux débités",
     "Le processus de fabrication",
     "Les outillages",
-    "La maquette numÃ©rique",
+    "La maquette numérique",
     "Le cahier des charges",
-    "Les matÃ©riaux et composants",
-    "Le parc machine est Ã  votre disposition"
+    "Les matériaux et composants",
+    "Le parc machine est à votre disposition"
   ],
   "_logoBase64": "data:image/jpeg;base64,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NqP7PMFjbu0c9zZX0Mbr1VmkmAI/E1598Ifh54Q8beHrttVW5/tW0uCksaXGz5CAVO3tzuH1U17Z8O/Dd54R8Cabod/JBJdWvm73gYlDuldxgkA9GHauY8Q/CWV/EkniPwfrkug6nMSZ0Rd0UpPU47ZPJBBGecZoAT/hQPgb/njf/wDgUf8ACo/iXoFj4X+AeqaNpqutnbeV5Ykbc3zXSMcn6saig8I/F69jaHVPH9lbRnjdZ2qs2Pr5aEH8a67x94Zv/FXw9vtAtLiAXtwsIE1wSqEpIjEnAYjIU9jQBlfBL/kkOhf9vH/pRJXoFcv8O/Dd54R8Cabod/JBJdWvm73gYlDuldxgkA9GHauooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvI/iNH4+8V6/J4P0WyWy0SRENxqRJ2yIw5UkjsQRtXJPGSAa9cooAxPCXhex8H+HLXRrAExwjLyH70rn7zn3J/IYHatuiigAooooAKKKKACiiigAooooAK8f8f8AgnxFrfxk8L6/p2n+dplj9k+0T+dGuzZcM7fKWDHCkHgGvYKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z"
 }
