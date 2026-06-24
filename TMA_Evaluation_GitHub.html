@@ -2580,8 +2580,10 @@ function renderPfmpOnglets() {
   let sessions = [];
   if (selectedPfmpClasseId) {
     sessions = (data.sessionsPfmp||[]).filter(sess =>
-      sess.classeId === selectedPfmpClasseId ||
-      (sess.eleveId && sess.eleveId === selectedPfmpEleveId)
+      // Sessions de classe : visibles pour tous les élèves de la classe
+      (sess.type === 'classe' && sess.classeId === selectedPfmpClasseId) ||
+      // Sessions personnalisées : uniquement pour l'élève concerné
+      (sess.type !== 'classe' && sess.eleveId === selectedPfmpEleveId)
     ).sort((a,b) => a.debut.localeCompare(b.debut));
   }
   if (sessions.length && !selectedPfmpSession) selectedPfmpSession = sessions[0].id;
