@@ -1940,25 +1940,7 @@ function imprimerPfmp(visiteId) {
 
     <script>window.onload=()=>window.print();<\/script>
   
-<!-- ══ MODAL GITHUB CONFIG ══ -->
-<div id="ghModalOverlay" class="gh-modal-overlay" style="display:none;" onclick="if(event.target===this)closeGhModal()">
-  <div class="gh-modal">
-    <h3>🔗 Configuration GitHub</h3>
-    <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">
-      Votre token permet de lire et écrire le fichier JSON dans le dépôt <strong>massejeanclaude59/evaluations-classes</strong>.<br>
-      Il est stocké uniquement dans votre navigateur (localStorage).
-    </p>
-    <label style="font-size:12px;font-weight:600;color:var(--text2);display:block;margin-bottom:4px;">Token d'accès personnel GitHub</label>
-    <input id="ghTokenInput" class="gh-input" type="password" placeholder="github_pat_…" autocomplete="off">
-    <div class="gh-row">
-      <button class="btn btn-primary" style="flex:1;justify-content:center;" onclick="saveGhToken()">Enregistrer</button>
-      <button class="btn btn-secondary" style="flex:1;justify-content:center;" onclick="closeGhModal()">Annuler</button>
-    </div>
-    <p style="font-size:11px;color:var(--text3);margin-top:10px;">
-      Créez votre token sur github.com → Settings → Developer settings → Fine-grained tokens
-    </p>
-  </div>
-</div>
+
 
 </body></html>`);
   w.document.close();
@@ -8290,6 +8272,27 @@ async function ghSave() {
     <div>
       <button class="btn btn-secondary" onclick="closeModal('modal-apropos')">Fermer</button>
     </div>
+  </div>
+</div>
+
+
+<!-- ══ MODAL GITHUB CONFIG ══ -->
+<div id="ghModalOverlay" class="gh-modal-overlay" style="display:none;" onclick="if(event.target===this)closeGhModal()">
+  <div class="gh-modal">
+    <h3>🔗 Configuration GitHub</h3>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">
+      Votre token permet de lire et écrire le fichier JSON dans le dépôt <strong>massejeanclaude59/evaluations-classes</strong>.<br>
+      Il est stocké uniquement dans votre navigateur (localStorage).
+    </p>
+    <label style="font-size:12px;font-weight:600;color:var(--text2);display:block;margin-bottom:4px;">Token d'accès personnel GitHub</label>
+    <input id="ghTokenInput" class="gh-input" type="password" placeholder="github_pat_…" autocomplete="off">
+    <div class="gh-row">
+      <button class="btn btn-primary" style="flex:1;justify-content:center;" onclick="saveGhToken()">Enregistrer</button>
+      <button class="btn btn-secondary" style="flex:1;justify-content:center;" onclick="closeGhModal()">Annuler</button>
+    </div>
+    <p style="font-size:11px;color:var(--text3);margin-top:10px;">
+      Créez votre token sur github.com → Settings → Developer settings → Fine-grained tokens
+    </p>
   </div>
 </div>
 
