@@ -434,6 +434,22 @@
     .gh-status-badge { display: none; }
   }
 
+
+  /* ── SÉLECTION PROFESSEUR ── */
+  .prof-cards { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:10px; }
+  .prof-card {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width:110px; padding:14px 10px; border-radius:14px; border:2px solid var(--border);
+    background:var(--surface); cursor:pointer; transition:all .18s; gap:6px;
+  }
+  .prof-card:hover { border-color:var(--accent); background:var(--accent-bg); }
+  .prof-card.selected { border-color:var(--accent); background:var(--accent-bg); box-shadow:0 0 0 3px #d97b0c33; }
+  .prof-card .prof-initiales { font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--accent); }
+  .prof-card .prof-nom { font-size:10px; color:var(--text2); text-align:center; line-height:1.3; }
+  .prof-active-badge { display:inline-flex; align-items:center; gap:5px; padding:3px 10px;
+    border-radius:20px; background:var(--accent-bg); color:var(--accent);
+    font-size:11px; font-weight:700; font-family:'DM Sans',sans-serif; cursor:pointer; }
+
 </style>
 </head>
 <body>
@@ -842,6 +858,23 @@
     </div>
     <div class="startup-sub">Lycée François Mansart — BAC PRO Technicien Menuisier Agenceur</div>
     <p style="font-size:14px;color:var(--text2);margin-bottom:24px;">Chargez votre base de données existante ou démarrez une nouvelle session.</p>
+    <div style="margin-bottom:18px;">
+      <p style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Qui utilise l'appli ?</p>
+      <div class="prof-cards">
+        <div class="prof-card" id="prof-card-JC" onclick="selectProf('JC')">
+          <span class="prof-initiales">JC</span>
+          <span class="prof-nom">Jean-Claude<br>MASSE</span>
+        </div>
+        <div class="prof-card" id="prof-card-DV" onclick="selectProf('DV')">
+          <span class="prof-initiales">DV</span>
+          <span class="prof-nom">David<br>VANESSE</span>
+        </div>
+        <div class="prof-card" id="prof-card-XX" onclick="selectProf('XX')">
+          <span class="prof-initiales">XX</span>
+          <span class="prof-nom">Autre<br>professeur</span>
+        </div>
+      </div>
+    </div>
     <div class="startup-btns">
       <button class="btn btn-primary" style="justify-content:center;font-size:15px;padding:13px;" onclick="ghLoad()">
         ☁️ Charger depuis GitHub
@@ -8280,10 +8313,32 @@ function ghConfig() {
   };
 }
 
+// ── PROFESSEURS (modifiez cette liste si besoin) ──
+const PROFESSEURS = [
+  { initiales: 'JC', nom: 'Jean-Claude MASSE' },
+  { initiales: 'DV', nom: 'David VANESSE'     },
+  { initiales: 'XX', nom: 'Autre professeur'  },
+];
+
+function ghGetProf() {
+  return localStorage.getItem('gh_prof') || '';
+}
+
+function selectProf(initiales) {
+  localStorage.setItem('gh_prof', initiales);
+  // Mettre à jour les cartes visuellement
+  PROFESSEURS.forEach(p => {
+    const card = document.getElementById('prof-card-' + p.initiales);
+    if (card) card.classList.toggle('selected', p.initiales === initiales);
+  });
+  ghUpdateBadge();
+}
+
 function ghJsonFile() {
-  // Détermine le nom du fichier selon l'appli courante
+  const prof  = ghGetProf();
   const isCAP = document.title.includes('CAP');
-  return isCAP ? 'CAP_MI_data.json' : 'TMA_data.json';
+  const base  = isCAP ? 'CAP_MI_data' : 'TMA_data';
+  return prof ? base + '_' + prof + '.json' : base + '.json';
 }
 
 function ghHeaders() {
@@ -8297,15 +8352,27 @@ function ghHeaders() {
 
 function ghUpdateBadge() {
   const token = localStorage.getItem('gh_token') || '';
+  const prof  = ghGetProf();
+  const profObj = PROFESSEURS.find(p => p.initiales === prof);
   document.querySelectorAll('.gh-status-badge').forEach(el => {
-    if (token) {
+    if (token && prof) {
       el.className = 'gh-badge connected gh-status-badge';
-      el.textContent = '● GitHub connecté';
+      el.textContent = '● ' + (profObj ? profObj.initiales + ' — ' + profObj.nom.split(' ')[0] : prof);
+    } else if (token) {
+      el.className = 'gh-badge disconnected gh-status-badge';
+      el.textContent = '⚠️ Choisir un prof';
     } else {
       el.className = 'gh-badge disconnected gh-status-badge';
       el.textContent = '○ GitHub non configuré';
     }
   });
+  // Rafraîchir la sélection des cartes dans la modale startup
+  if (prof) {
+    PROFESSEURS.forEach(p => {
+      const card = document.getElementById('prof-card-' + p.initiales);
+      if (card) card.classList.toggle('selected', p.initiales === prof);
+    });
+  }
 }
 
 function openGhModal() {
@@ -8329,6 +8396,7 @@ function saveGhToken() {
 async function ghLoad() {
   const token = localStorage.getItem('gh_token');
   if (!token) { openGhModal(); return; }
+  if (!ghGetProf()) { toast('⚠️ Veuillez d\'abord sélectionner un professeur'); return; }
   const file = ghJsonFile();
   toast('⏳ Chargement depuis GitHub…');
   try {

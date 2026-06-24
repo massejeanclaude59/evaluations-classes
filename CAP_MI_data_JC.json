@@ -1,0 +1,2531 @@
+{
+  "professors": [
+    {
+      "id": "p1",
+      "nom": "LEVEQUE",
+      "prenom": "Philippe",
+      "initiales": "PL",
+      "color": "#2563eb"
+    },
+    {
+      "id": "p2",
+      "nom": "MASSE",
+      "prenom": "Jean-Claude",
+      "initiales": "JC",
+      "color": "#c8860a"
+    },
+    {
+      "id": "p3",
+      "nom": "VANESSE",
+      "prenom": "David",
+      "initiales": "DV",
+      "color": "#059669"
+    }
+  ],
+  "classes": [
+    {
+      "id": "c1780086058135",
+      "nom": "1C-Men",
+      "level": "2TMA",
+      "color": "#2563eb",
+      "profIds": []
+    },
+    {
+      "id": "c1780086085704",
+      "nom": "TC-Men",
+      "level": "2TMA",
+      "color": "#dc2626",
+      "profIds": [
+        "p2",
+        "p3"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": "s1780086167221",
+      "nom": "RÉMY",
+      "prenom": "Léandre",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": "",
+      "_acqPct": 13
+    },
+    {
+      "id": "s1781113654885",
+      "nom": "DUMONT",
+      "prenom": "Baptiste",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": "CAP en 3 ans"
+    }
+  ],
+  "projets": [
+    {
+      "id": "proj1781091595321",
+      "nom": "Pose de revêtement de sol stratifié",
+      "descriptif": "Pose de revêtement de sol stratifié, avec les plinthes de finition.",
+      "blocs": [
+        {
+          "capId": "C1",
+          "ctId": "C1.2",
+          "contexte": "Compréhension du projet ",
+          "itemIds": [
+            "C1.2.1"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Port des EPI",
+          "itemIds": [
+            "C3.2.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Organiser la zone de travail",
+          "itemIds": [
+            "C3.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster les lames",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.9",
+          "contexte": "Pose du parquet et respect du DTU",
+          "itemIds": [
+            "C3.9.11",
+            "C3.9.6"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster les plinthes",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Rangement et nettoyage",
+          "itemIds": [
+            "C3.2.10"
+          ],
+          "_open": true
+        }
+      ],
+      "ficheContrat": {
+        "activite": "Pose de revêtement de sol stratifié",
+        "duree": "",
+        "objectif": "Pose de revêtement de sol stratifié, avec les plinthes de finition.",
+        "onDonne": [
+          "Le revêtement de sol stratifié",
+          "Cellule de pose à disposition.",
+          "L'outillage électroportatif est à votre disposition."
+        ],
+        "lignes": [
+          {
+            "id": "h17811188858920.03335554690868514",
+            "groupe": "Compréhension du projet ",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.4912044795287085",
+            "groupe": "",
+            "onDemande": "Prendre connaissance de l’environnement et de l’installation du chantier.",
+            "onExige": "L'environnement du chantier est correctement identifié",
+            "competence": "C1.2.1",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.8692795394969624",
+            "groupe": "Port des EPI",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.5020091777483584",
+            "groupe": "",
+            "onDemande": "Porter les EPI.",
+            "onExige": "Les équipements de protection individuelle adaptés (EPI) sont portés.",
+            "competence": "C3.2.7",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.36378649209240366",
+            "groupe": "Organiser la zone de travail",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.4584261594538057",
+            "groupe": "",
+            "onDemande": "Organiser les zones d’intervention sur le chantier",
+            "onExige": "Les matériels et outillages sont disposés rationnellement.",
+            "competence": "C3.2.3",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.8103391715388486",
+            "groupe": "Couper et ajuster les lames",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.6556192875141338",
+            "groupe": "",
+            "onDemande": "Relever les éléments (dimensions, angles, formes).",
+            "onExige": "Les valeurs relevées permettent de réaliser le tracé.",
+            "competence": "C3.6.1",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.7034120355081919",
+            "groupe": "",
+            "onDemande": "Tracer les éléments à adapter.",
+            "onExige": "Les tracés correspondent à la forme à obtenir.",
+            "competence": "C3.6.2",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.6563333103665023",
+            "groupe": "",
+            "onDemande": "Couper et ajuster les éléments",
+            "onExige": "La pièce est parfaitement adaptée.",
+            "competence": "C3.6.5",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.351131279928927",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte",
+            "competence": "C3.6.7",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.4759184680725622",
+            "groupe": "Pose du parquet et respect du DTU",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.052259688420075556",
+            "groupe": "",
+            "onDemande": "Poser les revêtements de plancher en bois et dérivés.",
+            "onExige": "La pose est plane, stable et conforme aux règles techniques du DTU.",
+            "competence": "C3.9.6",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.4782092379709231",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte.",
+            "competence": "C3.9.11",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.8109355469089625",
+            "groupe": "Couper et ajuster les plinthes",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.7715790796334735",
+            "groupe": "",
+            "onDemande": "Relever les éléments (dimensions, angles, formes).",
+            "onExige": "Les valeurs relevées permettent de réaliser le tracé.",
+            "competence": "C3.6.1",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.8374527545936779",
+            "groupe": "",
+            "onDemande": "Tracer les éléments à adapter.",
+            "onExige": "Les tracés correspondent à la forme à obtenir.",
+            "competence": "C3.6.2",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.6999366627532319",
+            "groupe": "",
+            "onDemande": "Couper et ajuster les éléments",
+            "onExige": "La pièce est parfaitement adaptée.",
+            "competence": "C3.6.5",
+            "estEntete": false
+          },
+          {
+            "id": "l17811188858920.5249826649781988",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte",
+            "competence": "C3.6.7",
+            "estEntete": false
+          },
+          {
+            "id": "h17811188858920.35179311262754187",
+            "groupe": "Rangement et nettoyage",
+            "estEntete": true
+          },
+          {
+            "id": "l17811188858920.29021340113213057",
+            "groupe": "",
+            "onDemande": "Désinstaller et ranger les postes de travail et les zones d'activités en fin de chantier.",
+            "onExige": "L'outillage est rangé, la zone est propre",
+            "competence": "C3.2.10",
+            "estEntete": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "proj1781116146098",
+      "nom": "Pose de cuisine",
+      "descriptif": "Pose de meubles de cuisine dans une cellule de pose. Meubles bas, plan de travail avec découpe pour une petite plaque de cuisson, et meubles hauts",
+      "blocs": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Compréhension du projet ",
+          "itemIds": [
+            "C1.1.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Tracer sur les murs, l'implantation des meubles ",
+          "itemIds": [
+            "C2.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Port des EPI",
+          "itemIds": [
+            "C3.2.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Organiser la zone de travail",
+          "itemIds": [
+            "C3.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.8",
+          "contexte": "Pose des meubles bas",
+          "itemIds": [
+            "C3.8.1",
+            "C3.8.3",
+            "C3.8.4",
+            "C3.8.6",
+            "C3.8.7",
+            "C3.8.10"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster le plan de travail",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.8",
+          "contexte": "Pose des meubles hauts",
+          "itemIds": [
+            "C3.8.1",
+            "C3.8.3",
+            "C3.8.4",
+            "C3.8.5",
+            "C3.8.6",
+            "C3.8.10"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Rangement et nettoyage",
+          "itemIds": [
+            "C3.2.10"
+          ],
+          "_open": false
+        }
+      ],
+      "ficheContrat": {
+        "activite": "Pose de cuisine",
+        "duree": "",
+        "objectif": "Pose de meubles de cuisine dans une cellule de pose. Meubles bas, plan de travail avec découpe pour une petite plaque de cuisson, et meubles hauts",
+        "onDonne": [
+          "Le mobilier et plan de travail",
+          "Cellule de pose à disposition.",
+          "L'outillage électroportatif est à votre disposition."
+        ],
+        "lignes": [
+          {
+            "id": "h17811189718240.035782472639753427",
+            "groupe": "Compréhension du projet ",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.9155721158943223",
+            "groupe": "",
+            "onDemande": "Identifier, localiser un ouvrage ou une partie d’ouvrage",
+            "onExige": "L’identification et la localisation de l’élément sont réalisées sans erreur.",
+            "competence": "C1.1.3",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.41577464832767375",
+            "groupe": "Tracer sur les murs, l'implantation des meubles ",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.394044145382518",
+            "groupe": "",
+            "onDemande": "Tracer l'implantation",
+            "onExige": "Les représentations sont pertinentes et exploitables.",
+            "competence": "C2.2.3",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.07612659453741177",
+            "groupe": "Port des EPI",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.9459248508397392",
+            "groupe": "",
+            "onDemande": "Porter les EPI.",
+            "onExige": "Les équipements de protection individuelle adaptés (EPI) sont portés.",
+            "competence": "C3.2.7",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.16345758579485103",
+            "groupe": "Organiser la zone de travail",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.5377019727470697",
+            "groupe": "",
+            "onDemande": "Organiser les zones d’intervention sur le chantier",
+            "onExige": "Les matériels et outillages sont disposés rationnellement.",
+            "competence": "C3.2.3",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.7164721900540932",
+            "groupe": "Pose des meubles bas",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.34007600210819633",
+            "groupe": "",
+            "onDemande": "Présenter de façon provisoire les éléments d’agencement et/ou de mobilier.",
+            "onExige": "Le positionnement initial respecte les plans d'implantation.",
+            "competence": "C3.8.1",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.17457088109340013",
+            "groupe": "",
+            "onDemande": "Assembler et solidariser entre eux les différents éléments.",
+            "onExige": "L’utilisation des matériels est rationnelle",
+            "competence": "C3.8.3",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.09748033946896828",
+            "groupe": "",
+            "onDemande": "Régler les positions :- niveau et aplomb",
+            "onExige": "Le positionnement de l’ouvrage est conforme aux plans et aux instructions.",
+            "competence": "C3.8.4",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.27970366766194454",
+            "groupe": "",
+            "onDemande": "Régler les charnières des portes",
+            "onExige": "Les réglages respectent les conditions fonctionnelles",
+            "competence": "C3.8.6",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.032757240465216",
+            "groupe": "",
+            "onDemande": "Installer les fileurs",
+            "onExige": "La mise en œuvre respecte les critères esthétiques et fonctionnels.",
+            "competence": "C3.8.7",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.9240139665859003",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte.",
+            "competence": "C3.8.10",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.13260034208272464",
+            "groupe": "Couper et ajuster le plan de travail",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.6639396602580728",
+            "groupe": "",
+            "onDemande": "Relever les dimensions du plan de travail.",
+            "onExige": "Les valeurs relevées permettent de réaliser le tracé.",
+            "competence": "C3.6.1",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.128833483486833",
+            "groupe": "",
+            "onDemande": "Tracer les éléments à adapter.",
+            "onExige": "Les tracés correspondent à la forme à obtenir.",
+            "competence": "C3.6.2",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.4377732299884983",
+            "groupe": "",
+            "onDemande": "Couper et ajuster les éléments",
+            "onExige": "La pièce est parfaitement adaptée.",
+            "competence": "C3.6.5",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.15309964485826133",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte",
+            "competence": "C3.6.7",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.9778056436660943",
+            "groupe": "Pose des meubles hauts",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.20603163604523056",
+            "groupe": "",
+            "onDemande": "Présenter de façon provisoire les éléments d’agencement et/ou de mobilier.",
+            "onExige": "Le positionnement initial respecte les plans d'implantation.",
+            "competence": "C3.8.1",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.6653518302329757",
+            "groupe": "",
+            "onDemande": "Assembler et solidariser entre eux les différents éléments.",
+            "onExige": "L’utilisation des matériels est rationnelle",
+            "competence": "C3.8.3",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.2755925585070378",
+            "groupe": "",
+            "onDemande": "Régler les positions :- niveau et aplomb",
+            "onExige": "Le positionnement de l’ouvrage est conforme aux plans et aux instructions.",
+            "competence": "C3.8.4",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.4602932005051751",
+            "groupe": "",
+            "onDemande": "Mettre en œuvre les fixations adaptées au\nsupport",
+            "onExige": "Les fixations respectent les contraintes imposées.",
+            "competence": "C3.8.5",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.5870621972773155",
+            "groupe": "",
+            "onDemande": "Régler les charnières des portes",
+            "onExige": "Les réglages respectent les conditions fonctionnelles",
+            "competence": "C3.8.6",
+            "estEntete": false
+          },
+          {
+            "id": "l17811189718240.6106476169655392",
+            "groupe": "",
+            "onDemande": "Respecter le temps alloué.",
+            "onExige": "Le temps alloué est pris en compte.",
+            "competence": "C3.8.10",
+            "estEntete": false
+          },
+          {
+            "id": "h17811189718240.702770684552778",
+            "groupe": "Rangement et nettoyage",
+            "estEntete": true
+          },
+          {
+            "id": "l17811189718240.8935437402570058",
+            "groupe": "",
+            "onDemande": "Désinstaller et ranger les postes de travail en fin de chantier.",
+            "onExige": "L'outillage est rangé, la zone est propre",
+            "competence": "C3.2.10",
+            "estEntete": false
+          }
+        ]
+      }
+    }
+  ],
+  "referentiel": {
+    "RAP": {
+      "titre": "Référentiel des Activités Professionnelles",
+      "activites": [
+        {
+          "id": "A1",
+          "titre": "PRÉPARATION - Étude de l’ouvrage à installer",
+          "description": "Analyse du dossier technique, interprétation des contraintes, proposition de solutions, établissement de dessins d'exécution et quantitatifs.",
+          "taches": [
+            {
+              "id": "A1-T1",
+              "intitule": "Prendre connaissance du dossier technique, des consignes écrites et orales",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C1.1",
+                "C1.2"
+              ]
+            },
+            {
+              "id": "A1-T2",
+              "intitule": "Interpréter les contraintes techniques relatives à la mise en œuvre sur chantier",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C1.1",
+                "C1.2"
+              ]
+            },
+            {
+              "id": "A1-T3",
+              "intitule": "Proposer des solutions techniques",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C2.1",
+                "C2.2"
+              ]
+            },
+            {
+              "id": "A1-T4",
+              "intitule": "Établir ou compléter les dessins d’exécution",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C1.1",
+                "C2.2"
+              ]
+            },
+            {
+              "id": "A1-T5",
+              "intitule": "Établir la liste et les quantitatifs des fournitures et des accessoires",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C1.1",
+                "C2.3"
+              ]
+            },
+            {
+              "id": "A1-T6",
+              "intitule": "Proposer ou exploiter des modes opératoires de pose",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C2.1",
+                "C2.4"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "titre": "LOGISTIQUE",
+          "description": "Conditionnement, stockage, préparation des outillages, contrôle des approvisionnements et chargements.",
+          "taches": [
+            {
+              "id": "A2-T1",
+              "intitule": "Conditionner, stocker, manutentionner les ouvrages pour assurer leur livraison sur chantier",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1"
+              ]
+            },
+            {
+              "id": "A2-T2",
+              "intitule": "Préparer les quincailleries, les accessoires, les matériels, les outillages nécessaires à la mise en œuvre sur chantier",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1"
+              ]
+            },
+            {
+              "id": "A2-T3",
+              "intitule": "Organiser et effectuer le contrôle des approvisionnements et livraisons",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C3.1"
+              ]
+            },
+            {
+              "id": "A2-T4",
+              "intitule": "Effectuer les chargements et déchargements",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.1",
+          "titre": "MISE EN ŒUVRE - Installation et mise en sécurité du chantier",
+          "description": "Organisation du poste de travail, protection des lieux et préparation des matériels.",
+          "taches": [
+            {
+              "id": "A31-T1",
+              "intitule": "Organiser et sécuriser son poste de travail",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.2"
+              ]
+            },
+            {
+              "id": "A31-T2",
+              "intitule": "Protéger les lieux et les biens environnants",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2"
+              ]
+            },
+            {
+              "id": "A31-T3",
+              "intitule": "Préparer les matériels et outillages nécessaires à la pose des ouvrages",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.2",
+          "titre": "MISE EN ŒUVRE - Préparation du chantier",
+          "description": "Vérification des supports, dépose des existants, implantation des ouvrages et approvisionnement.",
+          "taches": [
+            {
+              "id": "A32-T1",
+              "intitule": "Vérifier les supports et identifier les contraintes de pose",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.3"
+              ]
+            },
+            {
+              "id": "A32-T2",
+              "intitule": "Déposer, trier et évacuer si nécessaire les ouvrages existants",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.2",
+                "C3.4"
+              ]
+            },
+            {
+              "id": "A32-T3",
+              "intitule": "Implanter les ouvrages, tracer la répartition des produits à installer",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C3.5"
+              ]
+            },
+            {
+              "id": "A32-T4",
+              "intitule": "Approvisionner et disposer rationnellement les produits/ouvrages à poser",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.3",
+          "titre": "MISE EN ŒUVRE - Adaptation des ouvrages et des produits à installer",
+          "description": "Tracé, usinage, contrôle, assemblage et équipement des pièces d'ajustement.",
+          "taches": [
+            {
+              "id": "A33-T1",
+              "intitule": "Repérer et tracer les éléments et pièces d’ajustement",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.6"
+              ]
+            },
+            {
+              "id": "A33-T2",
+              "intitule": "Usiner les profils et liaisons simples (outillage manuel et machines portatives)",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.2",
+                "C3.6"
+              ]
+            },
+            {
+              "id": "A33-T3",
+              "intitule": "Contrôler les usinages réalisés",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.6"
+              ]
+            },
+            {
+              "id": "A33-T4",
+              "intitule": "Assembler et solidariser les liaisons",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A33-T5",
+              "intitule": "Équiper les ouvrages en quincailleries et accessoires",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A3.3.T6",
+              "intitule": "Effectuer des opérations de finition",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.4",
+          "titre": "MISE EN ŒUVRE - Montage et installation des ouvrages",
+          "description": "Assemblage, réglage, isolation, fixation et finitions des ouvrages posés.",
+          "taches": [
+            {
+              "id": "A34-T1",
+              "intitule": "Assembler les composants et accessoires",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.2",
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A34-T2",
+              "intitule": "Régler les mises à niveau, aplomb, planimétrie…",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A34-T3",
+              "intitule": "Ajuster, traîner, adapter, modifier…",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.2",
+                "C3.6",
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A34-T4",
+              "intitule": "Mettre en œuvre les produits d’étanchéité, d’isolation et de jointoiement",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.10",
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A34-T5",
+              "intitule": "Fixer, solidariser les ouvrages aux supports",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A34-T6",
+              "intitule": "Poser les équipements, produits verriers, quincailleries et accessoires",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.6",
+                "C3.7",
+                "C3.8",
+                "C3.9",
+                "C3.10",
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A34-T7",
+              "intitule": "Finir et protéger les ouvrages et/ou produits posés",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9",
+                "C3.12"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.5",
+          "titre": "MISE EN ŒUVRE - Suivi et contrôle qualité",
+          "description": "Vérification de la conformité et renseignement des documents de suivi.",
+          "taches": [
+            {
+              "id": "A35-T1",
+              "intitule": "Vérifier le fonctionnement et la conformité de l'ouvrage fini",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.7",
+                "C3.8",
+                "C3.9",
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A35-T2",
+              "intitule": "Renseigner les documents de suivi du chantier",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2",
+                "C3.3",
+                "C3.4",
+                "C3.5",
+                "C3.6",
+                "C3.7",
+                "C3.8",
+                "C3.9",
+                "C3.10",
+                "C3.11",
+                "C3.12"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3.6",
+          "titre": "MISE EN ŒUVRE - Désinstallation du chantier",
+          "description": "Repli du poste de travail, inventaire des matériels, nettoyage et tri des déchets.",
+          "taches": [
+            {
+              "id": "A36-T1",
+              "intitule": "Désinstaller le poste de travail",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2",
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A36-T2",
+              "intitule": "Inventorier, contrôler et ranger les matériels, produits et outillages",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2",
+                "C3.11"
+              ]
+            },
+            {
+              "id": "A36-T3",
+              "intitule": "Nettoyer le chantier",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2",
+                "C3.4",
+                "C3.7",
+                "C3.8",
+                "C3.9"
+              ]
+            },
+            {
+              "id": "A36-T4",
+              "intitule": "Trier et évacuer les déchets",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.1",
+                "C3.2",
+                "C3.4"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A4.1",
+          "titre": "MAINTENANCE - Maintenance des ouvrages",
+          "description": "Identification des dysfonctionnements, entretien, réparation et amélioration des ouvrages.",
+          "taches": [
+            {
+              "id": "A41-T1",
+              "intitule": "Identifier un dysfonctionnement et participer à la recherche de solutions correctives",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A41-T2",
+              "intitule": "Assurer l’entretien, la maintenance d’un ouvrage ou d’une installation",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.12"
+              ]
+            },
+            {
+              "id": "A41-T3",
+              "intitule": "Apporter des améliorations et réparer l’ouvrage",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.12"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A4.2",
+          "titre": "MAINTENANCE - Maintenance des équipements de chantier",
+          "description": "Maintenance de premier niveau des machines portatives et maintien en état des outillages manuels.",
+          "taches": [
+            {
+              "id": "A42-T1",
+              "intitule": "Effectuer la maintenance de premier niveau sur les machines portatives de chantier",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.11"
+              ]
+            },
+            {
+              "id": "A42-T2",
+              "intitule": "Maintenir en état les matériels et outillages manuels",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C3.11"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "titre": "COMMUNICATION",
+          "description": "Échanges avec les acteurs du chantier et comptes-rendus de travail.",
+          "taches": [
+            {
+              "id": "A5-T1",
+              "intitule": "Communiquer avec les différents acteurs",
+              "niveau": "Sous contrôle",
+              "ctLiees": [
+                "C4.1"
+              ]
+            },
+            {
+              "id": "A5-T2",
+              "intitule": "Rendre compte de son travail, des informations et des observations",
+              "niveau": "Autonomie",
+              "ctLiees": [
+                "C4.1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "competences": {
+      "titre": "Référentiel de Certification",
+      "capacites": [
+        {
+          "id": "C1",
+          "titre": "S'informer / Analyser",
+          "competences_terminales": [
+            {
+              "id": "C1.1",
+              "titre": "Identifier, décoder et interpréter les données de définition d’un ouvrage ou d’une partie d’ouvrage",
+              "items": [
+                {
+                  "id": "C1.1.1",
+                  "etre_capable_de": "Identifier les différents documents, plans d’architecte et/ou d’exécution.",
+                  "critere_evaluation": "L’identification des documents est réalisée sans erreur."
+                },
+                {
+                  "id": "C1.1.2",
+                  "etre_capable_de": "Exploiter le modèle numérique de définition d’un ouvrage dans son environnement.",
+                  "critere_evaluation": "Les manipulations simples de visualisation et le choix des vues permettent la compréhension de l’ouvrage."
+                },
+                {
+                  "id": "C1.1.3",
+                  "etre_capable_de": "Identifier, localiser, caractériser et décrire un élément, un ouvrage ou une partie d’ouvrage constitutif : forme géométrique, dimensions, nature, qualité, spécificités.",
+                  "critere_evaluation": "L’identification et la localisation de l’élément sont réalisées sans erreur. L’élément est correctement repéré, caractérisé et désigné. Les dimensions et les angles sont correctement identifiés."
+                },
+                {
+                  "id": "C1.1.4",
+                  "etre_capable_de": "Interpréter les symbolisations de la représentation d’un ouvrage ou d’une partie d’ouvrage (traits, écriture…) et de sa cotation.",
+                  "critere_evaluation": "La représentation de l’ouvrage ou d’une partie de l’ouvrage est correctement traduite."
+                },
+                {
+                  "id": "C1.1.5",
+                  "etre_capable_de": "Décrire une solution constructive à partir d’une représentation ou d’un objet.",
+                  "critere_evaluation": "La solution constructive est correctement définie."
+                },
+                {
+                  "id": "C1.1.6",
+                  "etre_capable_de": "Mettre en relation les données caractéristiques d’un élément avec les données numériques et les documents graphiques d’un dossier.",
+                  "critere_evaluation": "Les informations et les données relevées sont concordantes et exploitables."
+                }
+              ]
+            },
+            {
+              "id": "C1.2",
+              "titre": "Analyser les contraintes de réalisation et d’une situation de chantier",
+              "items": [
+                {
+                  "id": "C1.2.1",
+                  "etre_capable_de": "Prendre connaissance de l’environnement et de l’installation du chantier.",
+                  "critere_evaluation": "L'environnement du chantier est correctement identifié (possibilités d’accès, de circulation, de stockage, réseaux disponibles, contraintes à respecter, présence de matériaux dangereux)."
+                },
+                {
+                  "id": "C1.2.2",
+                  "etre_capable_de": "Identifier les interfaces liées à la co-activité et aux corps d'état.",
+                  "critere_evaluation": "Les contraintes d'ordonnancement liées aux interfaces sont repérées."
+                },
+                {
+                  "id": "C1.2.3",
+                  "etre_capable_de": "S’approprier le planning prévisionnel de l’entreprise.",
+                  "critere_evaluation": "Les périodes, les durées d'intervention et leurs interactions avec les autres corps d'état sont correctement identifiées sur le planning général du chantier et de l’entreprise."
+                },
+                {
+                  "id": "C1.2.4",
+                  "etre_capable_de": "Lire et situer une opération sur un planning.",
+                  "critere_evaluation": "L’opération est située sans erreur sur le planning prévisionnel de l’entreprise."
+                },
+                {
+                  "id": "C1.2.5",
+                  "etre_capable_de": "Déterminer les moyens matériels disponibles et prendre en compte leurs capacités en vue de son intervention.",
+                  "critere_evaluation": "Les moyens matériels choisis sont adaptés à l’intervention."
+                },
+                {
+                  "id": "C1.2.6",
+                  "etre_capable_de": "Extraire de la norme une règle de mise en œuvre pour une réalisation donnée.",
+                  "critere_evaluation": "La règle de mise en œuvre est applicable à la réalisation"
+                }
+              ]
+            }
+          ],
+          "color": "#2563eb"
+        },
+        {
+          "id": "C2",
+          "titre": "Préparer",
+          "competences_terminales": [
+            {
+              "id": "C2.1",
+              "titre": "Proposer et justifier des solutions techniques de mise en œuvre",
+              "items": [
+                {
+                  "id": "C2.1.2",
+                  "etre_capable_de": "Comparer les caractéristiques et les performances des ouvrages, produits, quincailleries, composants, matériaux, supports et matériels portatifs.",
+                  "critere_evaluation": "Les caractéristiques et les performances sont repérées sans erreur. Les comparaisons effectuées permettent d’effectuer un choix judicieux."
+                },
+                {
+                  "id": "C2.1.3",
+                  "etre_capable_de": "Choisir en fonction de sa destination un produit, un matériau, un composant, une quincaillerie, une liaison.",
+                  "critere_evaluation": "Le résultat est compatible avec les données et les contraintes techniques."
+                }
+              ]
+            },
+            {
+              "id": "C2.2",
+              "titre": "Traduire graphiquement une solution technique",
+              "items": [
+                {
+                  "id": "C2.2.1",
+                  "etre_capable_de": "Exécuter un croquis ou un schéma à main levée d’un élément, d’une partie d’ouvrage ou d’une liaison.",
+                  "critere_evaluation": "Le croquis traduit correctement les besoins exprimés."
+                },
+                {
+                  "id": "C2.2.2",
+                  "etre_capable_de": "Établir et tracer le relevé d’une situation de chantier, supports, partie d’ouvrage ou élément à remplacer/installer.",
+                  "critere_evaluation": "Les relevés effectués sont conformes à la réalité. Le document établi est fiable et lisible. Les représentations sont pertinentes et exploitables."
+                },
+                {
+                  "id": "C2.2.3",
+                  "etre_capable_de": "Représenter à l’aide des moyens graphiques des dessins d’exécution simples ou des représentations orthogonales d’éléments.",
+                  "critere_evaluation": "Les résultats respectent les données et les règles de représentation et de cotation. Les représentations sont pertinentes et exploitables."
+                },
+                {
+                  "id": "C2.2.4",
+                  "etre_capable_de": "Indiquer sur un croquis, un schéma ou un dessin d’exécution une cote fonctionnelle d’un élément extérieur à intégrer.",
+                  "critere_evaluation": "Les résultats respectent la cotation fonctionnelle et les données géométriques."
+                }
+              ]
+            },
+            {
+              "id": "C2.3",
+              "titre": "Établir les quantitatifs de matière, de produits et de composants",
+              "items": [
+                {
+                  "id": "C2.3.1",
+                  "etre_capable_de": "Identifier l’ensemble des ouvrages et produits, matériaux, quincailleries et accessoires.",
+                  "critere_evaluation": "Les éléments sont tous correctement listés et désignés."
+                },
+                {
+                  "id": "C2.3.2",
+                  "etre_capable_de": "Lister et quantifier les produits, composants, accessoires et les matériaux nécessaires à l’installation d’un ouvrage sur chantier.",
+                  "critere_evaluation": "Les quantitatifs sont exacts et permettent la mise en œuvre du chantier. L’inventaire des besoins est complet."
+                },
+                {
+                  "id": "C2.3.3",
+                  "etre_capable_de": "Renseigner un bordereau de chantier (quantités matières, consommables...).",
+                  "critere_evaluation": "Les documents sont exploitables par l’entreprise."
+                }
+              ]
+            },
+            {
+              "id": "C2.4",
+              "titre": "Compléter les modes opératoires d’installation et/ou pose",
+              "items": [
+                {
+                  "id": "C2.4.1",
+                  "etre_capable_de": "Compléter un mode opératoire d’installation ou de pose (décliner les opérations, associer les moyens matériels, prévoir les contrôles, identifier les risques).",
+                  "critere_evaluation": "Les différentes opérations sont correctement exploitables au niveau chronologique, des moyens de mise en œuvre et du respect des règles de sécurité."
+                },
+                {
+                  "id": "C2.4.2",
+                  "etre_capable_de": "Interpréter et traduire une notice de mise en œuvre établie par un fabricant.",
+                  "critere_evaluation": "La notice est correctement interprétée et appliquée."
+                }
+              ]
+            }
+          ],
+          "color": "#059669"
+        },
+        {
+          "id": "C3",
+          "titre": "Mettre en œuvre sur chantier",
+          "competences_terminales": [
+            {
+              "id": "C3.1",
+              "titre": "Conditionner, stocker, charger, décharger les matériaux, produits et ouvrages",
+              "items": [
+                {
+                  "id": "C3.1.1",
+                  "etre_capable_de": "Regrouper et contrôler les matériels, matériaux, produits et ouvrages.",
+                  "critere_evaluation": "Les matériels, matériaux et ouvrages sont regroupés selon les besoins."
+                },
+                {
+                  "id": "C3.1.2",
+                  "etre_capable_de": "Stocker et ranger rationnellement les matériels, matériaux et produits.",
+                  "critere_evaluation": "Les matériels et matériaux sont manipulés et stockés suivant les consignes et les recommandations des fournisseurs."
+                },
+                {
+                  "id": "C3.1.3",
+                  "etre_capable_de": "Conditionner et protéger les produits et ouvrages fabriqués.",
+                  "critere_evaluation": "Les produits et ouvrages fabriqués sont conditionnés et protégés selon les consignes."
+                },
+                {
+                  "id": "C3.1.4",
+                  "etre_capable_de": "Charger et/ou décharger les matériaux, matériels, produits et ouvrages.",
+                  "critere_evaluation": "La manutention et le chargement respectent l’ordre de livraison et les principes de la prévention des risques liés à l’activité physique (P.R.A.P.). Le port des E.P.I. est effectif."
+                },
+                {
+                  "id": "C3.1.5",
+                  "etre_capable_de": "Attacher et sangler le chargement.",
+                  "critere_evaluation": "Le chargement est correctement arrimé et respecte le poids total autorisé en charge (P.T.A.C.)."
+                },
+                {
+                  "id": "C3.1.6",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.2",
+              "titre": "Organiser et sécuriser son espace de travail",
+              "items": [
+                {
+                  "id": "C3.2.1",
+                  "etre_capable_de": "Identifier les dangers propres au poste de travail (environnement, climat, co-activité, circulations).",
+                  "critere_evaluation": "Les réseaux électriques et situations dangereuses sont identifiés. Les voies de circulation et zones de déchargement sont définies. Le P.I.C. est respecté."
+                },
+                {
+                  "id": "C3.2.2",
+                  "etre_capable_de": "Identifier les dangers propres aux structures existantes.",
+                  "critere_evaluation": "Les baies, trémies et surfaces de travail en hauteur sont protégées. Les contraintes de l'existant (amiante, plomb...) sont identifiées."
+                },
+                {
+                  "id": "C3.2.3",
+                  "etre_capable_de": "Organiser les zones d’intervention sur le chantier (travail, stockage, circulation).",
+                  "critere_evaluation": "Les matériels et outillages sont disposés rationnellement en tenant compte de l’environnement, du plan d'intervention et du travail à réaliser."
+                },
+                {
+                  "id": "C3.2.4",
+                  "etre_capable_de": "Mettre en œuvre les méthodes de manutention.",
+                  "critere_evaluation": "Les principes de la PRAP sont appliqués. Les points de levage sont respectés et l'adéquation/conformité des moyens de manutention est vérifiée."
+                },
+                {
+                  "id": "C3.2.5",
+                  "etre_capable_de": "Protéger l’environnement immédiat du chantier (locaux, personnes et biens).",
+                  "critere_evaluation": "Les locaux et les biens sont correctement protégés."
+                },
+                {
+                  "id": "C3.2.6",
+                  "etre_capable_de": "Vérifier la présence des dispositifs de protection collective du chantier et alerter si\nnécessaire sa hiérarchie.",
+                  "critere_evaluation": "Le contrôle est effectué selon le PPSPS ou le mode opératoire.\nLes protections collectives sont en place.\nLes anomalies sont détectées et signalées."
+                },
+                {
+                  "id": "C3.2.7",
+                  "etre_capable_de": "Installer et/ou compléter les dispositifs de sécurité sur sa zone d’intervention et EPI.",
+                  "critere_evaluation": "Les équipements de protections collectives sont utilisés et les équipements de protection individuelle adaptés (EPI) sont portés."
+                },
+                {
+                  "id": "C3.2.8",
+                  "etre_capable_de": "Installer les moyens d’accès et plates-formes de travail adaptés à la situation de chantier",
+                  "critere_evaluation": "Les moyens d’accès sont conformes et adaptés à la situation du chantier."
+                },
+                {
+                  "id": "C3.2.9",
+                  "etre_capable_de": "Préparer les matériels, machines électroportatives et outillages adaptés au chantier.",
+                  "critere_evaluation": "Les matériels et machines préparés correspondent aux besoins."
+                },
+                {
+                  "id": "C3.2.10",
+                  "etre_capable_de": "Désinstaller et ranger les postes de travail et les zones d'activités en fin de chantier.",
+                  "critere_evaluation": "Les matériels sont déposés, contrôlés, stockés conformément au mode opératoire.\nL’identification et le tri des déchets sont réalisés.\nL’évacuation est effectuée."
+                },
+                {
+                  "id": "C3.2.11",
+                  "etre_capable_de": "Alerter en cas de situation dangereuse.",
+                  "critere_evaluation": "Une situation dangereuse persistante est signalée à sa hiérarchie.\nLe droit de retrait est appliqué en cas de danger grave et imminent."
+                },
+                {
+                  "id": "C3.2.12",
+                  "etre_capable_de": "Respecter le temps alloué",
+                  "critere_evaluation": "Le temps alloué est pris en compte"
+                }
+              ]
+            },
+            {
+              "id": "C3.3",
+              "titre": "Vérifier la conformité des supports et des ouvrages",
+              "items": [
+                {
+                  "id": "C3.3.1",
+                  "etre_capable_de": "Contrôler et réceptionner les supports et référentiels (trait de niveau, caractéristiques géométriques et dimensionnelles, nature des matériaux).",
+                  "critere_evaluation": "La présence du trait de niveau est vérifiée. Les supports sont correctement évalués. Les défauts et anomalies sont communiqués."
+                },
+                {
+                  "id": "C3.3.2",
+                  "etre_capable_de": "Contrôler et réceptionner les produits et ouvrages (dimensions, aspect, finition, conformité technique).",
+                  "critere_evaluation": "Les caractéristiques sont conformes aux exigences du chantier. Les défauts et les anomalies sont communiqués."
+                },
+                {
+                  "id": "C3.3.3",
+                  "etre_capable_de": "Contrôler quantitativement les produits et ouvrages à installer.",
+                  "critere_evaluation": "Les quantités contrôlées correspondent aux besoins. Les écarts sont communiqués."
+                },
+                {
+                  "id": "C3.3.4",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.4",
+              "titre": "Réaliser la dépose des ouvrages",
+              "items": [
+                {
+                  "id": "C3.4.1",
+                  "etre_capable_de": "Identifier les matériaux des ouvrages à déposer et les éléments à conserver. Réaliser la dépose de manière méthodique.",
+                  "critere_evaluation": "La dépose est effectuée sans dommage pour les structures conservées. Les consignes de tri des déchets sont appliquées."
+                },
+                {
+                  "id": "C3.4.2",
+                  "etre_capable_de": "Déposer et évacuer les ouvrages existants en respectant les locaux, les biens et l’environnement.",
+                  "critere_evaluation": "Le démontage permet la réutilisation du support.\nLa protection des locaux, des biens et des personnes est assurée.\nL’évacuation est effectuée."
+                },
+                {
+                  "id": "C3.4.3",
+                  "etre_capable_de": "Identifier les matériaux et effectuer le tri sélectif\ndes différents types de déchets suivant les\nconditions du chantier et les normes en vigueur :\n– produits revalorisés,\n– produits détruits,\n– produits récupérés et stockés.",
+                  "critere_evaluation": "L’identification et le tri sont réalisés selon les recommandations."
+                },
+                {
+                  "id": "C3.4.4",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.5",
+              "titre": "Implanter et répartir les ouvrages sur le chantier",
+              "items": [
+                {
+                  "id": "C3.5.1",
+                  "etre_capable_de": "Identifier les contraintes de mise en œuvre, les obstacles, les réseaux, la co-activité.",
+                  "critere_evaluation": "Les différentes contraintes organisationnelles sont identifiées et prises en compte."
+                },
+                {
+                  "id": "C3.5.2",
+                  "etre_capable_de": "Tracer l’implantation des ouvrages (axes, alignements, angles, niveau, aplomb).",
+                  "critere_evaluation": "Les axes, alignements et repères sont implantés sans erreur. Les surfaces fonctionnelles de référence sont correctement positionnées."
+                },
+                {
+                  "id": "C3.5.3",
+                  "etre_capable_de": "Tracer les répartitions (division arithmétique, symétrie, calepinage).",
+                  "critere_evaluation": "Les répartitions respectent les caractéristiques des produits. Le calepinage est régulier et conforme aux normes."
+                },
+                {
+                  "id": "C3.5.4",
+                  "etre_capable_de": "Distribuer les ouvrages, produits et matériaux sur les zones d’installation.",
+                  "critere_evaluation": "La distribution est complète et rationnelle."
+                },
+                {
+                  "id": "C3.5.5",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.6",
+              "titre": "Réaliser des adaptations avec les machines portatives et l’outillage manuel",
+              "items": [
+                {
+                  "id": "C3.6.1",
+                  "etre_capable_de": "Relever les éléments (dimensions, angles, formes).",
+                  "critere_evaluation": "Les valeurs relevées permettent de réaliser le tracé. Les outils utilisés sont adaptés."
+                },
+                {
+                  "id": "C3.6.2",
+                  "etre_capable_de": "Reporter, tracer et traîner les éléments à adapter ou les gabarits.",
+                  "critere_evaluation": "Les tracés correspondent à la forme à obtenir."
+                },
+                {
+                  "id": "C3.6.3",
+                  "etre_capable_de": "Choisir et monter l’outil adapté à l’opération à réaliser.",
+                  "critere_evaluation": "L’outil choisi est adapté à l’usinage à réaliser et au niveau de finition défini.\nLe montage de l’outil respecte les règles de sécurité."
+                },
+                {
+                  "id": "C3.6.4",
+                  "etre_capable_de": "Régler la machine et mettre en place les organes de sécurité.",
+                  "critere_evaluation": "Le réglage effectué permet d’obtenir l’usinage désiré.\nLes organes de sécurité sont efficients (carters, aspiration…)."
+                },
+                {
+                  "id": "C3.6.5",
+                  "etre_capable_de": "Couper et ajuster les éléments d’adaptation (tapées, pré-batis, pré-cadres, tasseaux).",
+                  "critere_evaluation": "L’élément est correctement immobilisé et permet l’usinage en toute sécurité.\nLes E.P.I. adaptés sont portés.\nL’état de surface obtenu répond aux exigen­ces.\nLa pièce est parfaitement adaptée."
+                },
+                {
+                  "id": "C3.6.6",
+                  "etre_capable_de": "Remettre le poste de travail dans son état initial",
+                  "critere_evaluation": "Les déchets sont identifiés, triés et évacués.\nL’outillage est nettoyé et rangé."
+                },
+                {
+                  "id": "C3.6.7",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte"
+                }
+              ]
+            },
+            {
+              "id": "C3.7",
+              "titre": "Poser les menuiseries extérieures et les fermetures",
+              "items": [
+                {
+                  "id": "C3.7.1",
+                  "etre_capable_de": "Présenter les menuiseries et les fermetures pour la mise en position provisoire.",
+                  "critere_evaluation": "La mise en position est correcte. Le mode opératoire est respecté."
+                },
+                {
+                  "id": "C3.7.2",
+                  "etre_capable_de": "Ajuster et maintenir en position temporaire les ouvrages.",
+                  "critere_evaluation": "Le maintien en position est conforme aux contraintes et aux spécifications."
+                },
+                {
+                  "id": "C3.7.3",
+                  "etre_capable_de": "Régler les ouvrages (niveau, aplomb, alignement, jeux).",
+                  "critere_evaluation": "Le positionnement de l’ouvrage est conforme aux plans et aux instructions."
+                },
+                {
+                  "id": "C3.7.4",
+                  "etre_capable_de": "Reconnaître et mettre en œuvre les fixations adaptées (hydraulique, chimique, mécanique).",
+                  "critere_evaluation": "Les consignes de mise en œuvre et les contraintes imposées sont respectées."
+                },
+                {
+                  "id": "C3.7.5",
+                  "etre_capable_de": "Régler les mobilités et les organes de fonctionnement de l’ouvrage (translation, rotation).",
+                  "critere_evaluation": "Les réglages respectent les conditions fonctionnelles de l’ouvrage."
+                },
+                {
+                  "id": "C3.7.6",
+                  "etre_capable_de": "Installer les garnitures et les accessoires, les éléments de décoration et de sécurité.",
+                  "critere_evaluation": "La mise en œuvre respecte les critères esthétiques et fonctionnels."
+                },
+                {
+                  "id": "C3.7.7",
+                  "etre_capable_de": "Réaliser les opérations de finition et de retouche sur le chantier.",
+                  "critere_evaluation": "Les opérations de finition sont bien exécutées. L’esthétique est respectée."
+                },
+                {
+                  "id": "C3.7.8",
+                  "etre_capable_de": "Protéger les ouvrages posés.",
+                  "critere_evaluation": "La protection est adaptée à l’ouvrage et correctement installée."
+                },
+                {
+                  "id": "C3.7.9",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.8",
+              "titre": "Poser les aménagements intérieurs et les agencements",
+              "items": [
+                {
+                  "id": "C3.8.1",
+                  "etre_capable_de": "Présenter de façon provisoire les éléments d’agencement et/ou de mobilier.",
+                  "critere_evaluation": "Le positionnement initial respecte les plans d'implantation."
+                },
+                {
+                  "id": "C3.8.2",
+                  "etre_capable_de": "Ajuster et maintenir en position temporaire les différents éléments ou composants.",
+                  "critere_evaluation": "Le maintien en position est conforme aux contraintes et aux spécifications."
+                },
+                {
+                  "id": "C3.8.3",
+                  "etre_capable_de": "Assembler et solidariser entre eux les différents éléments ou composants.",
+                  "critere_evaluation": "L’utilisation des matériels est rationnelle"
+                },
+                {
+                  "id": "C3.8.4",
+                  "etre_capable_de": "Régler les positions :\n- niveau et aplomb,\n- alignement, jeux, épaisseurs…",
+                  "critere_evaluation": "Le positionnement de l’ouvrage est conforme aux plans et aux instructions."
+                },
+                {
+                  "id": "C3.8.5",
+                  "etre_capable_de": "Mettre en œuvre les fixations adaptées au\nsupport :\n- scellement hydraulique,\n- scellement chimique,\n- fixation mécanique.",
+                  "critere_evaluation": "Les consignes de mise œuvre sont respectées (niveaux, aplombs…).\nLes fixations respectent les contraintes imposées."
+                },
+                {
+                  "id": "C3.8.6",
+                  "etre_capable_de": "Régler les mobilités et les organes de fonctionnement : (translation, rotation…).",
+                  "critere_evaluation": "Les réglages respectent les conditions fonctionnelles de l’ouvrage"
+                },
+                {
+                  "id": "C3.8.7",
+                  "etre_capable_de": "Installer les habillages et les accessoires, les éléments de décoration ou de finition.",
+                  "critere_evaluation": "La mise en œuvre respecte les critères esthétiques et fonctionnels."
+                },
+                {
+                  "id": "C3.8.8",
+                  "etre_capable_de": "Réaliser les opérations de finition et de retouche sur le chantier",
+                  "critere_evaluation": "Les opérations de finition sont bien exécutées.\nL’esthétique est respectée."
+                },
+                {
+                  "id": "C3.8.9",
+                  "etre_capable_de": "Protéger les ouvrages posés",
+                  "critere_evaluation": "La protection est adaptée à l’ouvrage et à son environnement.\nLa protection est correctement installée."
+                },
+                {
+                  "id": "C3.8.10",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.9",
+              "titre": "Poser les revêtements muraux et plafonds, les parquets, les terrasses",
+              "items": [
+                {
+                  "id": "C3.9.1",
+                  "etre_capable_de": "Installer les éléments supports de répartition (solives, lambourdes, tasseaux, lisses).",
+                  "critere_evaluation": "Les prescriptions des normes de positionnement sont respectées."
+                },
+                {
+                  "id": "C3.9.2",
+                  "etre_capable_de": "Régler les ouvrages et supports (niveau, aplomb, alignement, planéité).",
+                  "critere_evaluation": "Les références de niveau, d’aplomb, d’alignement et de planéité sont respectées."
+                },
+                {
+                  "id": "C3.9.3",
+                  "etre_capable_de": "Reconnaître les supports, les produits de liaison et les fixations.",
+                  "critere_evaluation": "Les produits sont adaptés et les consignes sont respectées."
+                },
+                {
+                  "id": "C3.9.4",
+                  "etre_capable_de": "Mettre en œuvre les fixations adaptées (collage, clouage, vissage, clipsage, scellements).",
+                  "critere_evaluation": "Les consignes sont respectées. La résistance des fixations est conforme aux prescriptions (stabilité, solidité, sécurité)."
+                },
+                {
+                  "id": "C3.9.5",
+                  "etre_capable_de": "Mettre en œuvre les produits (lambris, habillages, faux plafonds, corniches).",
+                  "critere_evaluation": "Les consignes de mise en œuvre (jeux périphériques, joints de dilatation) et l'esthétique sont respectées. Les opérations d'ajustage sont bien exécutées."
+                },
+                {
+                  "id": "C3.9.6",
+                  "etre_capable_de": "Poser les revêtements de plancher en bois et dérivés.",
+                  "critere_evaluation": "La pose est plane, stable et conforme aux règles techniques du DTU."
+                },
+                {
+                  "id": "C3.9.7",
+                  "etre_capable_de": "Poser des parquets traditionnels, collés et flottants, plinthes...",
+                  "critere_evaluation": "Les consignes de mise œuvre sont respectées (jeux périphériques, joints de dilatation…).\nLes produits installés respectent la qualité décorative de l’ouvrage."
+                },
+                {
+                  "id": "C3.9.8",
+                  "etre_capable_de": "Poser le platelage extérieur en bois et composite.",
+                  "critere_evaluation": "Le platelage extérieur est posé conformément aux règles de mise en œuvre.\nLes produits installés respectent la qualité décorative de l’ouvrage."
+                },
+                {
+                  "id": "C3.9.9",
+                  "etre_capable_de": "Réaliser les opérations de finition et de retouche sur le chantier.",
+                  "critere_evaluation": "Les consignes de mise en œuvre sont respectées\nL’aspect esthétique est respecté."
+                },
+                {
+                  "id": "C3.9.10",
+                  "etre_capable_de": "Protéger les ouvrages posés",
+                  "critere_evaluation": "La protection est adaptée à l’ouvrage et à son environnement.\nLa protection est correctement installée"
+                },
+                {
+                  "id": "C3.9.11",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.10",
+              "titre": "Mettre en œuvre les produits d’étanchéité et d’isolation",
+              "items": [
+                {
+                  "id": "C3.10.1",
+                  "etre_capable_de": "Reconnaître les produits d’étanchéité, de jointoiement, de calfeutrement et d’isolation.",
+                  "critere_evaluation": "Les produits sont identifiés. Les caractéristiques et les contraintes sont établies."
+                },
+                {
+                  "id": "C3.10.2",
+                  "etre_capable_de": "Mettre en œuvre les produits d’étanchéité à l’air et à l’eau sur menuiseries extérieures.",
+                  "critere_evaluation": "Les consignes de mise en œuvre sont respectées. Les étanchéités sont assurées."
+                },
+                {
+                  "id": "C3.10.3",
+                  "etre_capable_de": "Mettre en œuvre les produits de jointoiement et de calfeutrement (menuiseries, agencements, habillages).",
+                  "critere_evaluation": "Les consignes de mise en œuvre sont respectées. Les joints sont conformes."
+                },
+                {
+                  "id": "C3.10.4",
+                  "etre_capable_de": "Mettre en œuvre les isolants thermiques et acoustiques (cloisons, planchers, plafonds).",
+                  "critere_evaluation": "Les consignes de mise en œuvre et les réglementations sont respectées. Les produits sont correctement installés."
+                },
+                {
+                  "id": "C3.10.5",
+                  "etre_capable_de": "Installer ou remplacer des vitrages et miroiteries sur des travaux neufs ou en rénovation.",
+                  "critere_evaluation": "Les principes de la PRAP sont appliqués. Le calage est conforme, l'étanchéité est assurée, et le produit est nettoyé et protégé."
+                },
+                {
+                  "id": "C3.10.6",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.11",
+              "titre": "Maintenir les matériels et les outillages en état",
+              "items": [
+                {
+                  "id": "C3.11.1",
+                  "etre_capable_de": "Contrôler l’état général du matériel, des machines portatives et des éléments de sécurité.",
+                  "critere_evaluation": "Le matériel est maintenu opérationnel et sécurisé pour l'utilisation sur chantier."
+                },
+                {
+                  "id": "C3.11.2",
+                  "etre_capable_de": "Contrôler l’état de coupe de l’outillage.",
+                  "critere_evaluation": "L’état de coupe des outils est vérifié et est conforme aux données."
+                },
+                {
+                  "id": "C3.11.3",
+                  "etre_capable_de": "Affûter les outillages manuels.",
+                  "critere_evaluation": "L’affûtage est réalisé correctement et en toute sécurité."
+                },
+                {
+                  "id": "C3.11.4",
+                  "etre_capable_de": "Remplacer les outils de coupe sur les machines portatives.",
+                  "critere_evaluation": "Le remplacement des outils de coupe est conduit sans risque ni erreur."
+                },
+                {
+                  "id": "C3.11.5",
+                  "etre_capable_de": "Nettoyer et assurer la maintenance des matériels de chantier.",
+                  "critere_evaluation": "La maintenance est effectuée suivant la méthode prescrite."
+                },
+                {
+                  "id": "C3.11.6",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            },
+            {
+              "id": "C3.12",
+              "titre": "Assurer la maintenance des ouvrages",
+              "items": [
+                {
+                  "id": "C3.12.1",
+                  "etre_capable_de": "Analyse les opérations de maintenance préconisées dans le diagnostic.",
+                  "critere_evaluation": "L’analyse est pertinente. Les opérations de maintenance sont correctement identifiées."
+                },
+                {
+                  "id": "C3.12.2",
+                  "etre_capable_de": "Localiser les organes des ouvrages à entretenir et/ou à réparer.",
+                  "critere_evaluation": "Les organes à entretenir sont repérés et correspondent au contrat de maintenance en toute sécurité."
+                },
+                {
+                  "id": "C3.12.3",
+                  "etre_capable_de": "Protéger les existants.",
+                  "critere_evaluation": "La protection des ouvrages et de la zone d'intervention est efficace et adaptée."
+                },
+                {
+                  "id": "C3.12.4",
+                  "etre_capable_de": "Effectuer les opérations de maintenance et/ou de réparation (démontage/remontage, remplacement d'organes simples, graissage, réglage des jeux).",
+                  "critere_evaluation": "Les éléments sont démontés sans détérioration. Le remplacement est adapté. L’ouvrage retrouve sa fonctionnalité et sa configuration d’origine."
+                },
+                {
+                  "id": "C3.12.5",
+                  "etre_capable_de": "Respecter le temps alloué.",
+                  "critere_evaluation": "Le temps alloué est pris en compte."
+                }
+              ]
+            }
+          ],
+          "color": "#db2777"
+        },
+        {
+          "id": "C4",
+          "titre": "Communiquer",
+          "competences_terminales": [
+            {
+              "id": "C4.1",
+              "titre": "Communiquer avec les différents partenaires",
+              "items": [
+                {
+                  "id": "C4.1.1",
+                  "etre_capable_de": "S’exprimer oralement et par écrit sur la mise en œuvre de son ouvrage.",
+                  "critere_evaluation": "La formulation et le vocabulaire employé sont adaptés à l’interlocuteur."
+                },
+                {
+                  "id": "C4.1.2",
+                  "etre_capable_de": "Rendre compte d’une activité (étapes, temps passés, problèmes rencontrés, solutions, contrôles).",
+                  "critere_evaluation": "Les aléas sont identifiés et exprimés. Les fiches de suivi (temps, matières, contrôles) sont exploitables."
+                },
+                {
+                  "id": "C4.1.3",
+                  "etre_capable_de": "Compléter des documents de suivi de chantier.",
+                  "critere_evaluation": "Les documents de suivi du chantier sont correctement renseignés."
+                }
+              ]
+            }
+          ],
+          "color": "#c8860a"
+        }
+      ]
+    },
+    "savoirs": {
+      "titre": "Savoirs Technologiques Associés",
+      "domaines": [
+        {
+          "id": "S1",
+          "titre": "L’entreprise et son environnement",
+          "sous_domaines": []
+        },
+        {
+          "id": "S2",
+          "titre": "La communication technique",
+          "sous_domaines": []
+        },
+        {
+          "id": "S3",
+          "titre": "Le confort de l’habitat",
+          "sous_domaines": [
+            {
+              "id": "S3.3",
+              "titre": "L'étanchéité à l’eau et à l’air"
+            },
+            {
+              "id": "S3.4",
+              "titre": "L'aération et la ventilation"
+            },
+            {
+              "id": "S3.5",
+              "titre": "La protection incendie"
+            },
+            {
+              "id": "S3.6",
+              "titre": "Les accès et dégagements dans le bâtiment"
+            },
+            {
+              "id": "S3.7",
+              "titre": "L’accessibilité du cadre bâti aux personnes handicapées"
+            }
+          ]
+        },
+        {
+          "id": "S4",
+          "titre": "Les ouvrages",
+          "sous_domaines": [
+            {
+              "id": "S4.1",
+              "titre": "Les généralités"
+            },
+            {
+              "id": "S4.2",
+              "titre": "L’étude des ouvrages"
+            },
+            {
+              "id": "S4.3",
+              "titre": "La manutention, le conditionnement, le stockage et le chargement des ouvrages"
+            }
+          ]
+        },
+        {
+          "id": "S5",
+          "titre": "Les matériaux, les produits et les composants",
+          "sous_domaines": [
+            {
+              "id": "S5.1",
+              "titre": "Les matériaux bois et dérivés du bois"
+            },
+            {
+              "id": "S5.2",
+              "titre": "Les matériaux connexes et complémentaires"
+            },
+            {
+              "id": "S5.3",
+              "titre": "Les produits : assemblage, fixation, étanchéité, traitement et finition"
+            },
+            {
+              "id": "S5.4",
+              "titre": "Les composants : produits manufacturés, quincailleries, accessoires…"
+            }
+          ]
+        },
+        {
+          "id": "S6",
+          "titre": "Les moyens et techniques de mise en œuvre des ouvrages",
+          "sous_domaines": [
+            {
+              "id": "S6.1",
+              "titre": "L’outillage électroportatif"
+            },
+            {
+              "id": "S6.2",
+              "titre": "Les moyens et les techniques d’assemblage et de montage des ouvrages"
+            },
+            {
+              "id": "S6.3",
+              "titre": "L’installation de chantier"
+            },
+            {
+              "id": "S6.4",
+              "titre": "La réception des ouvrages sur chantier"
+            },
+            {
+              "id": "S6.5",
+              "titre": "Les moyens et techniques de relevé de mesure, d’implantation et de contrôle"
+            },
+            {
+              "id": "S6.6",
+              "titre": "Les moyens et technique de fixation"
+            },
+            {
+              "id": "S6.7",
+              "titre": "Les moyens et techniques de maintenance des outillages, des équipements et des matériels de chantier"
+            }
+          ]
+        },
+        {
+          "id": "S7",
+          "titre": "Santé et sécurité au travail",
+          "sous_domaines": [
+            {
+              "id": "S7.1",
+              "titre": "Les documents de la prévention des risques"
+            },
+            {
+              "id": "S7.2",
+              "titre": "Les acteurs et les partenaires de la prévention"
+            },
+            {
+              "id": "S7.3",
+              "titre": "L’identification des dangers, l’analyse des risques et les mesures de prévention"
+            },
+            {
+              "id": "S7.4",
+              "titre": "Les mesures de prévention adaptés au métier"
+            },
+            {
+              "id": "S7.5",
+              "titre": "Les risques liés au travail en hauteur"
+            },
+            {
+              "id": "S7.6",
+              "titre": "Les risques spécifiques"
+            },
+            {
+              "id": "S7.7",
+              "titre": "L’application des principes de sécurité physique et d’économie d’effort adaptés au métier"
+            },
+            {
+              "id": "S7.8",
+              "titre": "Le champ d’intervention du sauveteur secouriste du travail"
+            },
+            {
+              "id": "S7.9",
+              "titre": "Les travaux à proximités de réseaux aériens"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "evaluations": [
+    {
+      "id": "eval1781119178433",
+      "projetId": "proj1781116146098",
+      "projetNom": "Pose de cuisine",
+      "classeId": "c1780086085704",
+      "classeNom": "TC-Men",
+      "profId": "p2",
+      "date": "2026-06-10",
+      "isCCF": true,
+      "eleveNotes": {
+        "s1780086167221": {
+          "C1.1.3": null,
+          "C2.2.3": null,
+          "C3.2.7": null,
+          "C3.2.3": null,
+          "C3.8.1": null,
+          "C3.8.3": null,
+          "C3.8.4": null,
+          "C3.8.6": null,
+          "C3.8.7": null,
+          "C3.8.10": null,
+          "C3.6.1": null,
+          "C3.6.2": null,
+          "C3.6.5": null,
+          "C3.6.7": null,
+          "C3.8.5": null,
+          "C3.2.10": null
+        }
+      },
+      "blocsSnapshot": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Compréhension du projet ",
+          "itemIds": [
+            "C1.1.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Tracer sur les murs, l'implantation des meubles ",
+          "itemIds": [
+            "C2.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Port des EPI",
+          "itemIds": [
+            "C3.2.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Organiser la zone de travail",
+          "itemIds": [
+            "C3.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.8",
+          "contexte": "Pose des meubles bas",
+          "itemIds": [
+            "C3.8.1",
+            "C3.8.3",
+            "C3.8.4",
+            "C3.8.6",
+            "C3.8.7",
+            "C3.8.10"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster le plan de travail",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.8",
+          "contexte": "Pose des meubles hauts",
+          "itemIds": [
+            "C3.8.1",
+            "C3.8.3",
+            "C3.8.4",
+            "C3.8.5",
+            "C3.8.6",
+            "C3.8.10"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Rangement et nettoyage",
+          "itemIds": [
+            "C3.2.10"
+          ],
+          "_open": false
+        }
+      ]
+    },
+    {
+      "id": "eval1781119281329",
+      "projetId": "proj1781091595321",
+      "projetNom": "Pose de revêtement de sol stratifié",
+      "classeId": "c1780086085704",
+      "classeNom": "TC-Men",
+      "profId": "p2",
+      "date": "2026-06-10",
+      "isCCF": false,
+      "eleveNotes": {
+        "s1780086167221": {
+          "C1.2.1": null,
+          "C3.2.7": null,
+          "C3.2.3": null,
+          "C3.6.1": null,
+          "C3.6.2": null,
+          "C3.6.5": null,
+          "C3.6.7": null,
+          "C3.9.11": null,
+          "C3.9.6": null,
+          "C3.2.10": null
+        }
+      },
+      "blocsSnapshot": [
+        {
+          "capId": "C1",
+          "ctId": "C1.2",
+          "contexte": "Compréhension du projet ",
+          "itemIds": [
+            "C1.2.1"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Port des EPI",
+          "itemIds": [
+            "C3.2.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Organiser la zone de travail",
+          "itemIds": [
+            "C3.2.3"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster les lames",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.9",
+          "contexte": "Pose du parquet et respect du DTU",
+          "itemIds": [
+            "C3.9.11",
+            "C3.9.6"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Couper et ajuster les plinthes",
+          "itemIds": [
+            "C3.6.1",
+            "C3.6.2",
+            "C3.6.5",
+            "C3.6.7"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.2",
+          "contexte": "Rangement et nettoyage",
+          "itemIds": [
+            "C3.2.10"
+          ],
+          "_open": true
+        }
+      ]
+    }
+  ],
+  "pfmps": [
+    {
+      "id": "pfmp1781113887893_s1781113654885",
+      "sessionId": "sess1781113887893",
+      "sessionNom": "PFMP 1",
+      "eleveId": "s1781113654885",
+      "classeId": "c1780086058135",
+      "classeNom": "1C-Men",
+      "profId": null,
+      "entrepriseId": null,
+      "entreprise": "",
+      "tuteur": "",
+      "date": "2025-01-06",
+      "debut": "2025-01-06",
+      "fin": "2025-01-17",
+      "aEffectue": true,
+      "observation": "",
+      "tachesNotes": {
+        "A1-T1": null,
+        "A1-T2": null,
+        "A1-T3": null,
+        "A1-T4": null,
+        "A1-T5": null,
+        "A1-T6": null,
+        "A2-T1": null,
+        "A2-T2": null,
+        "A2-T3": null,
+        "A2-T4": null,
+        "A31-T1": null,
+        "A31-T2": null,
+        "A31-T3": null,
+        "A32-T1": null,
+        "A32-T2": null,
+        "A32-T3": null,
+        "A32-T4": null,
+        "A33-T1": null,
+        "A33-T2": null,
+        "A33-T3": null,
+        "A33-T4": null,
+        "A33-T5": null,
+        "A3.3.T6": null,
+        "A34-T1": null,
+        "A34-T2": null,
+        "A34-T3": null,
+        "A34-T4": null,
+        "A34-T5": null,
+        "A34-T6": null,
+        "A34-T7": null,
+        "A35-T1": null,
+        "A35-T2": null,
+        "A36-T1": null,
+        "A36-T2": null,
+        "A36-T3": null,
+        "A36-T4": null,
+        "A41-T1": null,
+        "A41-T2": null,
+        "A41-T3": null,
+        "A42-T1": null,
+        "A42-T2": null,
+        "A5-T1": null,
+        "A5-T2": null
+      },
+      "attitudesNotes": {
+        "att1": null,
+        "att2": null,
+        "att3": null,
+        "att4": null,
+        "att5": null,
+        "att6": null,
+        "att7": null
+      },
+      "signatureProf": null,
+      "signatureTuteur": null
+    },
+    {
+      "id": "pfmp1781113939318_s1781113654885",
+      "sessionId": "sess1781113939318",
+      "sessionNom": "PFMP 2",
+      "eleveId": "s1781113654885",
+      "classeId": "c1780086058135",
+      "classeNom": "1C-Men",
+      "profId": null,
+      "entrepriseId": null,
+      "entreprise": "",
+      "tuteur": "",
+      "date": "2025-06-02",
+      "debut": "2025-06-02",
+      "fin": "2025-06-27",
+      "aEffectue": true,
+      "observation": "",
+      "tachesNotes": {
+        "A1-T1": null,
+        "A1-T2": null,
+        "A1-T3": null,
+        "A1-T4": null,
+        "A1-T5": null,
+        "A1-T6": null,
+        "A2-T1": null,
+        "A2-T2": null,
+        "A2-T3": null,
+        "A2-T4": null,
+        "A31-T1": null,
+        "A31-T2": null,
+        "A31-T3": null,
+        "A32-T1": null,
+        "A32-T2": null,
+        "A32-T3": null,
+        "A32-T4": null,
+        "A33-T1": null,
+        "A33-T2": null,
+        "A33-T3": null,
+        "A33-T4": null,
+        "A33-T5": null,
+        "A3.3.T6": null,
+        "A34-T1": null,
+        "A34-T2": null,
+        "A34-T3": null,
+        "A34-T4": null,
+        "A34-T5": null,
+        "A34-T6": null,
+        "A34-T7": null,
+        "A35-T1": null,
+        "A35-T2": null,
+        "A36-T1": null,
+        "A36-T2": null,
+        "A36-T3": null,
+        "A36-T4": null,
+        "A41-T1": null,
+        "A41-T2": null,
+        "A41-T3": null,
+        "A42-T1": null,
+        "A42-T2": null,
+        "A5-T1": null,
+        "A5-T2": null
+      },
+      "attitudesNotes": {
+        "att1": null,
+        "att2": null,
+        "att3": null,
+        "att4": null,
+        "att5": null,
+        "att6": null,
+        "att7": null
+      },
+      "signatureProf": null,
+      "signatureTuteur": null
+    },
+    {
+      "id": "pfmp1781114148105_s1780086167221",
+      "sessionId": "sess1781114148105",
+      "sessionNom": "PFMP 3",
+      "eleveId": "s1780086167221",
+      "classeId": "c1780086085704",
+      "classeNom": "TC-Men",
+      "profId": null,
+      "entrepriseId": null,
+      "entreprise": "",
+      "tuteur": "",
+      "date": "2026-02-09",
+      "debut": "2026-02-09",
+      "fin": "2026-02-27",
+      "aEffectue": true,
+      "observation": "",
+      "tachesNotes": {
+        "A1-T1": null,
+        "A1-T2": null,
+        "A1-T3": null,
+        "A1-T4": null,
+        "A1-T5": null,
+        "A1-T6": null,
+        "A2-T1": null,
+        "A2-T2": null,
+        "A2-T3": null,
+        "A2-T4": null,
+        "A31-T1": null,
+        "A31-T2": null,
+        "A31-T3": null,
+        "A32-T1": null,
+        "A32-T2": null,
+        "A32-T3": null,
+        "A32-T4": null,
+        "A33-T1": null,
+        "A33-T2": null,
+        "A33-T3": null,
+        "A33-T4": null,
+        "A33-T5": null,
+        "A3.3.T6": null,
+        "A34-T1": null,
+        "A34-T2": null,
+        "A34-T3": null,
+        "A34-T4": null,
+        "A34-T5": null,
+        "A34-T6": null,
+        "A34-T7": null,
+        "A35-T1": null,
+        "A35-T2": null,
+        "A36-T1": null,
+        "A36-T2": null,
+        "A36-T3": null,
+        "A36-T4": null,
+        "A41-T1": null,
+        "A41-T2": null,
+        "A41-T3": null,
+        "A42-T1": null,
+        "A42-T2": null,
+        "A5-T1": null,
+        "A5-T2": null
+      },
+      "attitudesNotes": {
+        "att1": null,
+        "att2": null,
+        "att3": null,
+        "att4": null,
+        "att5": null,
+        "att6": null,
+        "att7": null
+      },
+      "signatureProf": null,
+      "signatureTuteur": null
+    },
+    {
+      "id": "pfmp1781114148105_s1781113654885",
+      "sessionId": "sess1781114148105",
+      "sessionNom": "PFMP 3",
+      "eleveId": "s1781113654885",
+      "classeId": "c1780086085704",
+      "classeNom": "TC-Men",
+      "profId": null,
+      "entrepriseId": null,
+      "entreprise": "",
+      "tuteur": "",
+      "date": "2026-02-09",
+      "debut": "2026-02-09",
+      "fin": "2026-02-27",
+      "aEffectue": true,
+      "observation": "",
+      "tachesNotes": {
+        "A1-T1": null,
+        "A1-T2": null,
+        "A1-T3": null,
+        "A1-T4": null,
+        "A1-T5": null,
+        "A1-T6": null,
+        "A2-T1": null,
+        "A2-T2": null,
+        "A2-T3": null,
+        "A2-T4": null,
+        "A31-T1": null,
+        "A31-T2": null,
+        "A31-T3": null,
+        "A32-T1": null,
+        "A32-T2": null,
+        "A32-T3": null,
+        "A32-T4": null,
+        "A33-T1": null,
+        "A33-T2": null,
+        "A33-T3": null,
+        "A33-T4": null,
+        "A33-T5": null,
+        "A3.3.T6": null,
+        "A34-T1": null,
+        "A34-T2": null,
+        "A34-T3": null,
+        "A34-T4": null,
+        "A34-T5": null,
+        "A34-T6": null,
+        "A34-T7": null,
+        "A35-T1": null,
+        "A35-T2": null,
+        "A36-T1": null,
+        "A36-T2": null,
+        "A36-T3": null,
+        "A36-T4": null,
+        "A41-T1": null,
+        "A41-T2": null,
+        "A41-T3": null,
+        "A42-T1": null,
+        "A42-T2": null,
+        "A5-T1": null,
+        "A5-T2": null
+      },
+      "attitudesNotes": {
+        "att1": null,
+        "att2": null,
+        "att3": null,
+        "att4": null,
+        "att5": null,
+        "att6": null,
+        "att7": null
+      },
+      "signatureProf": null,
+      "signatureTuteur": null
+    }
+  ],
+  "entreprises": [
+    {
+      "nom": "Toto",
+      "chef": "tom",
+      "telBureau": "",
+      "telMobile": "",
+      "adresse": "",
+      "tuteur": "tom",
+      "telTuteur": "",
+      "note": "",
+      "id": "ent1780086362416"
+    }
+  ],
+  "sessionsPfmp": [
+    {
+      "id": "sess1781113887893",
+      "nom": "PFMP 1",
+      "type": "individuelle",
+      "classeId": "c1780086058135",
+      "eleveId": "s1781113654885",
+      "debut": "2025-01-06",
+      "fin": "2025-01-17"
+    },
+    {
+      "id": "sess1781113939318",
+      "nom": "PFMP 2",
+      "type": "individuelle",
+      "classeId": "c1780086058135",
+      "eleveId": "s1781113654885",
+      "debut": "2025-06-02",
+      "fin": "2025-06-27"
+    },
+    {
+      "id": "sess1781114148105",
+      "nom": "PFMP 3",
+      "type": "classe",
+      "classeId": "c1780086085704",
+      "eleveId": "s1781113654885",
+      "debut": "2026-02-09",
+      "fin": "2026-02-27"
+    }
+  ],
+  "u31s": [],
+  "_logoBase64": "data:image/jpeg;base64,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NqP7PMFjbu0c9zZX0Mbr1VmkmAI/E1598Ifh54Q8beHrttVW5/tW0uCksaXGz5CAVO3tzuH1U17Z8O/Dd54R8Cabod/JBJdWvm73gYlDuldxgkA9GHauY8Q/CWV/EkniPwfrkug6nMSZ0Rd0UpPU47ZPJBBGecZoAT/hQPgb/njf/wDgUf8ACo/iXoFj4X+AeqaNpqutnbeV5Ykbc3zXSMcn6saig8I/F69jaHVPH9lbRnjdZ2qs2Pr5aEH8a67x94Zv/FXw9vtAtLiAXtwsIE1wSqEpIjEnAYjIU9jQBlfBL/kkOhf9vH/pRJXoFcv8O/Dd54R8Cabod/JBJdWvm73gYlDuldxgkA9GHauooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvI/iNH4+8V6/J4P0WyWy0SRENxqRJ2yIw5UkjsQRtXJPGSAa9cooAxPCXhex8H+HLXRrAExwjLyH70rn7zn3J/IYHatuiigAooooAKKKKACiiigAooooAK8f8f8AgnxFrfxk8L6/p2n+dplj9k+0T+dGuzZcM7fKWDHCkHgGvYKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z",
+  "_onDonnePresets": [
+    "Les plans de définition",
+    "Le bois corroyé",
+    "Le bois brut",
+    "Les fiches techniques",
+    "Les panneaux débités",
+    "Le processus de fabrication",
+    "Les outillages",
+    "La maquette numérique",
+    "Le cahier des charges",
+    "Les matériaux et composants",
+    "Le revêtement de sol stratifié",
+    "Cellule de pose à disposition.",
+    "L'outillage électroportatif est à votre disposition.",
+    "Le mobilier et plan de travail"
+  ]
+}
