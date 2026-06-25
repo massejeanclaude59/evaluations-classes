@@ -450,6 +450,55 @@
     border-radius:20px; background:var(--accent-bg); color:var(--accent);
     font-size:11px; font-weight:700; font-family:'DM Sans',sans-serif; cursor:pointer; }
 
+
+  /* ── BOUTON ZOOM MOBILE ── */
+  @media (max-width: 768px) {
+    #zoomControls {
+      position: fixed;
+      bottom: 18px;
+      right: 14px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .zoom-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 3px 10px #0004;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      transition: background .15s, transform .1s;
+    }
+    .zoom-btn:active { transform: scale(.92); }
+    .zoom-btn.reset {
+      font-size: 13px;
+      background: var(--surface);
+      color: var(--text2);
+      border: 1.5px solid var(--border);
+      width: 40px;
+      height: 40px;
+    }
+    #zoomLevel {
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text3);
+    }
+  }
+  @media (min-width: 769px) {
+    #zoomControls { display: none !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -2089,6 +2138,15 @@ function imprimerPfmp(visiteId) {
     <script>window.onload=()=>window.print();<\/script>
   
 
+
+
+<!-- ══ ZOOM MOBILE ══ -->
+<div id="zoomControls" style="display:none;">
+  <button class="zoom-btn" onclick="mobileZoom(+0.1)" title="Zoom +">＋</button>
+  <div id="zoomLevel">100%</div>
+  <button class="zoom-btn" onclick="mobileZoom(-0.1)" title="Zoom −">－</button>
+  <button class="zoom-btn reset" onclick="mobileZoomReset()" title="Réinitialiser">↺</button>
+</div>
 
 </body></html>`);
   w.document.close();
@@ -8458,6 +8516,70 @@ async function ghSave() {
     toast('✅ Sauvegardé sur GitHub');
   } catch(e) { toast('❌ Erreur GitHub : ' + e.message); }
 }
+
+
+// ── ZOOM MOBILE ──
+(function() {
+  let _zoomScale = parseFloat(localStorage.getItem('mobileZoom') || '1');
+
+  function getZoomTarget() {
+    // Cherche le conteneur actif (eval ou pfmp)
+    const evalMain = document.getElementById('evalMain');
+    const pfmpMain = document.getElementById('pfmpMain');
+    if (evalMain && evalMain.style.display !== 'none' && evalMain.offsetParent !== null) return evalMain;
+    if (pfmpMain && pfmpMain.style.display !== 'none' && pfmpMain.offsetParent !== null) return pfmpMain;
+    return null;
+  }
+
+  function applyZoom() {
+    const t = getZoomTarget();
+    if (!t) return;
+    t.style.transformOrigin = 'top left';
+    t.style.transform = `scale(${_zoomScale})`;
+    t.style.width = (100 / _zoomScale) + '%';
+    const lbl = document.getElementById('zoomLevel');
+    if (lbl) lbl.textContent = Math.round(_zoomScale * 100) + '%';
+    localStorage.setItem('mobileZoom', _zoomScale);
+  }
+
+  function resetZoom() {
+    const t = getZoomTarget();
+    if (t) { t.style.transform = ''; t.style.width = ''; t.style.transformOrigin = ''; }
+    _zoomScale = 1;
+    const lbl = document.getElementById('zoomLevel');
+    if (lbl) lbl.textContent = '100%';
+    localStorage.setItem('mobileZoom', '1');
+  }
+
+  window.mobileZoom = function(delta) {
+    _zoomScale = Math.min(1.5, Math.max(0.3, _zoomScale + delta));
+    applyZoom();
+  };
+  window.mobileZoomReset = function() { resetZoom(); };
+
+  // Afficher les contrôles uniquement sur mobile, et ré-appliquer le zoom à chaque render
+  function showZoomIfMobile() {
+    const ctrl = document.getElementById('zoomControls');
+    if (!ctrl) return;
+    const isMobile = window.innerWidth <= 768;
+    ctrl.style.display = isMobile ? 'flex' : 'none';
+    if (isMobile) {
+      _zoomScale = parseFloat(localStorage.getItem('mobileZoom') || '1');
+      applyZoom();
+    }
+  }
+
+  // Hook sur les navigations de page pour ré-appliquer le zoom
+  const _origSelectPage = window.selectPage;
+  window.selectPage = function(page) {
+    if (_origSelectPage) _origSelectPage(page);
+    setTimeout(showZoomIfMobile, 80);
+  };
+
+  // Init
+  window.addEventListener('resize', showZoomIfMobile);
+  document.addEventListener('DOMContentLoaded', () => setTimeout(showZoomIfMobile, 200));
+})();
 
 </script>
 
