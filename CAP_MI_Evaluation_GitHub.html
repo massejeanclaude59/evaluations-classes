@@ -620,6 +620,18 @@
       <button class="btn btn-primary" style="width:100%;justify-content:center;background:var(--accent);" onclick="openEntrepriseModal()">＋ Nouvelle entreprise</button>
     </div>
     <div class="sidebar-title" style="padding-top:12px;">Entreprises <span id="entreprisesCount" style="font-weight:400;"></span></div>
+    <div style="padding:0 10px 8px;">
+      <div style="position:relative;">
+        <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--text3);pointer-events:none;">🔍</span>
+        <input id="entreprisesSearch" type="search" placeholder="Rechercher…"
+          oninput="filterEntreprises(this.value)"
+          style="width:100%;padding:7px 10px 7px 30px;border:1.5px solid var(--border);border-radius:var(--radius-sm);
+                 font-size:13px;font-family:'DM Sans',sans-serif;background:var(--surface2);color:var(--text);
+                 box-sizing:border-box;outline:none;"
+          onfocus="this.style.borderColor='var(--accent2)'"
+          onblur="this.style.borderColor='var(--border)'">
+      </div>
+    </div>
     <div id="entreprisesList"></div>
   </aside>
   <main class="main" id="entreprisesMain">
@@ -2199,23 +2211,52 @@ function pfmpSupprimerDoc(visiteId) {
   if (zone) zone.style.display = 'none';
 }
 
-function renderEntreprisesPage() {
+// Normalise une chaîne : minuscules + sans accents pour la recherche
+function normalizeStr(s) {
+  return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+}
+
+function filterEntreprises(query) {
+  renderEntreprisesPage(query);
+}
+
+function renderEntreprisesPage(searchQuery) {
+  if (searchQuery === undefined) {
+    const inp = document.getElementById('entreprisesSearch');
+    searchQuery = inp ? inp.value : '';
+  }
+  const q = normalizeStr(searchQuery);
   const sorted = [...(data.entreprises||[])].sort((a,b) => a.nom.localeCompare(b.nom,'fr'));
+  const filtered = q
+    ? sorted.filter(e =>
+        normalizeStr(e.nom).includes(q) ||
+        normalizeStr(e.chef).includes(q) ||
+        normalizeStr(e.tuteur).includes(q) ||
+        normalizeStr(e.adresse).includes(q)
+      )
+    : sorted;
   const el = document.getElementById('entreprisesList');
   const count = document.getElementById('entreprisesCount');
-  if (count) count.textContent = `(${sorted.length})`;
+  if (count) count.textContent = q
+    ? `(${filtered.length}/${sorted.length})`
+    : `(${sorted.length})`;
   if (!el) return;
   el.innerHTML = '';
-  if (!sorted.length) {
-    el.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text3);font-size:13px;">Aucune entreprise</div>';
+  if (!filtered.length) {
+    el.innerHTML = q
+      ? '<div style="padding:16px;text-align:center;color:var(--text3);font-size:13px;">Aucun résultat</div>'
+      : '<div style="padding:16px;text-align:center;color:var(--text3);font-size:13px;">Aucune entreprise</div>';
   } else {
-    sorted.forEach(e => {
+    filtered.forEach(e => {
       const div = document.createElement('div');
       div.className = 'class-item' + (e.id === selectedEntrepriseId ? ' active' : '');
+      const nomDisplay = q
+        ? e.nom.replace(new RegExp('(' + searchQuery.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi'), '<mark style="background:#fde68a;border-radius:2px;padding:0 1px;">$1</mark>')
+        : e.nom;
       div.innerHTML = `
         <div class="class-dot" style="background:var(--accent2)"></div>
         <div style="flex:1;min-width:0;">
-          <div class="class-name" style="font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.nom}</div>
+          <div class="class-name" style="font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${nomDisplay}</div>
           <div style="font-size:11px;color:var(--text3);">${e.chef||'—'}</div>
         </div>
         <div class="class-actions">
