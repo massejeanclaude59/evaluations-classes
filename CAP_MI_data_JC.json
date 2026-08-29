@@ -20,6 +20,13 @@
       "prenom": "David",
       "initiales": "DV",
       "color": "#059669"
+    },
+    {
+      "id": "p1788013873109",
+      "nom": "MALIET",
+      "prenom": "Denis",
+      "initiales": "DM",
+      "color": "#dc2626"
     }
   ],
   "classes": [
@@ -28,7 +35,10 @@
       "nom": "1C-Men",
       "level": "2TMA",
       "color": "#2563eb",
-      "profIds": []
+      "profIds": [
+        "p2",
+        "p1788013873109"
+      ]
     },
     {
       "id": "c1780086085704",
@@ -36,20 +46,155 @@
       "level": "2TMA",
       "color": "#dc2626",
       "profIds": [
-        "p2",
-        "p3"
+        "p3",
+        "p1788013873109"
       ]
     }
   ],
   "students": [
     {
       "id": "s1781113654885",
-      "nom": "DUMONT",
+      "nom": "DUMONT ZUCCONI",
       "prenom": "Baptiste",
       "genre": "M",
       "classId": "c1780086085704",
       "statut": "normal",
       "note": "CAP en 3 ans"
+    },
+    {
+      "id": "s1788013834197",
+      "nom": "BOUANANI",
+      "prenom": "Issam",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788013916012",
+      "nom": "DIALLO",
+      "prenom": "Thierno Amadou",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788013948523",
+      "nom": "HENNEUSE",
+      "prenom": "Matheo",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788013979283",
+      "nom": "RAHERINIAINA CLOVIS",
+      "prenom": "Haifa Imran",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014002444",
+      "nom": "SZMUNDIJ",
+      "prenom": "Youness",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014025300",
+      "nom": "VANESSE--TREFOIS",
+      "prenom": "Noa",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014055795",
+      "nom": "WANQUETIN",
+      "prenom": "Mathis",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014130804",
+      "nom": "CONDE",
+      "prenom": "Sidiki",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014155539",
+      "nom": "COULIBALY",
+      "prenom": "Brahima",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014177875",
+      "nom": "DIABY",
+      "prenom": "Habibou",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014198236",
+      "nom": "DIALLO",
+      "prenom": "Ousmane",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014217731",
+      "nom": "DOYEN",
+      "prenom": "Léo",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014245971",
+      "nom": "GUFFROY",
+      "prenom": "Mayrone",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014267028",
+      "nom": "HUON",
+      "prenom": "Lorick",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788014290859",
+      "nom": "SOW",
+      "prenom": "Mustapha",
+      "genre": "M",
+      "classId": "c1780086085704",
+      "statut": "normal",
+      "note": ""
     }
   ],
   "projets": [
