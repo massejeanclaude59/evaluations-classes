@@ -2560,6 +2560,22 @@ function creerVisiteAuto(sess, eleveId) {
 }
 
 function deleteSession(id) {
+  const sess = (data.sessionsPfmp||[]).find(s => s.id === id);
+  const visitesLiees = (data.pfmps||[]).filter(v => v.sessionId === id);
+  // Élèves ayant une visite sur cette session mais qui ne sont plus dans la classe
+  // d'origine (ex: élève promu de 2nde vers 1ère) : on ne doit jamais perdre leur historique.
+  const elevesPromus = visitesLiees.filter(v => {
+    const el = data.students.find(x => x.id === v.eleveId);
+    return el && sess && el.classId !== sess.classeId;
+  });
+  if (elevesPromus.length > 0) {
+    const noms = elevesPromus.map(v => {
+      const el = data.students.find(x => x.id === v.eleveId);
+      return el ? `${el.nom} ${el.prenom}` : '';
+    }).filter(Boolean).join(', ');
+    alert(`Impossible de supprimer cette session : elle contient des visites PFMP d'élève(s) qui ont depuis changé de classe (${noms}).\n\nSupprimer la session effacerait aussi leur historique PFMP.\n\nAstuce : cette session n'apparaît déjà plus automatiquement pour les nouveaux élèves de la classe (seules les sessions de l'année scolaire en cours sont affichées).`);
+    return;
+  }
   if (!confirm('Supprimer cette session ? Les visites associées seront aussi supprimées.')) return;
   data.sessionsPfmp = data.sessionsPfmp.filter(s => s.id !== id);
   data.pfmps = data.pfmps.filter(v => v.sessionId !== id);
@@ -2609,6 +2625,17 @@ function renderPfmpSidebar() {
   });
 }
 
+// Détermine l'année scolaire (ex: "2025-2026") d'une date donnée.
+// Convention : l'année scolaire commence en août.
+function getAnneeScolaire(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d)) return null;
+  const y = d.getFullYear();
+  const m = d.getMonth(); // 0 = janvier ... 7 = août
+  return m >= 7 ? `${y}-${y+1}` : `${y-1}-${y}`;
+}
+
 function renderPfmpOnglets() {
   const main = document.getElementById('pfmpMain');
   if (!main) return;
@@ -2617,20 +2644,30 @@ function renderPfmpOnglets() {
   // Sessions de cet élève (classe + individuelles)
   let sessions = [];
   if (selectedPfmpClasseId) {
+    const anneeActuelle = getAnneeScolaire(new Date().toISOString());
     // Sessions pour lesquelles cet élève a déjà une fiche PFMP enregistrée,
     // même si elles ont été créées quand il était dans une AUTRE classe
     // (ex: PFMP faites en 2nde, élève passé depuis en 1ère).
     const sessionIdsHistoriqueEleve = new Set(
       (data.pfmps||[]).filter(p => p.eleveId === selectedPfmpEleveId).map(p => p.sessionId)
     );
-    sessions = (data.sessionsPfmp||[]).filter(sess =>
-      // Sessions de classe : celles de la classe actuellement sélectionnée...
-      (sess.type === 'classe' && sess.classeId === selectedPfmpClasseId) ||
-      // ...+ celles où l'élève a un historique, quelle que soit la classe d'origine
-      (sess.type === 'classe' && sessionIdsHistoriqueEleve.has(sess.id)) ||
+    sessions = (data.sessionsPfmp||[]).filter(sess => {
+      if (sess.type === 'classe') {
+        if (sess.classeId === selectedPfmpClasseId) {
+          // Sessions de la classe actuellement sélectionnée :
+          // on n'affiche que l'année scolaire en cours par défaut...
+          const anneeSess = getAnneeScolaire(sess.debut);
+          if (!anneeSess || anneeSess === anneeActuelle) return true;
+          // ...sauf si l'élève sélectionné a un historique sur cette ancienne session
+          return sessionIdsHistoriqueEleve.has(sess.id);
+        }
+        // Session d'une AUTRE classe : uniquement si l'élève promu y a un historique
+        // (ex: élève passé de 2nde à 1ère, on garde ses anciennes visites PFMP)
+        return sessionIdsHistoriqueEleve.has(sess.id);
+      }
       // Sessions personnalisées : uniquement pour l'élève concerné
-      (sess.type !== 'classe' && sess.eleveId === selectedPfmpEleveId)
-    ).sort((a,b) => a.debut.localeCompare(b.debut));
+      return sess.eleveId === selectedPfmpEleveId;
+    }).sort((a,b) => a.debut.localeCompare(b.debut));
   }
   if (sessions.length && !selectedPfmpSession) selectedPfmpSession = sessions[0].id;
 
