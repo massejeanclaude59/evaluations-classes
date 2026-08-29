@@ -43,16 +43,6 @@
   ],
   "students": [
     {
-      "id": "s1780086167221",
-      "nom": "RÉMY",
-      "prenom": "Léandre",
-      "genre": "M",
-      "classId": "c1780086085704",
-      "statut": "normal",
-      "note": "",
-      "_acqPct": 13
-    },
-    {
       "id": "s1781113654885",
       "nom": "DUMONT",
       "prenom": "Baptiste",
@@ -2468,19 +2458,7 @@
       "signatureTuteur": null
     }
   ],
-  "entreprises": [
-    {
-      "nom": "Toto",
-      "chef": "tom",
-      "telBureau": "",
-      "telMobile": "",
-      "adresse": "",
-      "tuteur": "tom",
-      "telTuteur": "",
-      "note": "",
-      "id": "ent1780086362416"
-    }
-  ],
+  "entreprises": [],
   "sessionsPfmp": [
     {
       "id": "sess1781113887893",
