@@ -20,6 +20,13 @@
       "prenom": "David",
       "initiales": "DV",
       "color": "#059669"
+    },
+    {
+      "id": "p1787998107015",
+      "nom": "MALIET",
+      "prenom": "Denis",
+      "initiales": "DM",
+      "color": "#dc2626"
     }
   ],
   "classes": [
@@ -40,7 +47,7 @@
       "color": "#c8860a",
       "profIds": [
         "p3",
-        "p1"
+        "p2"
       ]
     },
     {
@@ -49,8 +56,8 @@
       "level": "TTMA",
       "color": "#059669",
       "profIds": [
-        "p1",
-        "p2"
+        "p2",
+        "p3"
       ]
     }
   ],
@@ -59,7 +66,7 @@
       "id": "s1",
       "nom": "VERGUETHEN",
       "prenom": "Cyril",
-      "classId": "c1",
+      "classId": "c2",
       "statut": "normal",
       "genre": "M",
       "note": "",
@@ -69,7 +76,7 @@
       "id": "s2",
       "nom": "MOISEZ",
       "prenom": "Clément",
-      "classId": "c1",
+      "classId": "c2",
       "statut": "normal",
       "genre": "M",
       "note": ""
@@ -78,7 +85,7 @@
       "id": "s3",
       "nom": "BOLLAERT",
       "prenom": "Madison",
-      "classId": "c1",
+      "classId": "c2",
       "statut": "normal",
       "genre": "F",
       "note": "",
@@ -99,7 +106,7 @@
       "nom": "PIERREJEAN",
       "prenom": "Nolan",
       "genre": "M",
-      "classId": "c1",
+      "classId": "c2",
       "statut": "normal",
       "note": ""
     },
@@ -108,7 +115,7 @@
       "nom": "MASQUELIER",
       "prenom": "Mael",
       "genre": "M",
-      "classId": "c2",
+      "classId": "c3",
       "statut": "normal",
       "note": "Bac en 2 ans",
       "_acqPct": 6
@@ -118,17 +125,98 @@
       "nom": "MATHY",
       "prenom": "Simon",
       "genre": "M",
-      "classId": "c2",
+      "classId": "c3",
       "statut": "normal",
       "note": "Bac en 2 ans",
       "_acqPct": 7
     },
     {
-      "id": "s1782314725809",
-      "nom": "DIEULOT",
-      "prenom": "Clément",
+      "id": "s1787998685552",
+      "nom": "BECK--LIBERT",
+      "prenom": "Maëlys",
+      "genre": "F",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998728284",
+      "nom": "BOUCOT",
+      "prenom": "Jules",
       "genre": "M",
       "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998748711",
+      "nom": "BUCHE",
+      "prenom": "Nathan",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998768144",
+      "nom": "CHEVAL",
+      "prenom": "Logan",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998787523",
+      "nom": "CHOPIN",
+      "prenom": "Enzo",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998854414",
+      "nom": "HOUREZ",
+      "prenom": "Stephane",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998900502",
+      "nom": "NICQ",
+      "prenom": "Mathéo",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998933534",
+      "nom": "VINSINGUES--LESAGE",
+      "prenom": "Mathéo",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787998954062",
+      "nom": "WILLIOT",
+      "prenom": "Pierre",
+      "genre": "M",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1787999019327",
+      "nom": "MUSY",
+      "prenom": "Kyllian",
+      "genre": "M",
+      "classId": "c2",
       "statut": "normal",
       "note": ""
     }
