@@ -271,7 +271,7 @@
           "itemIds": [
             "C3.2.10"
           ],
-          "_open": true
+          "_open": false
         }
       ],
       "ficheContrat": {
@@ -513,7 +513,7 @@
             "C3.8.6",
             "C3.8.10"
           ],
-          "_open": true
+          "_open": false
         },
         {
           "capId": "C3",
