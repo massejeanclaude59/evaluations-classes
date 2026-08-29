@@ -2680,9 +2680,17 @@ function renderPfmpOnglets() {
   // Sessions de cet élève (classe + individuelles)
   let sessions = [];
   if (selectedPfmpClasseId) {
+    // Sessions pour lesquelles cet élève a déjà une fiche PFMP enregistrée,
+    // même si elles ont été créées quand il était dans une AUTRE classe
+    // (ex: PFMP faites en 2TMA, élève passé depuis en 1TMA).
+    const sessionIdsHistoriqueEleve = new Set(
+      (data.pfmps||[]).filter(p => p.eleveId === selectedPfmpEleveId).map(p => p.sessionId)
+    );
     sessions = (data.sessionsPfmp||[]).filter(sess =>
-      // Sessions de classe : visibles pour tous les élèves de la classe
+      // Sessions de classe : celles de la classe actuellement sélectionnée...
       (sess.type === 'classe' && sess.classeId === selectedPfmpClasseId) ||
+      // ...+ celles où l'élève a un historique, quelle que soit la classe d'origine
+      (sess.type === 'classe' && sessionIdsHistoriqueEleve.has(sess.id)) ||
       // Sessions personnalisées : uniquement pour l'élève concerné
       (sess.type !== 'classe' && sess.eleveId === selectedPfmpEleveId)
     ).sort((a,b) => a.debut.localeCompare(b.debut));
