@@ -219,6 +219,24 @@
       "classId": "c2",
       "statut": "normal",
       "note": ""
+    },
+    {
+      "id": "s1788461624761",
+      "nom": "MUSY",
+      "prenom": "Maxence",
+      "genre": "M",
+      "classId": "c2",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1788461659553",
+      "nom": "BEDRINES",
+      "prenom": "Sacha",
+      "genre": "M",
+      "classId": "c2",
+      "statut": "normal",
+      "note": ""
     }
   ],
   "projets": [
