@@ -20,13 +20,6 @@
       "prenom": "David",
       "initiales": "DV",
       "color": "#059669"
-    },
-    {
-      "id": "p1788013873109",
-      "nom": "MALIET",
-      "prenom": "Denis",
-      "initiales": "DM",
-      "color": "#dc2626"
     }
   ],
   "classes": [
@@ -36,8 +29,7 @@
       "level": "2TMA",
       "color": "#2563eb",
       "profIds": [
-        "p2",
-        "p1788013873109"
+        "p2"
       ]
     },
     {
@@ -46,8 +38,7 @@
       "level": "2TMA",
       "color": "#dc2626",
       "profIds": [
-        "p3",
-        "p1788013873109"
+        "p3"
       ]
     }
   ],
