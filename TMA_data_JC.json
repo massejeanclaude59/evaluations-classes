@@ -1677,6 +1677,268 @@
           }
         ]
       }
+    },
+    {
+      "id": "proj1788799374129",
+      "nom": "Dessous de plat 250x250mm",
+      "descriptif": "Réalisation d'un dessous de plat en frêne. L'objectif est découvrir le tracé, et l'utilisation de l'outillage manuel, l'électroportatif et la toupie",
+      "blocs": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Compréhension",
+          "itemIds": [
+            "C1.15"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Tracer les pièces",
+          "itemIds": [
+            "C2.21"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les entailles",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les coupes à 45°",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Couper en longueur les pièces intérieures (le X)",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Usiner l'assemblage DOMINO",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Coller l'assemblage",
+          "itemIds": [
+            "C3.52"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Serrage de l'assemblage",
+          "itemIds": [
+            "C3.53"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Toupillage du 1/4 de rond",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Finition",
+          "itemIds": [
+            "C3.63"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Ranger et nettoyer",
+          "itemIds": [
+            "C3.66"
+          ],
+          "_open": false
+        }
+      ],
+      "ficheContrat": {
+        "activite": "Dessous de plat 250x250mm",
+        "duree": "",
+        "objectif": "Réalisation d'un dessous de plat en frêne. L'objectif est découvrir le tracé, et l'utilisation de l'outillage manuel, l'électroportatif et la toupie",
+        "_srcNom": "Dessous de plat 250x250mm",
+        "_srcDescriptif": "Réalisation d'un dessous de plat en frêne. L'objectif est découvrir le tracé, et l'utilisation de l'outillage manuel, l'électroportatif et la toupie",
+        "onDonne": [
+          "Les plans de définition",
+          "Le bois corroyé"
+        ],
+        "lignes": [
+          {
+            "id": "h17887999543050.3963621725541948",
+            "groupe": "Compréhension",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.854279534314744",
+            "groupe": "",
+            "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
+            "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
+            "competence": "C1.15",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.09947199237229831",
+            "groupe": "Tracer les pièces",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.16021484210250536",
+            "groupe": "",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur.",
+            "competence": "C2.21",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.7675664601478304",
+            "groupe": "Réaliser les entailles",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.11279971974972536",
+            "groupe": "",
+            "onDemande": "entailler les éléments",
+            "onExige": "La conduite de l'entaillage est maîtrisée.",
+            "competence": "C3.42",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.9871368620663048",
+            "groupe": "Réaliser les coupes à 45°",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.2509582012226059",
+            "groupe": "",
+            "onDemande": "couper les éléments à 45° à la même longueur",
+            "onExige": "Les pièces sont identiques. l'assemblage est exploitable.",
+            "competence": "C3.42",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.5973212638009299",
+            "groupe": "Couper en longueur les pièces intérieures (le X)",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.3167399986512357",
+            "groupe": "",
+            "onDemande": "Couper les éléments selon un tracé précis",
+            "onExige": "Les coupes sont précises.",
+            "competence": "C3.42",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.6515203560960443",
+            "groupe": "Usiner l'assemblage DOMINO",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.02322201681202596",
+            "groupe": "",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de l'usinage est maîtrisée.",
+            "competence": "C3.42",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.2035664217796146",
+            "groupe": "Coller l'assemblage",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.3146308140923719",
+            "groupe": "",
+            "onDemande": "Encoller et/ou insérer les pièces et les composants",
+            "onExige": "L'encollage est conforme aux prescriptions.",
+            "competence": "C3.52",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.692394210796221",
+            "groupe": "Serrage de l'assemblage",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543050.9308070671692239",
+            "groupe": "",
+            "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
+            "onExige": "La méthodologie est respectée.",
+            "competence": "C3.53",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543050.3581497682908784",
+            "groupe": "Toupillage du 1/4 de rond",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543060.5374400663266652",
+            "groupe": "",
+            "onDemande": "Usiner les éléments",
+            "onExige": "La conduite de toupillage est maîtrisée.",
+            "competence": "C3.42",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543060.2530712419445744",
+            "groupe": "Finition",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543060.6363942678837194",
+            "groupe": "",
+            "onDemande": "Préparer les surfaces à traiter (ponçage)",
+            "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
+            "competence": "C3.63",
+            "estEntete": false
+          },
+          {
+            "id": "h17887999543060.6881762424901159",
+            "groupe": "Ranger et nettoyer",
+            "estEntete": true
+          },
+          {
+            "id": "l17887999543060.12944460482991615",
+            "groupe": "",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Le poste de travail est propre et opérationnel.",
+            "competence": "C3.66",
+            "estEntete": false
+          }
+        ]
+      }
     }
   ],
   "referentiel": {
@@ -4365,6 +4627,137 @@
           "contexte": "Élaborer le processus de fabrication",
           "itemIds": [
             "C2.44"
+          ],
+          "_open": false
+        }
+      ]
+    },
+    {
+      "id": "eval1788800825944",
+      "projetId": "proj1788799374129",
+      "projetNom": "Dessous de plat 250x250mm",
+      "classeId": "c3",
+      "classeNom": "TTMA",
+      "profId": "p2",
+      "date": "2026-09-07",
+      "isCCF": false,
+      "eleveNotes": {
+        "s1781205391770": {
+          "C1.15": "TBM",
+          "C2.21": "MS",
+          "C3.42": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1781205445930": {
+          "C1.15": "TBM",
+          "C2.21": "TBM",
+          "C3.42": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.63": null,
+          "C3.66": null
+        }
+      },
+      "blocsSnapshot": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Compréhension",
+          "itemIds": [
+            "C1.15"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Tracer les pièces",
+          "itemIds": [
+            "C2.21"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les entailles",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les coupes à 45°",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Couper en longueur les pièces intérieures (le X)",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Usiner l'assemblage DOMINO",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Coller l'assemblage",
+          "itemIds": [
+            "C3.52"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Serrage de l'assemblage",
+          "itemIds": [
+            "C3.53"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Toupillage du 1/4 de rond",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Finition",
+          "itemIds": [
+            "C3.63"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Ranger et nettoyer",
+          "itemIds": [
+            "C3.66"
           ],
           "_open": false
         }
