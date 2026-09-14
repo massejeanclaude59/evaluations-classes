@@ -186,6 +186,15 @@
       "classId": "c1780086085704",
       "statut": "normal",
       "note": ""
+    },
+    {
+      "id": "s1789376106737",
+      "nom": "LEGRU",
+      "prenom": "Lucas",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
     }
   ],
   "projets": [
