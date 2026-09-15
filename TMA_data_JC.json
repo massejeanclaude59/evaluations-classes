@@ -153,7 +153,7 @@
     {
       "id": "s1787998768144",
       "nom": "CHEVAL",
-      "prenom": "Logan",
+      "prenom": "Alex",
       "genre": "M",
       "classId": "c1",
       "statut": "normal",
@@ -243,9 +243,18 @@
     {
       "id": "s1789491737658",
       "nom": "CHEVAL",
-      "prenom": "Enzo",
+      "prenom": "Logan",
       "genre": "M",
       "classId": "c1",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1789492954805",
+      "nom": "REMY",
+      "prenom": "Léandre",
+      "genre": "M",
+      "classId": "c2",
       "statut": "normal",
       "note": ""
     }
