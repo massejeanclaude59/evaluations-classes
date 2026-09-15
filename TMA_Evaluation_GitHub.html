@@ -647,12 +647,14 @@
 <div class="app" id="page-evaluations" style="display:none;">
   <aside class="sidebar" style="width:240px;min-width:240px;overflow-y:auto;">
     <div style="padding:10px 10px 6px;border-bottom:1px solid var(--border);">
-      <div class="sidebar-title" style="padding:0 0 8px;border:none;">Filtre</div>
+      <div class="sidebar-title" style="padding:0 0 8px;border:none;">Filtre CCF</div>
       <div style="display:flex;gap:4px;flex-wrap:wrap;">
         <button class="btn btn-sm" id="filtreAll" onclick="setFiltreEval('all')" style="flex:1;justify-content:center;">Tout</button>
         <button class="btn btn-sm" id="filtreCCF" onclick="setFiltreEval('ccf')" style="flex:1;justify-content:center;">CCF seul</button>
         <button class="btn btn-sm" id="filtreNoCCF" onclick="setFiltreEval('noccf')" style="flex:1;justify-content:center;">Sans CCF</button>
       </div>
+      <div class="sidebar-title" style="padding:10px 0 8px;border:none;">Professeur</div>
+      <select class="form-select" id="filtreProfSelect" onchange="setFiltreProf(this.value)" style="width:100%;font-size:12px;"></select>
     </div>
     <div class="sidebar-title" style="padding-top:12px;">Classes &amp; Élèves</div>
     <div id="evalClassesList"></div>
@@ -1269,6 +1271,7 @@ let projetBlocs = []; // blocs compétences en cours d'édition
 let selectedEvalClasseId = null;
 let selectedEvalEleveId = null;
 let evalFiltreMode = 'all';
+let evalFiltreProf = 'moi'; // 'moi' | 'tous' | id d'un professeur
 let selectedPfmpClasseId = null;
 let selectedPfmpEleveId = null;
 let selectedPfmpSession = null;
@@ -3748,10 +3751,11 @@ function lancerEvaluation(projetId) {
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('lancerEvalDate').value = today;
   document.getElementById('lancerEvalCCF').checked = false;
-  // Profs
+  // Profs — le professeur utilisateur de l'appli est présélectionné par défaut
   const profSel = document.getElementById('lancerEvalProf');
+  const currentProfId = getCurrentProfId();
   profSel.innerHTML = data.professors.map(p2 =>
-    `<option value="${p2.id}">${p2.prenom} ${p2.nom}</option>`
+    `<option value="${p2.id}" ${p2.id === currentProfId ? 'selected' : ''}>${p2.prenom} ${p2.nom}</option>`
   ).join('');
   // Classes
   const classeSel = document.getElementById('lancerEvalClasse');
@@ -3857,7 +3861,33 @@ function setFiltreEval(mode) {
 
 function renderEvaluationsPage() {
   setFiltreEval(evalFiltreMode);
+  renderFiltreProfOptions();
   renderEvalSidebar();
+}
+
+function renderFiltreProfOptions() {
+  const sel = document.getElementById('filtreProfSelect');
+  if (!sel) return;
+  const currentProfId = getCurrentProfId();
+  const currentProf = currentProfId ? data.professors.find(p => p.id === currentProfId) : null;
+
+  // Si aucun professeur utilisateur n'est identifié, "moi" n'a pas de sens :
+  // on retombe sur "toutes les évaluations".
+  if (evalFiltreProf === 'moi' && !currentProf) evalFiltreProf = 'tous';
+
+  const options = [];
+  options.push(`<option value="moi" ${!currentProf ? 'disabled' : ''}>👤 Mes évaluations${currentProf ? ' (' + currentProf.prenom + ' ' + currentProf.nom + ')' : ''}</option>`);
+  options.push(`<option value="tous">👥 Toutes les évaluations</option>`);
+  (data.professors || []).forEach(p => {
+    options.push(`<option value="${p.id}">${p.prenom} ${p.nom}</option>`);
+  });
+  sel.innerHTML = options.join('');
+  sel.value = evalFiltreProf;
+}
+
+function setFiltreProf(value) {
+  evalFiltreProf = value;
+  if (selectedEvalEleveId) renderEvalMainPour(selectedEvalEleveId);
 }
 
 function renderEvalSidebar() {
@@ -3900,6 +3930,12 @@ function renderEvalMainPour(eleveId) {
   let evals = data.evaluations.filter(ev => ev.eleveNotes && ev.eleveNotes[eleveId] !== undefined);
   if (evalFiltreMode === 'ccf') evals = evals.filter(ev => ev.isCCF);
   if (evalFiltreMode === 'noccf') evals = evals.filter(ev => !ev.isCCF);
+  if (evalFiltreProf === 'moi') {
+    const currentProfId = getCurrentProfId();
+    if (currentProfId) evals = evals.filter(ev => ev.profId === currentProfId);
+  } else if (evalFiltreProf !== 'tous') {
+    evals = evals.filter(ev => ev.profId === evalFiltreProf);
+  }
   evals = [...evals].sort((a,b) => b.date.localeCompare(a.date));
 
   const prof = (id) => { const p = data.professors.find(x=>x.id===id); return p ? p.prenom+' '+p.nom : '—'; };
@@ -3912,7 +3948,7 @@ function renderEvalMainPour(eleveId) {
       </div>
     </div>
     <div id="evalsContainer">
-      ${evals.length === 0 ? `<div class="empty-state"><div class="icon">📋</div><p>Aucune évaluation pour cet élève${evalFiltreMode!=='all'?' avec ce filtre':''}.</p></div>` :
+      ${evals.length === 0 ? `<div class="empty-state"><div class="icon">📋</div><p>Aucune évaluation pour cet élève${(evalFiltreMode!=='all'||evalFiltreProf!=='tous')?' avec ce filtre':''}.</p></div>` :
         evals.map(ev => renderEvalCard(ev, eleveId)).join('')}
     </div>`;
 }
@@ -4745,7 +4781,8 @@ function openU31Modal(id=null) {
   if (u?.classeId) clSel.value = u.classeId;
 
   const profSel = document.getElementById('u31Prof');
-  profSel.innerHTML = data.professors.map(p=>`<option value="${p.id}" ${u?.profId===p.id?'selected':''}>${p.prenom} ${p.nom}</option>`).join('');
+  const currentProfIdU31 = getCurrentProfId();
+  profSel.innerHTML = data.professors.map(p=>`<option value="${p.id}" ${(u ? u.profId===p.id : p.id===currentProfIdU31)?'selected':''}>${p.prenom} ${p.nom}</option>`).join('');
 
   onU31ClasseChange(u?.eleveId);
   openModal('u31Modal');
@@ -8471,6 +8508,15 @@ const PROFESSEURS = [
 
 function ghGetProf() {
   return localStorage.getItem('gh_prof') || '';
+}
+
+// Retourne l'id (data.professors) du professeur qui utilise actuellement l'appli,
+// en faisant la correspondance avec les initiales choisies au démarrage.
+function getCurrentProfId() {
+  const initiales = ghGetProf();
+  if (!initiales || !data.professors) return null;
+  const p = data.professors.find(pr => pr.initiales === initiales);
+  return p ? p.id : null;
 }
 
 function selectProf(initiales) {
