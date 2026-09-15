@@ -745,6 +745,114 @@
           }
         ]
       }
+    },
+    {
+      "id": "proj1789499135890",
+      "nom": "Pièce d'entaillage",
+      "descriptif": "Première pièce d'entaillage, réalisée en début de formation pour évaluer les compétences de l'élève en lecture de plan, traçage et utilisation d'outils manuels.",
+      "blocs": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Lecture de plan",
+          "itemIds": [
+            "C1.1.4"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Traçage de la pièce",
+          "itemIds": [
+            "C2.2.2"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Entailler la pièce",
+          "itemIds": [
+            "C3.6.5"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Nettoyage",
+          "itemIds": [
+            "C3.6.6"
+          ],
+          "_open": false
+        }
+      ],
+      "ficheContrat": {
+        "activite": "Pièce d'entaillage - CAP MI",
+        "duree": "",
+        "objectif": "Première pièce d'entaillage, réalisée en début de formation pour évaluer les compétences de l'élève en lecture de plan, traçage et utilisation d'outils manuels.",
+        "_srcNom": "Pièce d'entaillage",
+        "_srcDescriptif": "Première pièce d'entaillage, réalisée en début de formation pour évaluer les compétences de l'élève en lecture de plan, traçage et utilisation d'outils manuels.",
+        "onDonne": [
+          "Les plans de définition",
+          "Le bois corroyé"
+        ],
+        "lignes": [
+          {
+            "id": "h17894995242900.8422016153985042",
+            "groupe": "Lecture de plan",
+            "estEntete": true
+          },
+          {
+            "id": "l17894995242900.8792056187764821",
+            "groupe": "",
+            "onDemande": "Interpréter les symbolisations de la représentation d’un ouvrage (traits, écriture…) et de sa cotation.",
+            "onExige": "La représentation de l’ouvrage est correctement traduite.",
+            "competence": "C1.1.4",
+            "estEntete": false
+          },
+          {
+            "id": "h17894995242900.33728670063483246",
+            "groupe": "Traçage de la pièce",
+            "estEntete": true
+          },
+          {
+            "id": "l17894995242900.05797596331606136",
+            "groupe": "",
+            "onDemande": "Tracer les entailles.",
+            "onExige": "Le traçage est exploitables.",
+            "competence": "C2.2.2",
+            "estEntete": false
+          },
+          {
+            "id": "h17894995242900.7571123868392297",
+            "groupe": "Entailler la pièce",
+            "estEntete": true
+          },
+          {
+            "id": "l17894995242900.08266675181061578",
+            "groupe": "",
+            "onDemande": "Entailler les éléments.",
+            "onExige": "L'entaillage obtenu répond aux exigen­ces.",
+            "competence": "C3.6.5",
+            "estEntete": false
+          },
+          {
+            "id": "h17894995242900.3516219324799039",
+            "groupe": "Nettoyage",
+            "estEntete": true
+          },
+          {
+            "id": "l17894995242900.23100179634559892",
+            "groupe": "",
+            "onDemande": "Remettre le poste de travail dans son état initial",
+            "onExige": "Les déchets sont identifiés, triés et évacués.\nL’outillage est nettoyé et rangé.",
+            "competence": "C3.6.6",
+            "estEntete": false
+          }
+        ]
+      }
     }
   ],
   "referentiel": {
