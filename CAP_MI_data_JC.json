@@ -204,6 +204,24 @@
       "classId": "c1780086058135",
       "statut": "normal",
       "note": ""
+    },
+    {
+      "id": "s1789626828571",
+      "nom": "DOISE",
+      "prenom": "Tony",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1789626871396",
+      "nom": "CAMARA",
+      "prenom": "Ibrahim",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
     }
   ],
   "projets": [
