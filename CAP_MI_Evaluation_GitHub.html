@@ -1390,7 +1390,7 @@ function getAcqPct(studentId) {
 
   // Projets / CCF
   (data.evaluations||[]).filter(ev => ev.eleveNotes?.[studentId] !== undefined).forEach(ev => {
-    Object.entries(ev.eleveNotes[studentId]||{}).forEach(([itemId, niveau]) => {
+    evalNoteEntries(ev, studentId).forEach(([itemId, niveau]) => {
       if (!niveau) return;
       const n20 = NIVEAUX_TO_20[niveau] ?? null;
       if (n20 === null) return;
@@ -3757,21 +3757,14 @@ function confirmerLancerEval() {
     eleveNotes: {}
   };
 
-  // Initialiser les notes à null pour chaque élève et chaque item
+  // Stocker la structure des blocs du projet au moment du lancement (snapshot)
+  eval_.blocsSnapshot = JSON.parse(JSON.stringify(p.blocs));
+
+  // Initialiser les notes à null pour chaque élève et chaque LIGNE (null = non évalué)
   selectedEleveIds.forEach(eleveId => {
     eval_.eleveNotes[eleveId] = {};
-    // Garder aussi les items avec contexte pour l'affichage
-    p.blocs.forEach((b, bi) => {
-      b.itemIds.forEach(itemId => {
-        if (!eval_.eleveNotes[eleveId][itemId]) {
-          eval_.eleveNotes[eleveId][itemId] = null; // null = non évalué
-        }
-      });
-    });
+    evalLignes(eval_).forEach(l => { eval_.eleveNotes[eleveId][l.key] = null; });
   });
-
-  // Stocker aussi la structure des blocs du projet au moment du lancement (snapshot)
-  eval_.blocsSnapshot = JSON.parse(JSON.stringify(p.blocs));
 
   data.evaluations.push(eval_);
   closeModal('lancerEvalModal');
@@ -3889,29 +3882,56 @@ function renderEvalMainPour(eleveId) {
     </div>`;
 }
 
+// ═══════════════════════════════════════════
+//  NOTES PAR LIGNE D'ÉVALUATION
+//  Une même compétence (ex. C3.42) peut apparaître dans plusieurs blocs :
+//  chaque ligne a sa propre note. Clé de stockage dans ev.eleveNotes[eleve] :
+//    1re occurrence  → "C3.42"   (identique aux anciennes données)
+//    2e, 3e…         → "C3.42#2", "C3.42#3"…
+// ═══════════════════════════════════════════
+function evalLignes(ev) {
+  const cnt = {}, out = [];
+  (ev.blocsSnapshot || []).forEach((b, bi) => (b.itemIds || []).forEach(itemId => {
+    cnt[itemId] = (cnt[itemId] || 0) + 1;
+    out.push({ bi, itemId, key: cnt[itemId] === 1 ? itemId : itemId + '#' + cnt[itemId] });
+  }));
+  return out;
+}
+// Note d'une ligne. Anciennes évaluations (une seule note par compétence) :
+// tant que la ligne n'a pas sa propre note, elle reprend celle de la compétence.
+function evalNoteLigne(notes, l) {
+  if (!notes || !l) return null;
+  if (notes[l.key] !== undefined) return notes[l.key];
+  return notes[l.itemId] !== undefined ? notes[l.itemId] : null;
+}
+// Une entrée [itemId, niveau] PAR LIGNE (donc une compétence répétée 5 fois donne 5 entrées)
+function evalNoteEntries(ev, eleveId) {
+  const notes = ev.eleveNotes?.[eleveId];
+  if (!notes) return [];
+  if (!ev.blocsSnapshot) return Object.entries(notes).filter(([k]) => !k.includes('#'));
+  return evalLignes(ev).map(l => [l.itemId, evalNoteLigne(notes, l)]);
+}
+// Moyenne /20 par compétence = somme des notes de ses lignes ÷ nombre de lignes notées
+function evalMoyennesParItem(ev, eleveId) {
+  const NIV = { TBM:20, MS:15, MF:10, MI:5, '0':0 };
+  const acc = {};
+  evalNoteEntries(ev, eleveId).forEach(([id, n]) => {
+    if (n === null || n === undefined) return;
+    const v = NIV[n]; if (v === undefined) return;
+    (acc[id] = acc[id] || []).push(v);
+  });
+  const out = {};
+  Object.entries(acc).forEach(([id, a]) => { out[id] = a.reduce((x, y) => x + y, 0) / a.length; });
+  return out;
+}
+
 function calcNote(ev, eleveId) {
   const notes = ev.eleveNotes[eleveId];
   if (!notes) return null;
-  const niveauVal = { '0': 0, 'MI': 5, 'MF': 10, 'MS': 15, 'TBM': 20 };
-  // Grouper par itemId → moyenne
-  const moyennes = {};
-  // Collecter toutes les occurrences depuis blocsSnapshot
-  const occurrences = {}; // itemId -> [val, val, ...]
-  (ev.blocsSnapshot || []).forEach(b => {
-    b.itemIds.forEach(itemId => {
-      const note = notes[itemId];
-      if (note === null || note === undefined) return; // non évalué
-      if (!occurrences[itemId]) occurrences[itemId] = [];
-      occurrences[itemId].push(niveauVal[note]);
-    });
-  });
-  const ids = Object.keys(occurrences);
-  if (!ids.length) return null;
-  const total = ids.reduce((sum, id) => {
-    const vals = occurrences[id];
-    return sum + vals.reduce((s,v)=>s+v,0) / vals.length;
-  }, 0);
-  return Math.round((total / ids.length) * 10) / 10;
+  // Note de chaque compétence = moyenne de ses lignes ; note finale = moyenne des compétences
+  const moy = Object.values(evalMoyennesParItem(ev, eleveId));
+  if (!moy.length) return null;
+  return Math.round((moy.reduce((a, b) => a + b, 0) / moy.length) * 10) / 10;
 }
 
 function renderEvalCard(ev, eleveId) {
@@ -3958,10 +3978,10 @@ function renderEvalCardBody(ev, eleveId) {
 
   // Récupérer la fiche contrat du projet pour avoir les textes modifiés
   const projet = data.projets.find(p => p.id === ev.projetId);
-  const ficheContratLignes = projet?.ficheContrat?.lignes || [];
-  // Map compétence → ligne fiche contrat pour lookup rapide
-  const ficheMap = {};
-  ficheContratLignes.forEach(l => { if (!l.estEntete && l.competence) ficheMap[l.competence] = l; });
+  // Lignes de fiche contrat appariées bloc par bloc (une compétence peut revenir plusieurs fois)
+  const ficheRes = resolveFicheLignes(projet, ev.blocsSnapshot);
+  const lignesEv = evalLignes(ev);   // une entrée par ligne (mêmes parcours que ci-dessous)
+  let li = 0;
 
   let allRows = '';
   (ev.blocsSnapshot || []).forEach((b, bi) => {
@@ -3994,17 +4014,19 @@ function renderEvalCardBody(ev, eleveId) {
       }));
 
       // Priorité : textes de la fiche contrat si modifiés, sinon référentiel
-      const ficheL = ficheMap[itemId];
+      const ficheL = ficheRes[bi + '|' + itemId];
       const onDemande = ficheL?.onDemande || (itemObj ? itemObj.etre_capable_de : itemId);
       const onExige   = ficheL?.onExige   || (itemObj ? (itemObj.critere_evaluation || '') : '');
       const compId    = itemId;
-      const noteActuelle = notes[itemId] !== undefined ? notes[itemId] : null;
+      const ligneEv = lignesEv[li++];
+      const noteKey = ligneEv.key;
+      const noteActuelle = evalNoteLigne(notes, ligneEv);
 
       const evalBtns = niveaux.map(n => {
         const isSelected = noteActuelle === n;
         const cls = isSelected ? niveauColors[n] : (n!=='0' ? {'MI':'note-btn-mi','MF':'note-btn-mf','MS':'note-btn-ms','TBM':'note-btn-tbm'}[n]||'' : '');
         return `<button class="note-btn ${cls}"
-          onclick="setNote('${ev.id}','${eleveId}','${itemId}','${n}',this)"
+          onclick="setNote('${ev.id}','${eleveId}','${noteKey}','${n}',this)"
           title="${niveauLabels[n]}">${n}</button>`;
       }).join('');
 
@@ -4082,15 +4104,20 @@ function toggleEvalCard(header) {
 }
 
 function setNote(evalId, eleveId, itemId, niveau, btn) {
+  // itemId = clé de la LIGNE ("C3.42", "C3.42#2"…)
   const ev = data.evaluations.find(x => x.id === evalId);
   if (!ev || !ev.eleveNotes[eleveId]) return;
+  const notes = ev.eleveNotes[eleveId];
 
-  const actuelle = ev.eleveNotes[eleveId][itemId];
+  // Anciennes évaluations : figer d'abord la note de chaque ligne (elles reprenaient la note unique)
+  evalLignes(ev).forEach(l => { if (notes[l.key] === undefined) notes[l.key] = evalNoteLigne(notes, l); });
+
+  const actuelle = notes[itemId];
   // Si on clique sur le même niveau → désélectionner (null = non évalué)
   if (actuelle === niveau) {
-    ev.eleveNotes[eleveId][itemId] = null;
+    notes[itemId] = null;
   } else {
-    ev.eleveNotes[eleveId][itemId] = niveau;
+    notes[itemId] = niveau;
   }
 
   // Mettre à jour visuellement sans re-render complet
@@ -4162,13 +4189,13 @@ function imprimerEvaluation(evalId, eleveId) {
 
   // Textes de la fiche contrat (priorité sur le référentiel)
   const projet = data.projets.find(p => p.id === ev.projetId);
-  const ficheContratLignes = projet?.ficheContrat?.lignes || [];
-  const ficheMap = {};
-  ficheContratLignes.forEach(l => { if (!l.estEntete && l.competence) ficheMap[l.competence] = l; });
+  const ficheRes = resolveFicheLignes(projet, ev.blocsSnapshot);
+  const lignesEv = evalLignes(ev);
+  let li = 0;
 
   // Construire les lignes du tableau
   let tbodyRows = '';
-  (ev.blocsSnapshot || []).forEach(b => {
+  (ev.blocsSnapshot || []).forEach((b, bi) => {
     if (!b.itemIds.length) return;
     const cap = caps.find(c => c.id === b.capId);
     const ct  = cap ? cap.competences_terminales.find(x => x.id === b.ctId) : null;
@@ -4186,10 +4213,10 @@ function imprimerEvaluation(evalId, eleveId) {
         const found = ct2.items.find(it => it.id === itemId);
         if (found) itemObj = found;
       }));
-      const ficheL = ficheMap[itemId];
+      const ficheL = ficheRes[bi + '|' + itemId];
       const onDemande = ficheL?.onDemande || (itemObj ? itemObj.etre_capable_de : itemId);
       const onExige   = ficheL?.onExige   || (itemObj ? (itemObj.critere_evaluation || '') : '');
-      const noteItem  = notes[itemId] !== undefined ? notes[itemId] : null;
+      const noteItem  = evalNoteLigne(notes, lignesEv[li++]);
 
       // Cases d'évaluation : case cochée pleine, cases vides sinon
       const evalCases = niveaux.map(n => {
@@ -5557,15 +5584,13 @@ function buildColonnes(eleveId) {
     const projet = (data.projets||[]).find(p=>p.id===projetId);
     const notesParCT = {};
     evals.forEach(ev => {
-      const eleveNotes = ev.eleveNotes[eleveId] || {};
-      // Grouper les items par CT
+      // Grouper les compétences par CT (note d'une compétence = moyenne de ses lignes)
       const itemsByCT = {};
-      Object.entries(eleveNotes).forEach(([itemId, niveau]) => {
-        if (!niveau) return;
+      Object.entries(evalMoyennesParItem(ev, eleveId)).forEach(([itemId, n20]) => {
         const ctId = getCtOfItem(itemId);
         if (!ctId) return;
         if (!itemsByCT[ctId]) itemsByCT[ctId] = [];
-        itemsByCT[ctId].push(NIVEAUX_TO_20[niveau] ?? null);
+        itemsByCT[ctId].push(n20);
       });
       Object.entries(itemsByCT).forEach(([ctId, vals]) => {
         const filtered = vals.filter(v=>v!==null);
@@ -5654,10 +5679,8 @@ function renderBilan(eleveId) {
   (data.evaluations||[])
     .filter(ev => ev.eleveNotes && ev.eleveNotes[eleveId] !== undefined)
     .forEach(ev => {
-      const notes = ev.eleveNotes[eleveId] || {};
-      const vals = Object.values(notes)
-        .map(niveau => niveau ? (NIVEAUX_TO_20[niveau] ?? null) : null)
-        .filter(v => v !== null);
+      // moyenne des compétences (chaque compétence = moyenne de ses lignes)
+      const vals = Object.values(evalMoyennesParItem(ev, eleveId));
       if (vals.length) {
         const moyEv = vals.reduce((s,v) => s + v, 0) / vals.length;
         moyParEval.push(moyEv);
@@ -5733,7 +5756,7 @@ function renderBilan(eleveId) {
             const projetId = col.id.replace('proj_','');
             const evals = (data.evaluations||[]).filter(ev=>ev.projetId===projetId&&ev.eleveNotes&&ev.eleveNotes[eleveId]!==undefined);
             if (evals.length) {
-              const notesIt = evals.map(ev=>ev.eleveNotes[eleveId]?.[it.id]).filter(v=>v);
+              const notesIt = evals.flatMap(ev=>evalNoteEntries(ev, eleveId).filter(([id])=>id===it.id).map(([,n])=>n)).filter(v=>v);
               if (notesIt.length) {
                 const vals = notesIt.map(n=>NIVEAUX_TO_20[n]??null).filter(v=>v!==null);
                 noteItem = vals.length ? Math.round(vals.reduce((s,v)=>s+v,0)/vals.length*10)/10 : null;
@@ -6142,7 +6165,7 @@ function buildSyntheseHtml(eleveId) {
   (data.evaluations||[]).filter(ev => ev.eleveNotes && ev.eleveNotes[eleveId]!==undefined)
     .forEach(ev => {
       const notes = ev.eleveNotes[eleveId] || {};
-      Object.entries(notes).forEach(([itemId, niveau]) => {
+      evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
         if (niveau === null || niveau === undefined) return;
         const n20 = {TBM:20,MS:15,MF:10,MI:5,'0':0}[niveau] ?? null;
         if (n20 === null) return;
@@ -6340,7 +6363,7 @@ function buildLivretScolaireHtml(eleveId) {
   const itemNotes = {};
 
   (data.evaluations||[]).filter(ev => ev.eleveNotes?.[eleveId] !== undefined).forEach(ev => {
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([itemId, niveau]) => {
+    evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
       if (!niveau) return;
       const n20 = NIVEAUX_TO_20[niveau] ?? null;
       if (n20 === null) return;
@@ -6554,7 +6577,7 @@ function imprimerLivretScolaire(eleveId) {
   const itemNotes = {};
 
   (data.evaluations||[]).filter(ev => ev.eleveNotes?.[eleveId] !== undefined).forEach(ev => {
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([itemId, niveau]) => {
+    evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
       if (!niveau) return;
       const n20 = NIVEAUX_TO_20[niveau] ?? null;
       if (n20 === null) return;
@@ -6724,7 +6747,7 @@ function buildSyntheseGlobaleHtml(eleveId) {
   const itemNotes = {};
 
   (data.evaluations||[]).filter(ev => ev.eleveNotes?.[eleveId] !== undefined).forEach(ev => {
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([itemId, niveau]) => {
+    evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
       if (!niveau) return;
       const n20 = NIVEAUX_TO_20[niveau] ?? null;
       if (n20 === null) return;
@@ -6965,7 +6988,7 @@ function imprimerSyntheseGlobale(eleveId) {
   const itemNotes = {};
 
   (data.evaluations||[]).filter(ev=>ev.eleveNotes?.[eleveId]!==undefined).forEach(ev=>{
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([id,n])=>{
+    evalNoteEntries(ev, eleveId).forEach(([id,n])=>{
       if(!n) return; const v=NIVEAUX_TO_20[n]??null; if(v===null) return;
       if(!itemNotes[id]) itemNotes[id]=[]; itemNotes[id].push(v);
     });
@@ -7133,7 +7156,7 @@ function buildSyntheseHtml(eleveId) {
   (data.evaluations||[]).filter(ev => ev.eleveNotes && ev.eleveNotes[eleveId]!==undefined)
     .forEach(ev => {
       const notes = ev.eleveNotes[eleveId] || {};
-      Object.entries(notes).forEach(([itemId, niveau]) => {
+      evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
         if (niveau === null || niveau === undefined) return;
         const n20 = {TBM:20,MS:15,MF:10,MI:5,'0':0}[niveau] ?? null;
         if (n20 === null) return;
@@ -7331,7 +7354,7 @@ function buildSyntheseGlobaleHtml(eleveId) {
   const itemNotes = {};
 
   (data.evaluations||[]).filter(ev => ev.eleveNotes?.[eleveId] !== undefined).forEach(ev => {
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([itemId, niveau]) => {
+    evalNoteEntries(ev, eleveId).forEach(([itemId, niveau]) => {
       if (!niveau) return;
       const n20 = NIVEAUX_TO_20[niveau] ?? null;
       if (n20 === null) return;
@@ -7573,7 +7596,7 @@ function imprimerSyntheseGlobale(eleveId) {
   const NIVEAUX_TO_20 = { TBM:20, MS:15, MF:10, MI:5, '0':0 };
   const itemNotes = {};
   (data.evaluations||[]).filter(ev=>ev.eleveNotes?.[eleveId]!==undefined).forEach(ev=>{
-    Object.entries(ev.eleveNotes[eleveId]||{}).forEach(([id,n])=>{
+    evalNoteEntries(ev, eleveId).forEach(([id,n])=>{
       if(!n) return; const v=NIVEAUX_TO_20[n]??null; if(v===null) return;
       if(!itemNotes[id]) itemNotes[id]=[];
       itemNotes[id].push(v);
@@ -7860,9 +7883,11 @@ window.addEventListener('DOMContentLoaded', () => {
     <!-- Header modal -->
     <div style="background:#1a1a2e;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;">
       <div style="font-size:16px;font-weight:800;letter-spacing:.3px;">📄 Fiche contrat — <span id="fcProjetNom"></span></div>
-      <div style="display:flex;gap:10px;">
-        <button onclick="imprimerFicheContrat()" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;">🖨️ Imprimer / PDF</button>
-        <button onclick="closeFicheContrat()" style="background:#ffffff20;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;">✕ Fermer</button>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <span id="fcSaveStatus" style="font-size:12px;font-weight:700;"></span>
+        <button id="fcSaveBtn" data-fc-nodirty="1" onclick="enregistrerFicheContrat()" style="background:#16a34a;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;">💾 Enregistrer les modifications</button>
+        <button data-fc-nodirty="1" onclick="imprimerFicheContrat()" style="background:#7c3aed;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;">🖨️ Imprimer / PDF</button>
+        <button data-fc-nodirty="1" onclick="closeFicheContrat()" style="background:#ffffff20;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;">✕ Fermer</button>
       </div>
     </div>
 
@@ -7896,7 +7921,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <!-- Lignes du tableau -->
       <div style="background:var(--surface2);border-radius:10px;padding:14px 16px;border:1px solid var(--border);">
         <div style="font-size:13px;font-weight:800;color:var(--text1);margin-bottom:10px;">📋 Lignes d'évaluation</div>
-        <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-style:italic;">Les lignes sont synchronisées depuis les blocs compétences du projet à chaque ouverture. Vos textes "On demande / On exige" sont conservés si la compétence existe toujours.</div>
+        <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-style:italic;">Les lignes sont synchronisées depuis les blocs compétences du projet à chaque ouverture. Vos textes "On demande / On exige" sont conservés si la compétence existe toujours. Cliquez sur « Enregistrer les modifications » : ce sont ces textes qui seront repris dans « Évaluations et CCF ».</div>
         <div style="margin-bottom:10px;">
           <button onclick="regenererLignesFiche()" style="background:#f59e0b;color:#fff;border:none;border-radius:6px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;">🔄 Régénérer depuis les blocs (réinitialise les textes)</button>
         </div>
@@ -7931,6 +7956,72 @@ function getOnDonnePresets() {
 
 let _fcProjetId = null;
 let _fcData = null; // { activite, duree, objectif, onDonne:[], lignes:[] }
+
+// ── Appariement des lignes de fiche contrat ─────────────────────────────
+// Une même compétence (ex. C3.42) peut apparaître dans PLUSIEURS blocs d'un
+// projet, avec des textes "On demande / On exige" différents. On ne peut donc
+// pas retrouver une ligne par le seul code compétence : on apparie
+//   1) d'abord par (n° de bloc + compétence),
+//   2) puis, pour les anciennes fiches sans n° de bloc, par ordre d'apparition.
+// Chaque ligne source n'est utilisée qu'une seule fois.
+function _matchFicheLignes(cibles, sources) {
+  const used = new Set();
+  const out  = new Array(cibles.length).fill(null);
+  cibles.forEach((c, i) => {
+    const l = sources.find(x => !used.has(x) && x.competence === c.competence && x.blocIdx === c.blocIdx);
+    if (l) { used.add(l); out[i] = l; }
+  });
+  cibles.forEach((c, i) => {
+    if (out[i]) return;
+    const l = sources.find(x => !used.has(x) && x.competence === c.competence);
+    if (l) { used.add(l); out[i] = l; }
+  });
+  return out;
+}
+
+// Pour une liste de blocs (projet ou snapshot d'évaluation), retourne
+// { "indexBloc|itemId" : ligneFicheContrat } — utilisé par Évaluations et CCF.
+function resolveFicheLignes(projet, blocs) {
+  const sources = (projet?.ficheContrat?.lignes || []).filter(l => !l.estEntete && l.competence);
+  const cibles = [], cles = [];
+  (blocs || []).forEach((b, bi) => (b.itemIds || []).forEach(id => {
+    cibles.push({ blocIdx: bi, competence: id });
+    cles.push(bi + '|' + id);
+  }));
+  const paires = _matchFicheLignes(cibles, sources);
+  const res = {};
+  cles.forEach((k, i) => { if (paires[i]) res[k] = paires[i]; });
+  return res;
+}
+
+// ── Indicateur "modifications non enregistrées" + bouton Enregistrer ─────
+let _fcDirty = false;
+function _fcSetStatus(kind) {
+  const el = document.getElementById('fcSaveStatus');
+  if (!el) return;
+  if (kind === 'dirty')      { el.textContent = '● Modifications non enregistrées'; el.style.color = '#fbbf24'; }
+  else if (kind === 'saved') { el.textContent = '✓ Enregistré';                     el.style.color = '#4ade80'; }
+  else                       { el.textContent = '';                                   }
+}
+function _fcSetDirty(v) { _fcDirty = v; _fcSetStatus(v ? 'dirty' : ''); }
+(function() {
+  const ov = document.getElementById('ficheContratOverlay');
+  if (!ov) return;
+  ov.addEventListener('input',  () => _fcSetDirty(true));
+  ov.addEventListener('change', () => _fcSetDirty(true));
+  ov.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (b && !b.hasAttribute('data-fc-nodirty')) _fcSetDirty(true);
+  });
+})();
+
+function enregistrerFicheContrat() {
+  if (!_fcProjetId || !_fcData) return;
+  saveFicheContratData();
+  _fcDirty = false;
+  _fcSetStatus('saved');
+  toast('✅ Fiche contrat enregistrée — pensez à sauvegarder le fichier de données');
+}
 
 function openFicheContratModal(projetId) {
   const p = data.projets.find(x => x.id === projetId);
@@ -7980,19 +8071,15 @@ function openFicheContratModal(projetId) {
   // Si une fiche existait, on tente de conserver les "onDemande / onExige" 
   // déjà saisis manuellement en faisant un merge par compétence
   if (saved?.lignes?.length) {
-    const savedMap = {};
-    saved.lignes.forEach(l => { if (l.competence) savedMap[l.competence] = l; });
-    _fcData.lignes = _fcData.lignes.map(l => {
-      if (l.estEntete) return l;
-      const prev = savedMap[l.competence];
+    const sources = saved.lignes.filter(l => !l.estEntete && l.competence);
+    const cibles  = _fcData.lignes.filter(l => !l.estEntete);
+    const paires  = _matchFicheLignes(cibles, sources);
+    cibles.forEach((l, i) => {
+      const prev = paires[i];
       if (prev) {
-        return {
-          ...l,
-          onDemande : prev.onDemande ?? l.onDemande,
-          onExige   : prev.onExige   ?? l.onExige,
-        };
+        l.onDemande = prev.onDemande ?? l.onDemande;
+        l.onExige   = prev.onExige   ?? l.onExige;
       }
-      return l;
     });
   }
 
@@ -8003,12 +8090,14 @@ function openFicheContratModal(projetId) {
 
   renderOnDonneList();
   renderLignesList();
+  _fcSetDirty(false);
   document.getElementById('ficheContratOverlay').style.display = 'block';
 }
 
 function closeFicheContrat() {
   // Sauvegarder dans le projet avant de fermer
   saveFicheContratData();
+  _fcSetDirty(false);
   document.getElementById('ficheContratOverlay').style.display = 'none';
 }
 
@@ -8029,7 +8118,7 @@ function saveFicheContratData() {
 function genererLignesDepuisBlocs(p) {
   const caps = data.referentiel.competences.capacites;
   const lignes = [];
-  (p.blocs || []).forEach(b => {
+  (p.blocs || []).forEach((b, bi) => {
     const cap = caps.find(c => c.id === b.capId);
     const ct  = cap ? cap.competences_terminales.find(x => x.id === b.ctId) : null;
     const items = ct ? ct.items.filter(it => b.itemIds.includes(it.id)) : [];
@@ -8042,6 +8131,7 @@ function genererLignesDepuisBlocs(p) {
         onDemande: ct.titre || '',
         onExige: ct.items[0]?.critere_evaluation || '',
         competence: ct.id || '',
+        blocIdx: bi,
         estEntete: false,
       });
     } else {
@@ -8056,6 +8146,7 @@ function genererLignesDepuisBlocs(p) {
           onDemande: it.etre_capable_de,
           onExige: it.critere_evaluation,
           competence: it.id,
+          blocIdx: bi,
           estEntete: false,
         });
       });
@@ -8175,6 +8266,8 @@ function ajouterEntete(i) {
 // ══════════════════════════════════════════════════
 function imprimerFicheContrat() {
   saveFicheContratData();
+  _fcDirty = false;
+  _fcSetStatus('saved');
   // Convertir logo.jpg en base64 avant d'ouvrir la fenêtre
   _getLogoBase64().then(logoDataUrl => {
     _genererFicheContratHtml(logoDataUrl);
