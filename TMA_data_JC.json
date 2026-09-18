@@ -1824,146 +1824,157 @@
         ],
         "lignes": [
           {
-            "id": "h17897515008550.4282345408929841",
+            "id": "h17897691202610.7642888772335323",
             "groupe": "Compréhension",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.5594728236115302",
+            "id": "l17897691202610.4541319488042359",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
             "competence": "C1.15",
+            "blocIdx": 0,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.5608577925128851",
+            "id": "h17897691202610.04249491301492825",
             "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.9101475234645534",
+            "id": "l17897691202610.628022932305455",
             "groupe": "",
-            "onDemande": "Représenter et réaliser sous forme papier ou informatisée et autres supports : les relevés de situation de chantiers, les tracés d'atelier, les dessins de fabrication, les tracés des formes complexes.",
-            "onExige": "Les relevés, tracés, dessins de fabrication et formes complexes sont exploitables. Les tracés respectent le cahier des charges et les normes en vigueur.",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur",
             "competence": "C2.21",
+            "blocIdx": 1,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.5514080921518738",
+            "id": "h17897691202610.4164188937033513",
             "groupe": "Réaliser les entailles",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.9377719669170657",
+            "id": "l17897691202610.015723141624358172",
             "groupe": "",
-            "onDemande": "Usiner les éléments",
-            "onExige": "La conduite de l'usinage est maîtrisée.",
+            "onDemande": "entailler les éléments",
+            "onExige": "La conduite de l'entaillage est maîtrisée",
             "competence": "C3.42",
+            "blocIdx": 2,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.17821857684179876",
+            "id": "h17897691202610.7362955842970258",
             "groupe": "Réaliser les coupes à 45°",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.6954860098851523",
+            "id": "l17897691202610.007857449951594764",
             "groupe": "",
-            "onDemande": "Usiner les éléments",
-            "onExige": "La conduite de l'usinage est maîtrisée.",
+            "onDemande": "couper les éléments à 45° à la même longueur",
+            "onExige": "Les pièces sont identiques. l'assemblage est exploitable.",
             "competence": "C3.42",
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.36318348471862416",
+            "id": "h17897691202610.2427568504826786",
             "groupe": "Couper en longueur les pièces intérieures (le X)",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.16104862141334053",
+            "id": "l17897691202610.18083836811625853",
             "groupe": "",
-            "onDemande": "Usiner les éléments",
-            "onExige": "La conduite de l'usinage est maîtrisée.",
+            "onDemande": "Couper les éléments selon un tracé précis",
+            "onExige": "Les coupes sont précises. ",
             "competence": "C3.42",
+            "blocIdx": 4,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.6681009255392859",
+            "id": "h17897691202610.996335141000381",
             "groupe": "Usiner l'assemblage DOMINO",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.26112005196208643",
+            "id": "l17897691202610.62966556029157",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.8652216335976735",
+            "id": "h17897691202610.44256318715968535",
             "groupe": "Coller l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.8433397595344473",
+            "id": "l17897691202610.36147114664601543",
             "groupe": "",
             "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
             "competence": "C3.52",
+            "blocIdx": 6,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.7992227857505564",
+            "id": "h17897691202610.8236680060403848",
             "groupe": "Serrage de l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.32912816058275707",
+            "id": "l17897691202610.6989410767268857",
             "groupe": "",
             "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
             "onExige": "La méthodologie est respectée.",
             "competence": "C3.53",
+            "blocIdx": 7,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.15689166048917635",
+            "id": "h17897691202610.7594625910102105",
             "groupe": "Toupillage du 1/4 de rond",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.6449150027105571",
+            "id": "l17897691202610.7604765445190157",
             "groupe": "",
             "onDemande": "Usiner les éléments",
-            "onExige": "La conduite de l'usinage est maîtrisée.",
+            "onExige": "La conduite de toupillage est maîtrisée.",
             "competence": "C3.42",
+            "blocIdx": 8,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.8485042836707396",
+            "id": "h17897691202610.9694906120629618",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.292765469010434",
+            "id": "l17897691202610.5843552717562174",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
+            "blocIdx": 9,
             "estEntete": false
           },
           {
-            "id": "h17897515008560.9585581604883265",
+            "id": "h17897691202610.2548382419193127",
             "groupe": "Ranger et nettoyer",
             "estEntete": true
           },
           {
-            "id": "l17897515008560.9249677996216641",
+            "id": "l17897691202610.8607958759212507",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est opérationnel.",
             "competence": "C3.66",
+            "blocIdx": 10,
             "estEntete": false
           }
         ]
