@@ -1824,12 +1824,12 @@
         ],
         "lignes": [
           {
-            "id": "h17887999543050.3963621725541948",
+            "id": "h17897500960360.6929101929987506",
             "groupe": "Compréhension",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.854279534314744",
+            "id": "l17897500960360.12002309828288016",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
@@ -1837,51 +1837,51 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543050.09947199237229831",
+            "id": "h17897500960360.41534603632766665",
             "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.16021484210250536",
+            "id": "l17897500960360.5250318101039619",
             "groupe": "",
             "onDemande": "Réaliser les tracés d'atelier",
-            "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur.",
+            "onExige": "Les tracés respectent le cahier des charges.",
             "competence": "C2.21",
             "estEntete": false
           },
           {
-            "id": "h17887999543050.7675664601478304",
+            "id": "h17897500960360.19478625306025898",
             "groupe": "Réaliser les entailles",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.11279971974972536",
+            "id": "l17897500960360.6434588484321873",
             "groupe": "",
             "onDemande": "entailler les éléments",
-            "onExige": "La conduite de l'entaillage est maîtrisée.",
+            "onExige": "Les entailles sont propres et bien ajustées.\nLa conduite de l'entaillage est maîtrisée.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
-            "id": "h17887999543050.9871368620663048",
+            "id": "h17897500960360.9064241707242041",
             "groupe": "Réaliser les coupes à 45°",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.2509582012226059",
+            "id": "l17897500960360.3434860615219917",
             "groupe": "",
             "onDemande": "couper les éléments à 45° à la même longueur",
-            "onExige": "Les pièces sont identiques. l'assemblage est exploitable.",
+            "onExige": "Les pièces sont identiques.\nl'assemblage est exploitable.",
             "competence": "C3.42",
             "estEntete": false
           },
           {
-            "id": "h17887999543050.5973212638009299",
+            "id": "h17897500960360.38713155302733615",
             "groupe": "Couper en longueur les pièces intérieures (le X)",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.3167399986512357",
+            "id": "l17897500960360.8456330832692408",
             "groupe": "",
             "onDemande": "Couper les éléments selon un tracé précis",
             "onExige": "Les coupes sont précises.",
@@ -1889,12 +1889,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543050.6515203560960443",
+            "id": "h17897500960360.30322860849808675",
             "groupe": "Usiner l'assemblage DOMINO",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.02322201681202596",
+            "id": "l17897500960360.8891293413622018",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de l'usinage est maîtrisée.",
@@ -1902,12 +1902,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543050.2035664217796146",
+            "id": "h17897500960360.5143262063043614",
             "groupe": "Coller l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.3146308140923719",
+            "id": "l17897500960360.11946705836078897",
             "groupe": "",
             "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
@@ -1915,12 +1915,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543050.692394210796221",
+            "id": "h17897500960360.9244023894671745",
             "groupe": "Serrage de l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17887999543050.9308070671692239",
+            "id": "l17897500960360.12211069757740023",
             "groupe": "",
             "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
             "onExige": "La méthodologie est respectée.",
@@ -1928,12 +1928,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543050.3581497682908784",
+            "id": "h17897500960360.17207211953279056",
             "groupe": "Toupillage du 1/4 de rond",
             "estEntete": true
           },
           {
-            "id": "l17887999543060.5374400663266652",
+            "id": "l17897500960360.43174774879852285",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de toupillage est maîtrisée.",
@@ -1941,12 +1941,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543060.2530712419445744",
+            "id": "h17897500960360.8259777514014432",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17887999543060.6363942678837194",
+            "id": "l17897500960360.016749306551500975",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
@@ -1954,12 +1954,12 @@
             "estEntete": false
           },
           {
-            "id": "h17887999543060.6881762424901159",
+            "id": "h17897500960360.7718407144508002",
             "groupe": "Ranger et nettoyer",
             "estEntete": true
           },
           {
-            "id": "l17887999543060.12944460482991615",
+            "id": "l17897500960360.12201668652526176",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est propre et opérationnel.",
@@ -4990,8 +4990,8 @@
           "C3.66": "MS"
         },
         "s1781205445930": {
-          "C1.15": null,
-          "C2.21": null,
+          "C1.15": "TBM",
+          "C2.21": "TBM",
           "C3.42": null,
           "C3.52": null,
           "C3.53": null,
