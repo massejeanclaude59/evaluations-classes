@@ -264,10 +264,9 @@
           "itemIds": [
             "C3.6.1",
             "C3.6.2",
-            "C3.6.5",
-            "C3.6.7"
+            "C3.6.5"
           ],
-          "_open": false
+          "_open": true
         },
         {
           "capId": "C3",
@@ -305,6 +304,8 @@
         "activite": "Pose de revêtement de sol stratifié",
         "duree": "",
         "objectif": "Pose de revêtement de sol stratifié, avec les plinthes de finition.",
+        "_srcNom": "Pose de revêtement de sol stratifié",
+        "_srcDescriptif": "Pose de revêtement de sol stratifié, avec les plinthes de finition.",
         "onDonne": [
           "Le revêtement de sol stratifié",
           "Cellule de pose à disposition.",
@@ -312,154 +313,160 @@
         ],
         "lignes": [
           {
-            "id": "h17811188858920.03335554690868514",
+            "id": "h17898060154710.49967040008583263",
             "groupe": "Compréhension du projet ",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.4912044795287085",
+            "id": "l17898060154710.789914088710104",
             "groupe": "",
             "onDemande": "Prendre connaissance de l’environnement et de l’installation du chantier.",
             "onExige": "L'environnement du chantier est correctement identifié",
             "competence": "C1.2.1",
+            "blocIdx": 0,
             "estEntete": false
           },
           {
-            "id": "h17811188858920.8692795394969624",
+            "id": "h17898060154710.1595760719437188",
             "groupe": "Port des EPI",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.5020091777483584",
+            "id": "l17898060154710.03744358276152637",
             "groupe": "",
             "onDemande": "Porter les EPI.",
             "onExige": "Les équipements de protection individuelle adaptés (EPI) sont portés.",
             "competence": "C3.2.7",
+            "blocIdx": 1,
             "estEntete": false
           },
           {
-            "id": "h17811188858920.36378649209240366",
+            "id": "h17898060154710.7575656501126757",
             "groupe": "Organiser la zone de travail",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.4584261594538057",
+            "id": "l17898060154710.16805468955697522",
             "groupe": "",
             "onDemande": "Organiser les zones d’intervention sur le chantier",
             "onExige": "Les matériels et outillages sont disposés rationnellement.",
             "competence": "C3.2.3",
+            "blocIdx": 2,
             "estEntete": false
           },
           {
-            "id": "h17811188858920.8103391715388486",
+            "id": "h17898060154710.7621901275254093",
             "groupe": "Couper et ajuster les lames",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.6556192875141338",
+            "id": "l17898060154710.648504908440686",
             "groupe": "",
             "onDemande": "Relever les éléments (dimensions, angles, formes).",
             "onExige": "Les valeurs relevées permettent de réaliser le tracé.",
             "competence": "C3.6.1",
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.7034120355081919",
+            "id": "l17898060154710.7165053118270137",
             "groupe": "",
             "onDemande": "Tracer les éléments à adapter.",
             "onExige": "Les tracés correspondent à la forme à obtenir.",
             "competence": "C3.6.2",
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.6563333103665023",
+            "id": "l17898060154710.5308799338200103",
             "groupe": "",
             "onDemande": "Couper et ajuster les éléments",
             "onExige": "La pièce est parfaitement adaptée.",
             "competence": "C3.6.5",
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.351131279928927",
-            "groupe": "",
-            "onDemande": "Respecter le temps alloué.",
-            "onExige": "Le temps alloué est pris en compte",
-            "competence": "C3.6.7",
-            "estEntete": false
-          },
-          {
-            "id": "h17811188858920.4759184680725622",
+            "id": "h17898060154710.6223167018313261",
             "groupe": "Pose du parquet et respect du DTU",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.052259688420075556",
+            "id": "l17898060154710.9310678719201035",
             "groupe": "",
             "onDemande": "Poser les revêtements de plancher en bois et dérivés.",
             "onExige": "La pose est plane, stable et conforme aux règles techniques du DTU.",
             "competence": "C3.9.6",
+            "blocIdx": 4,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.4782092379709231",
+            "id": "l17898060154710.17180732898055928",
             "groupe": "",
             "onDemande": "Respecter le temps alloué.",
             "onExige": "Le temps alloué est pris en compte.",
             "competence": "C3.9.11",
+            "blocIdx": 4,
             "estEntete": false
           },
           {
-            "id": "h17811188858920.8109355469089625",
+            "id": "h17898060154710.5918197532602025",
             "groupe": "Couper et ajuster les plinthes",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.7715790796334735",
+            "id": "l17898060154710.89431276072576",
             "groupe": "",
             "onDemande": "Relever les éléments (dimensions, angles, formes).",
             "onExige": "Les valeurs relevées permettent de réaliser le tracé.",
             "competence": "C3.6.1",
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.8374527545936779",
+            "id": "l17898060154710.34815318592244093",
             "groupe": "",
             "onDemande": "Tracer les éléments à adapter.",
             "onExige": "Les tracés correspondent à la forme à obtenir.",
             "competence": "C3.6.2",
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.6999366627532319",
+            "id": "l17898060154710.6663307251728687",
             "groupe": "",
             "onDemande": "Couper et ajuster les éléments",
             "onExige": "La pièce est parfaitement adaptée.",
             "competence": "C3.6.5",
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "l17811188858920.5249826649781988",
+            "id": "l17898060154710.541878191082865",
             "groupe": "",
             "onDemande": "Respecter le temps alloué.",
             "onExige": "Le temps alloué est pris en compte",
             "competence": "C3.6.7",
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "h17811188858920.35179311262754187",
+            "id": "h17898060154710.6312818239147644",
             "groupe": "Rangement et nettoyage",
             "estEntete": true
           },
           {
-            "id": "l17811188858920.29021340113213057",
+            "id": "l17898060154710.8611478998968223",
             "groupe": "",
             "onDemande": "Désinstaller et ranger les postes de travail et les zones d'activités en fin de chantier.",
             "onExige": "L'outillage est rangé, la zone est propre",
             "competence": "C3.2.10",
+            "blocIdx": 6,
             "estEntete": false
           }
         ]
-      }
+      },
+      "vignette": "data:image/jpeg;base64,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"
     },
     {
       "id": "proj1781116146098",
