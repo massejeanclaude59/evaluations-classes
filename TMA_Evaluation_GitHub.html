@@ -1209,6 +1209,18 @@
       <label class="form-label">Descriptif <span style="font-weight:400;color:var(--text3)">(optionnel)</span></label>
       <textarea class="form-textarea" id="projetDescriptif" rows="3" placeholder="Description courte du projet…"></textarea>
     </div>
+    <div class="form-group">
+      <label class="form-label">Vignette <span style="font-weight:400;color:var(--text3)">(image du projet, pour éviter les confusions)</span></label>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div id="projetVignettePreview" style="width:120px;height:90px;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--surface2);color:var(--text3);font-size:11px;text-align:center;flex-shrink:0;">Aucune image</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start;">
+          <input type="file" id="projetVignetteFile" accept="image/*" style="display:none" onchange="projetVignetteChoisie(this)">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('projetVignetteFile').click()">📷 Choisir une image…</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="projetVignetteRetirer" onclick="projetVignetteRetirer()" style="display:none">✕ Retirer</button>
+          <div style="font-size:10px;color:var(--text3);">JPEG ou PNG — redimensionnée et convertie automatiquement.</div>
+        </div>
+      </div>
+    </div>
     <div class="modal-actions">
       <button class="btn btn-secondary" onclick="closeModal('projetModal')">Annuler</button>
       <button class="btn btn-primary" onclick="saveProjet()">Enregistrer</button>
@@ -4403,7 +4415,9 @@ function renderProjetsSidebar() {
     const div = document.createElement('div');
     div.className = 'class-item' + (p.id === selectedProjetId ? ' active' : '');
     div.innerHTML = `
-      <div class="class-dot" style="background:var(--accent2)"></div>
+      ${p.vignette
+        ? `<img src="${p.vignette}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;flex-shrink:0;border:1px solid var(--border);background:#fff;">`
+        : '<div class="class-dot" style="background:var(--accent2)"></div>'}
       <div style="flex:1;min-width:0;">
         <div class="class-name" style="font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.nom}</div>
         <div style="font-size:11px;color:var(--text3);">${nbBlocs} bloc${nbBlocs>1?'s':''} · ${nbItems} item${nbItems>1?'s':''}</div>
@@ -4429,7 +4443,10 @@ function renderProjetDetail() {
 
   main.innerHTML = `
     <div class="main-header">
-      <div class="main-title">${p.nom}<span class="sub">${p.descriptif || 'Aucun descriptif'}</span></div>
+      <div style="display:flex;align-items:center;gap:14px;min-width:0;">
+        ${p.vignette ? `<img src="${p.vignette}" alt="" style="height:76px;max-width:120px;border-radius:8px;object-fit:cover;flex-shrink:0;border:1px solid var(--border);background:#fff;">` : ''}
+        <div class="main-title">${p.nom}<span class="sub">${p.descriptif || 'Aucun descriptif'}</span></div>
+      </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         <button class="btn btn-secondary btn-sm" onclick="dupliquerProjet('${p.id}')">📋 Dupliquer</button>
         <button class="btn btn-secondary btn-sm" onclick="openProjetModal('${p.id}')">✏️ Modifier</button>
@@ -4630,9 +4647,63 @@ function dupliquerProjet(id) {
   toast('Projet dupliqué');
 }
 
+// ── Vignette du projet (image JPEG en base64, stockée dans p.vignette) ──
+let _projetVignetteTmp = '';   // valeur en cours d'édition dans la modale (validée à "Enregistrer")
+const VIGNETTE_MAX_PX  = 480;  // plus grand côté, en pixels
+const VIGNETTE_QUALITE = 0.82; // qualité JPEG
+
+function _projetVignetteRender() {
+  const box = document.getElementById('projetVignettePreview');
+  const btn = document.getElementById('projetVignetteRetirer');
+  if (!box) return;
+  if (_projetVignetteTmp) {
+    box.style.borderStyle = 'solid';
+    box.innerHTML = `<img src="${_projetVignetteTmp}" alt="" style="width:100%;height:100%;object-fit:contain;background:#fff;">`;
+  } else {
+    box.style.borderStyle = 'dashed';
+    box.textContent = 'Aucune image';
+  }
+  if (btn) btn.style.display = _projetVignetteTmp ? '' : 'none';
+}
+
+function projetVignetteChoisie(input) {
+  const file = input.files && input.files[0];
+  input.value = '';                       // permet de re-choisir le même fichier
+  if (!file) return;
+  if (!/^image\//.test(file.type)) { toast('⚠️ Choisissez un fichier image (JPEG, PNG…)'); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = new Image();
+    img.onload = () => {
+      // Redimensionner + convertir en JPEG (base64) pour garder un fichier de données léger
+      const k = Math.min(1, VIGNETTE_MAX_PX / Math.max(img.width, img.height));
+      const w = Math.max(1, Math.round(img.width * k));
+      const h = Math.max(1, Math.round(img.height * k));
+      const c = document.createElement('canvas');
+      c.width = w; c.height = h;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);   // fond blanc (PNG transparents)
+      ctx.drawImage(img, 0, 0, w, h);
+      _projetVignetteTmp = c.toDataURL('image/jpeg', VIGNETTE_QUALITE);
+      _projetVignetteRender();
+    };
+    img.onerror = () => toast('⚠️ Image illisible');
+    img.src = e.target.result;
+  };
+  reader.onerror = () => toast('⚠️ Lecture du fichier impossible');
+  reader.readAsDataURL(file);
+}
+
+function projetVignetteRetirer() {
+  _projetVignetteTmp = '';
+  _projetVignetteRender();
+}
+
 function openProjetModal(id = null) {
   editingId = id;
   const p = id ? data.projets.find(x => x.id === id) : null;
+  _projetVignetteTmp = p?.vignette || '';
+  _projetVignetteRender();
   // Injection d'un mini-modal inline
   const overlay = document.getElementById('projetModal');
   document.getElementById('projetModalTitle').textContent = id ? 'Modifier le projet' : 'Nouveau projet';
@@ -4648,8 +4719,10 @@ function saveProjet() {
   if (editingId) {
     const p = data.projets.find(x => x.id === editingId);
     p.nom = nom; p.descriptif = descriptif;
+    if (_projetVignetteTmp) p.vignette = _projetVignetteTmp; else delete p.vignette;
   } else {
     const newP = { id: 'proj' + Date.now(), nom, descriptif, blocs: [] };
+    if (_projetVignetteTmp) newP.vignette = _projetVignetteTmp;
     data.projets.push(newP);
     selectedProjetId = newP.id;
   }
@@ -7958,6 +8031,11 @@ window.addEventListener('DOMContentLoaded', () => {
     <div style="padding:20px 24px;display:flex;flex-direction:column;gap:16px;">
 
       <!-- Infos générales -->
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div id="fcVignetteBox" style="display:none;flex:0 0 auto;">
+          <img id="fcVignette" alt="Vignette du projet" style="display:block;width:140px;max-height:120px;object-fit:contain;border-radius:8px;border:1px solid var(--border);background:#fff;">
+        </div>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
         <div>
           <label style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;">Titre de l'activité</label>
@@ -7971,6 +8049,9 @@ window.addEventListener('DOMContentLoaded', () => {
       <div>
         <label style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;">Objectif / Descriptif</label>
         <textarea id="fcObjectif" class="form-textarea" rows="2" style="margin-top:4px;" placeholder="ex : Traçage et réalisation manuelle, sans machine, d'un assemblage à mi-bois…" oninput="_fcData && (_fcData.objectif=this.value)"></textarea>
+      </div>
+
+        </div>
       </div>
 
       <!-- Section "On Donne" -->
@@ -8152,6 +8233,11 @@ function openFicheContratModal(projetId) {
   }
 
   document.getElementById('fcProjetNom').textContent = p.nom;
+  const _fv = document.getElementById('fcVignette'), _fvb = document.getElementById('fcVignetteBox');
+  if (_fv && _fvb) {
+    if (p.vignette) { _fv.src = p.vignette; _fvb.style.display = 'block'; }
+    else            { _fv.removeAttribute('src'); _fvb.style.display = 'none'; }
+  }
   document.getElementById('fcActivite').value  = _fcData.activite;
   document.getElementById('fcDuree').value     = _fcData.duree;
   document.getElementById('fcObjectif').value  = _fcData.objectif;
@@ -8406,6 +8492,12 @@ function _genererFicheContratHtml(logoDataUrl) {
     ? `<img src="${logoDataUrl}" style="height:52px;object-fit:contain;display:block;">`
     : `<div style="font-family:Arial;font-weight:900;font-size:18px;color:#1a1a2e;">mansart</div>`;
 
+  // Vignette du projet (cellule à droite du bloc Nom / Prénom / Classe / Objectif)
+  const vig = p?.vignette || '';
+  const vigHtml = vig
+    ? `<td rowspan="2" style="width:26%;border:1px solid #ccc;padding:4px;text-align:center;vertical-align:middle;"><img src="${vig}" alt="" style="max-width:100%;max-height:30mm;object-fit:contain;display:block;margin:0 auto;"></td>`
+    : '';
+
   const html = `<!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8">
 <title>Fiche contrat — ${fc.activite || p?.nom || ''}</title>
@@ -8448,18 +8540,19 @@ function _genererFicheContratHtml(logoDataUrl) {
 <!-- Identité élève + objectif -->
 <table style="margin-bottom:8px;border:1.5px solid #1a1a2e;">
   <tr>
-    <td style="width:33%;border:1px solid #ccc;padding:7px 10px;">
+    <td style="width:${vig?25:33}%;border:1px solid #ccc;padding:7px 10px;">
       <span style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;">Nom</span><br>
       <div style="border-bottom:1.5px solid #1a1a2e;margin-top:14px;"></div>
     </td>
-    <td style="width:33%;border:1px solid #ccc;padding:7px 10px;">
+    <td style="width:${vig?25:33}%;border:1px solid #ccc;padding:7px 10px;">
       <span style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;">Prénom</span><br>
       <div style="border-bottom:1.5px solid #1a1a2e;margin-top:14px;"></div>
     </td>
-    <td style="width:34%;border:1px solid #ccc;padding:7px 10px;">
+    <td style="width:${vig?24:34}%;border:1px solid #ccc;padding:7px 10px;">
       <span style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;">Classe</span><br>
       <div style="border-bottom:1.5px solid #1a1a2e;margin-top:14px;"></div>
     </td>
+    ${vigHtml}
   </tr>
   <tr>
     <td colspan="3" style="border:1px solid #ccc;padding:7px 10px;">
