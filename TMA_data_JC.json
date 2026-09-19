@@ -739,6 +739,8 @@
         "activite": "Assemblage Trait de Jupiter",
         "duree": "",
         "objectif": "",
+        "_srcNom": "Assemblage Trait de Jupiter",
+        "_srcDescriptif": "",
         "onDonne": [
           "Les plans de définition",
           "Le bois corroyé",
@@ -746,80 +748,87 @@
         ],
         "lignes": [
           {
-            "id": "h17804748856660.6191636488915715",
+            "id": "h17898049742010.8287422553635205",
             "groupe": "Lecture de plan",
             "estEntete": true
           },
           {
-            "id": "l17804748856660.20244803776572906",
+            "id": "l17898049742010.6994059595548473",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
             "competence": "C1.15",
+            "blocIdx": 0,
             "estEntete": false
           },
           {
-            "id": "h17804748856660.8966336028089483",
+            "id": "h17898049742010.7058265347654118",
             "groupe": "Traçage des pieces",
             "estEntete": true
           },
           {
-            "id": "l17804748856660.9664284313070689",
+            "id": "l17898049742010.594011817839961",
             "groupe": "",
             "onDemande": "Réaliser les tracés d'atelier.",
             "onExige": "Les tracés sont exploitables.\nLes tracés respectent le cahier des charges.",
             "competence": "C2.21",
+            "blocIdx": 1,
             "estEntete": false
           },
           {
-            "id": "h17804748856660.062377574776164235",
+            "id": "h17898049742010.5220329677712618",
             "groupe": "Réaliser et ajuster les découpes d'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17804748856660.8344417526124718",
+            "id": "l17898049742010.6368813094267267",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de l'usinage est maîtrisée.",
             "competence": "C3.42",
+            "blocIdx": 2,
             "estEntete": false
           },
           {
-            "id": "l17804748856660.5434005575046813",
+            "id": "l17898049742010.9820428095414377",
             "groupe": "",
             "onDemande": "Effectuer les actions correctives nécessaires",
             "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
             "competence": "C3.44",
+            "blocIdx": 2,
             "estEntete": false
           },
           {
-            "id": "h17804748856660.1990702778722898",
+            "id": "h17898049742010.7332770442050665",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17804748856660.8644420721434974",
+            "id": "l17898049742010.05250131322122542",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "h17804748856660.1328837078348959",
+            "id": "h17898049742010.5139891686020466",
             "groupe": "Nettoyage de la zone de travail",
             "estEntete": true
           },
           {
-            "id": "l17804748856660.4312787178474671",
+            "id": "l17898049742010.5226122713513905",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est Propre et opérationnel.",
             "competence": "C3.66",
+            "blocIdx": 4,
             "estEntete": false
           }
         ]
-      }
+      },
+      "vignette": "data:image/jpeg;base64,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"
     },
     {
       "id": "proj1781209440893",
@@ -1828,12 +1837,12 @@
         ],
         "lignes": [
           {
-            "id": "h17897691202610.7642888772335323",
+            "id": "h17898052727870.29502225814311045",
             "groupe": "Compréhension",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.4541319488042359",
+            "id": "l17898052727870.2607846818852978",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
@@ -1842,12 +1851,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.04249491301492825",
+            "id": "h17898052727870.03939948795847248",
             "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.628022932305455",
+            "id": "l17898052727870.43487361153297044",
             "groupe": "",
             "onDemande": "Réaliser les tracés d'atelier",
             "onExige": "Les tracés respectent le cahier des charges et les normes en vigueur",
@@ -1856,12 +1865,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.4164188937033513",
+            "id": "h17898052727870.6635633239009446",
             "groupe": "Réaliser les entailles",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.015723141624358172",
+            "id": "l17898052727870.45634681990747883",
             "groupe": "",
             "onDemande": "entailler les éléments",
             "onExige": "La conduite de l'entaillage est maîtrisée",
@@ -1870,12 +1879,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.7362955842970258",
+            "id": "h17898052727870.15015957610240316",
             "groupe": "Réaliser les coupes à 45°",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.007857449951594764",
+            "id": "l17898052727870.25070406349048246",
             "groupe": "",
             "onDemande": "couper les éléments à 45° à la même longueur",
             "onExige": "Les pièces sont identiques. l'assemblage est exploitable.",
@@ -1884,12 +1893,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.2427568504826786",
+            "id": "h17898052727870.7793391569651319",
             "groupe": "Couper en longueur les pièces intérieures (le X)",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.18083836811625853",
+            "id": "l17898052727870.41602810984458494",
             "groupe": "",
             "onDemande": "Couper les éléments selon un tracé précis",
             "onExige": "Les coupes sont précises. ",
@@ -1898,12 +1907,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.996335141000381",
+            "id": "h17898052727870.949851972475853",
             "groupe": "Usiner l'assemblage DOMINO",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.62966556029157",
+            "id": "l17898052727870.8267907789997192",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de l'usinage est maîtrisée.",
@@ -1912,12 +1921,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.44256318715968535",
+            "id": "h17898052727870.5426071698509813",
             "groupe": "Coller l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.36147114664601543",
+            "id": "l17898052727870.9434794348834712",
             "groupe": "",
             "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
@@ -1926,12 +1935,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.8236680060403848",
+            "id": "h17898052727870.5586596663651378",
             "groupe": "Serrage de l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.6989410767268857",
+            "id": "l17898052727870.3392569691837999",
             "groupe": "",
             "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
             "onExige": "La méthodologie est respectée.",
@@ -1940,12 +1949,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.7594625910102105",
+            "id": "h17898052727870.7579043452129134",
             "groupe": "Toupillage du 1/4 de rond",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.7604765445190157",
+            "id": "l17898052727870.14644405917951475",
             "groupe": "",
             "onDemande": "Usiner les éléments",
             "onExige": "La conduite de toupillage est maîtrisée.",
@@ -1954,12 +1963,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.9694906120629618",
+            "id": "h17898052727870.8725505228766705",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.5843552717562174",
+            "id": "l17898052727870.6745843592606169",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
@@ -1968,12 +1977,12 @@
             "estEntete": false
           },
           {
-            "id": "h17897691202610.2548382419193127",
+            "id": "h17898052727870.22263853967050118",
             "groupe": "Ranger et nettoyer",
             "estEntete": true
           },
           {
-            "id": "l17897691202610.8607958759212507",
+            "id": "l17898052727870.3499570717967764",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est opérationnel.",
@@ -5058,6 +5067,275 @@
           "capId": "C3",
           "ctId": "C3.6",
           "contexte": "Nettoyage de la zone de travail",
+          "itemIds": [
+            "C3.66"
+          ],
+          "_open": false
+        }
+      ]
+    },
+    {
+      "id": "eval1789805149723",
+      "projetId": "proj1788799374129",
+      "projetNom": "Dessous de plat 250x250mm",
+      "classeId": "c1",
+      "classeNom": "2TMA",
+      "profId": "p2",
+      "date": "2026-09-19",
+      "isCCF": false,
+      "eleveNotes": {
+        "s1787998685552": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998728284": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998748711": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998768144": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1789491737658": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998787523": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1779263676513": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998854414": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998900502": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1788796552305": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998933534": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        },
+        "s1787998954062": {
+          "C1.15": null,
+          "C2.21": null,
+          "C3.42": null,
+          "C3.42#2": null,
+          "C3.42#3": null,
+          "C3.42#4": null,
+          "C3.52": null,
+          "C3.53": null,
+          "C3.42#5": null,
+          "C3.63": null,
+          "C3.66": null
+        }
+      },
+      "blocsSnapshot": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Compréhension",
+          "itemIds": [
+            "C1.15"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Tracer les pièces",
+          "itemIds": [
+            "C2.21"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les entailles",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les coupes à 45°",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Couper en longueur les pièces intérieures (le X)",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Usiner l'assemblage DOMINO",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Coller l'assemblage",
+          "itemIds": [
+            "C3.52"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.5",
+          "contexte": "Serrage de l'assemblage",
+          "itemIds": [
+            "C3.53"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Toupillage du 1/4 de rond",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Finition",
+          "itemIds": [
+            "C3.63"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Ranger et nettoyer",
           "itemIds": [
             "C3.66"
           ],
