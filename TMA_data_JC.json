@@ -63,7 +63,7 @@
       "statut": "normal",
       "genre": "M",
       "note": "",
-      "_acqPct": 57
+      "_acqPct": 62
     },
     {
       "id": "s2",
@@ -122,7 +122,7 @@
       "classId": "c3",
       "statut": "normal",
       "note": "Bac en 2 ans",
-      "_acqPct": 7
+      "_acqPct": 10
     },
     {
       "id": "s1787998685552",
@@ -4761,7 +4761,8 @@
           "C3.44": "MS",
           "C3.63": "TBM",
           "C3.61": "TBM",
-          "C3.66": null
+          "C3.66": null,
+          "C3.42#2": "TBM"
         },
         "s1787998854414": {
           "C1.15": null,
