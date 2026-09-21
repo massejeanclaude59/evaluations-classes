@@ -4392,6 +4392,8 @@ function renderProjetDetail() {
       </div>
     </div>
 
+    ${renderProjetDocsHtml(p)}
+
     <div class="section">
       <div class="section-header">
         <div class="section-title">Compétences à évaluer <span class="tag">${p.blocs.length} bloc${p.blocs.length>1?'s':''}</span></div>
@@ -8607,7 +8609,7 @@ function buildFicheTableBody(fc) {
 //  GITHUB SYNC
 // ═══════════════════════════════════════════
 const GH_OWNER = 'massejeanclaude59';
-const GH_REPO  = 'evaluations-classes';
+const GH_REPO  = 'evaluations-classes';   // dépôt des données (JSON) et des documents PDF
 
 function ghConfig() {
   return {
@@ -8652,6 +8654,27 @@ function ghJsonFile() {
   const isCAP = document.title.includes('CAP');
   const base  = isCAP ? 'CAP_MI_data' : 'TMA_data';
   return prof ? base + '_' + prof + '.json' : base + '.json';
+}
+
+// URL de l'API "contents" pour un chemin du dépôt (chemin vide = racine)
+function ghContentsUrl(chemin) {
+  const p = String(chemin || '').split('/').filter(Boolean).map(encodeURIComponent).join('/');
+  return `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents` + (p ? '/' + p : '');
+}
+
+// SHA d'un fichier, quelle que soit sa taille (nécessaire pour le mettre à jour ou le supprimer).
+// Le format JSON standard de l'API ne fonctionne plus au-delà de 1 Mo : on utilise le format "object",
+// puis, en secours, la liste du dossier parent. Retourne null si le fichier n'existe pas.
+async function ghGetSha(chemin) {
+  const r = await fetch(ghContentsUrl(chemin), { headers: { ...ghHeaders(), 'Accept': 'application/vnd.github.object+json' } });
+  if (r.status === 404) return null;
+  if (r.ok) { const m = await r.json(); if (m && m.sha) return m.sha; }
+  const dir = chemin.includes('/') ? chemin.slice(0, chemin.lastIndexOf('/')) : '';
+  const r2 = await fetch(ghContentsUrl(dir), { headers: ghHeaders() });
+  if (!r2.ok) return null;
+  const liste = await r2.json();
+  const f = Array.isArray(liste) ? liste.find(x => x.path === chemin) : null;
+  return f ? f.sha : null;
 }
 
 function ghHeaders() {
@@ -8713,16 +8736,12 @@ async function ghLoad() {
   const file = ghJsonFile();
   toast('⏳ Chargement depuis GitHub…');
   try {
-    const r = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${file}`, { headers: ghHeaders() });
+    // Format "raw" : renvoie directement le contenu du fichier, quelle que soit sa taille (le format
+    // JSON standard de l'API renvoie un contenu vide au-delà de 1 Mo).
+    const r = await fetch(ghContentsUrl(file), { headers: { ...ghHeaders(), 'Accept': 'application/vnd.github.raw+json' } });
     if (r.status === 404) { toast('ℹ️ Pas encore de données sur GitHub pour ce fichier'); return; }
     if (!r.ok) throw new Error('HTTP ' + r.status);
-    const meta = await r.json();
-    // Décodage UTF-8 correct pour les accents
-    const b64clean = meta.content.replace(/\n/g,'');
-    const binary = atob(b64clean);
-    const bytes2 = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) bytes2[i] = binary.charCodeAt(i);
-    const content = JSON.parse(new TextDecoder('utf-8').decode(bytes2));
+    const content = JSON.parse(await r.text());   // décodage UTF-8 automatique
     data = content;
     if (!data.professors)  data.professors  = [];
     if (!data.classes)     data.classes     = [];
@@ -8757,9 +8776,8 @@ async function ghSave() {
   toast('⏳ Sauvegarde sur GitHub…');
   try {
     // Récupérer le SHA actuel (nécessaire pour mettre à jour)
-    let sha = null;
-    const r0 = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${file}`, { headers: ghHeaders() });
-    if (r0.ok) { const m = await r0.json(); sha = m.sha; }
+    // Récupérer le SHA actuel (nécessaire pour mettre à jour) — fonctionne aussi au-delà de 1 Mo
+    const sha = await ghGetSha(file);
     const body = { message: '💾 Sauvegarde ' + new Date().toLocaleString('fr-FR'), content: b64 };
     if (sha) body.sha = sha;
     const r = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${file}`, {
@@ -8769,6 +8787,143 @@ async function ghSave() {
     toast('✅ Sauvegardé sur GitHub');
   } catch(e) { toast('❌ Erreur GitHub : ' + e.message); }
 }
+
+
+// ═══════════════════════════════════════════
+//  DOCUMENTS PDF JOINTS À UN PROJET (stockés sur GitHub)
+//  Le PDF est envoyé dans le dépôt : documents/<initiales>/<idProjet>/<id>_<nom>.pdf
+//  Le projet ne garde que ses références : p.documents = [{id, nom, chemin, taille, date}]
+// ═══════════════════════════════════════════
+const DOC_MAX_OCTETS = 10 * 1024 * 1024;   // 10 Mo par PDF
+
+function _docEsc(t) {
+  return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function _docTaille(o) {
+  return o >= 1048576 ? (o / 1048576).toFixed(1).replace('.', ',') + ' Mo' : Math.max(1, Math.round(o / 1024)) + ' Ko';
+}
+function _docSlug(nom) {
+  return String(nom).replace(/\.pdf$/i, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 60) || 'document';
+}
+function _docCheckGh() {
+  if (!localStorage.getItem('gh_token')) { toast('⚠️ Configurez d\'abord le token GitHub'); openGhModal(); return false; }
+  if (!ghGetProf()) { toast('⚠️ Veuillez d\'abord sélectionner un professeur'); return false; }
+  if (navigator.onLine === false) { toast('📵 Pas de réseau : les documents PDF sont sur GitHub'); return false; }
+  return true;
+}
+
+function renderProjetDocsHtml(p) {
+  const docs = p.documents || [];
+  const liste = docs.length ? docs.map(d => `
+      <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface2);">
+        <span style="font-size:18px;">📄</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${_docEsc(d.nom)}</div>
+          <div style="font-size:11px;color:var(--text3);">${_docTaille(d.taille || 0)} · ${d.date ? new Date(d.date).toLocaleDateString('fr-FR') : ''}</div>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="projetDocOuvrir('${d.id}')">👁 Ouvrir</button>
+        <button class="btn btn-secondary btn-sm" title="Télécharger" onclick="projetDocOuvrir('${d.id}', true)">⬇️</button>
+        <button class="btn btn-danger btn-sm" title="Supprimer" onclick="projetDocSupprimer('${d.id}')">🗑️</button>
+      </div>`).join('')
+    : `<div style="font-size:12px;color:var(--text3);padding:2px;">Aucun document joint. Vous pouvez joindre les plans du projet au format PDF.</div>`;
+  return `
+    <div class="section" id="projetDocs">
+      <div class="section-header">
+        <div class="section-title">📎 Documents PDF <span class="tag">${docs.length}</span></div>
+        <button class="btn btn-secondary btn-sm" onclick="projetDocChoisir()">＋ Joindre un PDF</button>
+        <input type="file" id="projetDocFile" accept="application/pdf,.pdf" style="display:none" onchange="projetDocAjouter(this)">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">${liste}</div>
+    </div>`;
+}
+
+function projetDocChoisir() {
+  if (!_docCheckGh()) return;
+  document.getElementById('projetDocFile').click();
+}
+
+async function projetDocAjouter(input) {
+  const file = input.files && input.files[0];
+  input.value = '';
+  const p = data.projets.find(x => x.id === selectedProjetId);
+  if (!file || !p) return;
+  if (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf') { toast('⚠️ Choisissez un fichier PDF'); return; }
+  if (file.size > DOC_MAX_OCTETS) { toast('⚠️ PDF trop volumineux (' + _docTaille(file.size) + ') — 10 Mo maximum'); return; }
+  if (!_docCheckGh()) return;
+  toast('⏳ Envoi du PDF sur GitHub…');
+  try {
+    const b64 = await new Promise((res, rej) => {
+      const r = new FileReader();
+      r.onload = () => res(String(r.result).split(',')[1] || '');
+      r.onerror = () => rej(new Error('lecture du fichier impossible'));
+      r.readAsDataURL(file);
+    });
+    const id = 'doc' + Date.now();
+    const chemin = `documents/${ghGetProf()}/${p.id}/${id}_${_docSlug(file.name)}.pdf`;
+    const r = await fetch(ghContentsUrl(chemin), {
+      method: 'PUT', headers: ghHeaders(),
+      body: JSON.stringify({ message: '📎 PDF « ' + file.name + ' » (' + p.nom + ')', content: b64 })
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    (p.documents = p.documents || []).push({ id, nom: file.name, chemin, taille: file.size, date: new Date().toISOString() });
+    if (selectedProjetId === p.id) renderProjetDetail();
+    await ghSave();   // garde le projet et ses documents synchronisés sur GitHub
+  } catch (e) { toast('❌ Envoi impossible : ' + e.message); }
+}
+
+async function projetDocOuvrir(docId, telecharger = false) {
+  const p = data.projets.find(x => x.id === selectedProjetId);
+  const d = p && (p.documents || []).find(x => x.id === docId);
+  if (!d || !_docCheckGh()) return;
+  // Onglet ouvert tout de suite (pendant le clic) : sinon les téléphones bloquent la fenêtre
+  const w = telecharger ? null : window.open('', '_blank');
+  toast('⏳ Chargement du PDF…');
+  try {
+    // Format "raw" : renvoie le fichier brut (nécessaire pour un dépôt privé et au-delà de 1 Mo)
+    const r = await fetch(ghContentsUrl(d.chemin), { headers: { ...ghHeaders(), 'Accept': 'application/vnd.github.raw+json' } });
+    if (r.status === 404) throw new Error('fichier introuvable sur GitHub');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const url = URL.createObjectURL(new Blob([await r.arrayBuffer()], { type: 'application/pdf' }));
+    if (w && !w.closed) { w.location.href = url; }
+    else {
+      const a = document.createElement('a');
+      a.href = url; a.download = d.nom; document.body.appendChild(a); a.click(); a.remove();
+    }
+    setTimeout(() => URL.revokeObjectURL(url), 120000);
+    toast(telecharger ? '✅ PDF téléchargé' : '✅ PDF ouvert');
+  } catch (e) {
+    if (w && !w.closed) w.close();
+    toast('❌ ' + e.message);
+  }
+}
+
+async function projetDocSupprimer(docId) {
+  const p = data.projets.find(x => x.id === selectedProjetId);
+  const d = p && (p.documents || []).find(x => x.id === docId);
+  if (!d) return;
+  if (!confirm('Supprimer « ' + d.nom + ' » de ce projet et de GitHub ?')) return;
+  if (!_docCheckGh()) return;
+  // Fichier partagé avec un autre projet (projet dupliqué) : on ne supprime alors que le lien
+  const partage = data.projets.some(x => x !== p && (x.documents || []).some(y => y.chemin === d.chemin));
+  try {
+    if (!partage) {
+      const sha = await ghGetSha(d.chemin);
+      if (sha) {
+        const r = await fetch(ghContentsUrl(d.chemin), {
+          method: 'DELETE', headers: ghHeaders(),
+          body: JSON.stringify({ message: '🗑️ Suppression PDF « ' + d.nom + ' »', sha })
+        });
+        if (!r.ok && r.status !== 404) throw new Error('HTTP ' + r.status);
+      }
+    }
+    p.documents = p.documents.filter(x => x.id !== docId);
+    if (!p.documents.length) delete p.documents;
+    if (selectedProjetId === p.id) renderProjetDetail();
+    await ghSave();
+  } catch (e) { toast('❌ Suppression impossible : ' + e.message); }
+}
+
 
 </script>
 
