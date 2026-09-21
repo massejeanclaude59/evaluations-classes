@@ -5223,6 +5223,86 @@
           "_open": false
         }
       ]
+    },
+    {
+      "id": "eval1789993478712",
+      "projetId": "proj1779254858994",
+      "projetNom": "Assemblage en croix",
+      "classeId": "c1",
+      "classeNom": "2TMA",
+      "profId": "p3",
+      "date": "2026-09-21",
+      "isCCF": false,
+      "eleveNotes": {
+        "s1787998728284": {
+          "C1.15": "MF",
+          "C2.21": "MF",
+          "C3.42": "MF",
+          "C3.44": "MI",
+          "C3.42#2": "MS",
+          "C3.63": "MS",
+          "C3.61": "MF",
+          "C3.66": "MF"
+        }
+      },
+      "blocsSnapshot": [
+        {
+          "capId": "C1",
+          "ctId": "C1.1",
+          "contexte": "Lecture de plan",
+          "itemIds": [
+            "C1.15"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.2",
+          "contexte": "Traçage des pieces",
+          "itemIds": [
+            "C2.21"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Réaliser les entailles",
+          "itemIds": [
+            "C3.42",
+            "C3.44"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.4",
+          "contexte": "Sciage a 90° et 45°",
+          "itemIds": [
+            "C3.42"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Finition",
+          "itemIds": [
+            "C3.63",
+            "C3.61"
+          ],
+          "_open": false
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.6",
+          "contexte": "Nettoyage de la zone de travail",
+          "itemIds": [
+            "C3.66"
+          ],
+          "_open": false
+        }
+      ]
     }
   ],
   "pfmps": [
