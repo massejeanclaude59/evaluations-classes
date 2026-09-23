@@ -5647,18 +5647,11 @@ function buildColonnes(eleveId) {
   });
 
   // ── 3. Projets / Évaluations CCF ──
-  // Grouper par projetId pour ne faire qu'une colonne par projet
-  const evalsByProjet = {};
+  // Une colonne par évaluation (un même projet peut être évalué plusieurs fois :
+  // chaque occurrence doit apparaître séparément, pas fusionnée avec les autres)
   (data.evaluations||[]).filter(ev => ev.eleveNotes && ev.eleveNotes[eleveId]!==undefined)
     .forEach(ev => {
-      if (!evalsByProjet[ev.projetId]) evalsByProjet[ev.projetId] = [];
-      evalsByProjet[ev.projetId].push(ev);
-    });
-
-  Object.entries(evalsByProjet).forEach(([projetId, evals]) => {
-    const projet = (data.projets||[]).find(p=>p.id===projetId);
-    const notesParCT = {};
-    evals.forEach(ev => {
+      const projet = (data.projets||[]).find(p=>p.id===ev.projetId);
       // Grouper les compétences par CT (note d'une compétence = moyenne de ses lignes)
       const itemsByCT = {};
       Object.entries(evalMoyennesParItem(ev, eleveId)).forEach(([itemId, n20]) => {
@@ -5667,21 +5660,14 @@ function buildColonnes(eleveId) {
         if (!itemsByCT[ctId]) itemsByCT[ctId] = [];
         itemsByCT[ctId].push(n20);
       });
+      const notesParCT = {};
       Object.entries(itemsByCT).forEach(([ctId, vals]) => {
         const filtered = vals.filter(v=>v!==null);
         if (!filtered.length) return;
-        if (!notesParCT[ctId]) notesParCT[ctId] = [];
-        notesParCT[ctId].push(filtered.reduce((s,v)=>s+v,0)/filtered.length);
+        notesParCT[ctId] = Math.round(filtered.reduce((s,v)=>s+v,0)/filtered.length*10)/10;
       });
+      cols.push({ id:'eval_'+ev.id, label:ev.projetNom||projet?.nom||ev.projetId, type:'eval', date:ev.date, profId:ev.profId, notesParCT });
     });
-    // Moyenne sur toutes les occurrences du projet
-    const moyParCT = {};
-    Object.entries(notesParCT).forEach(([ctId, vals]) => {
-      moyParCT[ctId] = Math.round(vals.reduce((s,v)=>s+v,0)/vals.length*10)/10;
-    });
-    const lastEval = evals.sort((a,b)=>b.date.localeCompare(a.date))[0];
-    cols.push({ id:'proj_'+projetId, label:projet?.nom||projetId, type:'eval', date:lastEval.date, profId:lastEval.profId, notesParCT: moyParCT });
-  });
 
   // Trier par date
   cols.sort((a,b) => {
@@ -5828,10 +5814,10 @@ function renderBilan(eleveId) {
           // Pour les projets : chercher la note de l'item directement
           let noteItem = null;
           if (col.type==='eval') {
-            const projetId = col.id.replace('proj_','');
-            const evals = (data.evaluations||[]).filter(ev=>ev.projetId===projetId&&ev.eleveNotes&&ev.eleveNotes[eleveId]!==undefined);
-            if (evals.length) {
-              const notesIt = evals.flatMap(ev=>evalNoteEntries(ev, eleveId).filter(([id])=>id===it.id).map(([,n])=>n)).filter(v=>v);
+            const evId = col.id.replace('eval_','');
+            const ev = (data.evaluations||[]).find(e=>e.id===evId&&e.eleveNotes&&e.eleveNotes[eleveId]!==undefined);
+            if (ev) {
+              const notesIt = evalNoteEntries(ev, eleveId).filter(([id])=>id===it.id).map(([,n])=>n).filter(v=>v);
               if (notesIt.length) {
                 const vals = notesIt.map(n=>NIVEAUX_TO_20[n]??null).filter(v=>v!==null);
                 noteItem = vals.length ? Math.round(vals.reduce((s,v)=>s+v,0)/vals.length*10)/10 : null;
