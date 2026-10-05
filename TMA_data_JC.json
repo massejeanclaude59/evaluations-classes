@@ -5975,9 +5975,7 @@
           "ctId": "C3.4",
           "contexte": "Couper en longueur les pièces",
           "itemIds": [
-            "C3.42",
-            "C3.43",
-            "C3.44"
+            "C3.42"
           ],
           "_open": false
         },
@@ -5987,8 +5985,7 @@
           "contexte": "Calibrer les montants à la toupie sur un montage d'usinage",
           "itemIds": [
             "C3.41",
-            "C3.42",
-            "C3.43"
+            "C3.42"
           ],
           "_open": false
         },
@@ -5997,9 +5994,7 @@
           "ctId": "C3.4",
           "contexte": "Usiner les assemblages DOMINO",
           "itemIds": [
-            "C3.42",
-            "C3.43",
-            "C3.44"
+            "C3.42"
           ],
           "_open": false
         },
@@ -6053,12 +6048,12 @@
         ],
         "lignes": [
           {
-            "id": "h17912290901500.9409532053049054",
+            "id": "h17912301760860.6277029187172706",
             "groupe": "Compréhension",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.6350476502984963",
+            "id": "l17912301760860.7594049715167961",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
@@ -6067,12 +6062,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.09294875589659768",
+            "id": "h17912301760860.8729277466274283",
             "groupe": "Réaliser la feuille de débit",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.1549748645595208",
+            "id": "l17912301760860.7403118505215824",
             "groupe": "",
             "onDemande": "Répertorier, quantifier les composants",
             "onExige": "L'inventaire des besoins est exhaustif.",
@@ -6081,12 +6076,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.5127715168170928",
+            "id": "h17912301760860.6689789236801529",
             "groupe": "Tracer les pièces",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.96134778889651",
+            "id": "l17912301760860.8626475908862065",
             "groupe": "",
             "onDemande": "Réaliser les tracés d'atelier",
             "onExige": "Les tracés respectent le plan de fabrication",
@@ -6095,12 +6090,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.2006167594045376",
+            "id": "h17912301760860.20376043896003493",
             "groupe": "Couper en longueur les pièces",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.9915638624485954",
+            "id": "l17912301760860.8271059554443448",
             "groupe": "",
             "onDemande": "couper les éléments à la bonne longueur",
             "onExige": "Les pièces sont exploitables pour la bonne réalisation de l'ouvrage.",
@@ -6109,12 +6104,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.038773012119391215",
+            "id": "h17912301760860.08682126458498152",
             "groupe": "Calibrer les montants à la toupie sur un montage d'usinage",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.06818345848787377",
+            "id": "l17912301760860.01565120537383191",
             "groupe": "",
             "onDemande": "Procéder à la mise en route des mouvements nécessaires à l'opération d'usinage",
             "onExige": "La procédure de mise en route est respectée en toute sécurité.",
@@ -6123,7 +6118,7 @@
             "estEntete": false
           },
           {
-            "id": "l17912290901500.5509685868100843",
+            "id": "l17912301760860.24912611411145003",
             "groupe": "",
             "onDemande": "Calibrer les pièces sur un montage d'usinage",
             "onExige": "Le calibrage à la toupie est correctement usiné.",
@@ -6132,12 +6127,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.24616918211737526",
+            "id": "h17912301760860.9066783625539016",
             "groupe": "Usiner les assemblages DOMINO",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.8879876827839283",
+            "id": "l17912301760860.5888219846869156",
             "groupe": "",
             "onDemande": "usiner les assemblages Domino",
             "onExige": "La conduite des usinages est maîtrisée",
@@ -6146,12 +6141,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.6917488958451506",
+            "id": "h17912301760860.33206626514519355",
             "groupe": "Coller l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.25613592065955193",
+            "id": "l17912301760860.5565468917675671",
             "groupe": "",
             "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
@@ -6160,12 +6155,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.8880271695692109",
+            "id": "h17912301760860.7108751008417857",
             "groupe": "Serrage de l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.7112914378627264",
+            "id": "l17912301760860.3675445034533853",
             "groupe": "",
             "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
             "onExige": "La méthodologie est respectée.",
@@ -6174,12 +6169,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.5055371297423724",
+            "id": "h17912301760860.2066563421464429",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.769921758224455",
+            "id": "l17912301760860.6005262440678232",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
@@ -6188,12 +6183,12 @@
             "estEntete": false
           },
           {
-            "id": "h17912290901500.4453619408517351",
+            "id": "h17912301760860.5990055392522807",
             "groupe": "Ranger et nettoyer",
             "estEntete": true
           },
           {
-            "id": "l17912290901500.4957985388462941",
+            "id": "l17912301760860.4261057719450603",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est opérationnel.",
