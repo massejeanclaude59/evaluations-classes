@@ -5954,15 +5954,6 @@
         },
         {
           "capId": "C2",
-          "ctId": "C2.2",
-          "contexte": "Tracer les pièces",
-          "itemIds": [
-            "C2.21"
-          ],
-          "_open": false
-        },
-        {
-          "capId": "C2",
           "ctId": "C2.3",
           "contexte": "Réaliser la feuille de débit",
           "itemIds": [
@@ -6062,12 +6053,12 @@
         ],
         "lignes": [
           {
-            "id": "h17912287443310.1266376825642096",
+            "id": "h17912290901500.9409532053049054",
             "groupe": "Compréhension",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.5262545941108542",
+            "id": "l17912290901500.6350476502984963",
             "groupe": "",
             "onDemande": "Identifier les caractéristiques géométriques et dimensionnelles",
             "onExige": "Le recensement des caractéristiques géométriques et dimensionnelles est exact.",
@@ -6076,183 +6067,138 @@
             "estEntete": false
           },
           {
-            "id": "h17912287443310.5264320984953512",
-            "groupe": "Tracer les pièces",
-            "estEntete": true
-          },
-          {
-            "id": "l17912287443310.4020189136616069",
-            "groupe": "",
-            "onDemande": "Répertorier, quantifier les composants",
-            "onExige": "L'inventaire des besoins est exhaustif.",
-            "competence": "C2.31",
-            "blocIdx": 2,
-            "estEntete": false
-          },
-          {
-            "id": "l17912287443310.5056355680100856",
-            "groupe": "",
-            "onDemande": "Réaliser les tracés d'atelier",
-            "onExige": "Les tracés respectent le plan de fabrication",
-            "competence": "C2.21",
-            "blocIdx": 1,
-            "estEntete": false
-          },
-          {
-            "id": "h17912287443310.46285980624474443",
+            "id": "h17912290901500.09294875589659768",
             "groupe": "Réaliser la feuille de débit",
             "estEntete": true
           },
           {
-            "id": "h17912287443310.701574979275889",
+            "id": "l17912290901500.1549748645595208",
+            "groupe": "",
+            "onDemande": "Répertorier, quantifier les composants",
+            "onExige": "L'inventaire des besoins est exhaustif.",
+            "competence": "C2.31",
+            "blocIdx": 1,
+            "estEntete": false
+          },
+          {
+            "id": "h17912290901500.5127715168170928",
+            "groupe": "Tracer les pièces",
+            "estEntete": true
+          },
+          {
+            "id": "l17912290901500.96134778889651",
+            "groupe": "",
+            "onDemande": "Réaliser les tracés d'atelier",
+            "onExige": "Les tracés respectent le plan de fabrication",
+            "competence": "C2.21",
+            "blocIdx": 2,
+            "estEntete": false
+          },
+          {
+            "id": "h17912290901500.2006167594045376",
             "groupe": "Couper en longueur les pièces",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.48862979568693965",
+            "id": "l17912290901500.9915638624485954",
             "groupe": "",
-            "onDemande": "Couper les éléments selon un tracé précis",
-            "onExige": "Les coupes sont précises. ",
+            "onDemande": "couper les éléments à la bonne longueur",
+            "onExige": "Les pièces sont exploitables pour la bonne réalisation de l'ouvrage.",
             "competence": "C3.42",
-            "blocIdx": 4,
+            "blocIdx": 3,
             "estEntete": false
           },
           {
-            "id": "l17912287443310.3970824878326107",
-            "groupe": "",
-            "onDemande": "Contrôler les éléments usinés",
-            "onExige": "Les résultats sont conformes aux spécifications.",
-            "competence": "C3.43",
-            "blocIdx": 4,
-            "estEntete": false
-          },
-          {
-            "id": "l17912287443310.847531541829144",
-            "groupe": "",
-            "onDemande": "Effectuer les actions correctives nécessaires",
-            "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
-            "competence": "C3.44",
-            "blocIdx": 4,
-            "estEntete": false
-          },
-          {
-            "id": "h17912287443310.05360923815717733",
+            "id": "h17912290901500.038773012119391215",
             "groupe": "Calibrer les montants à la toupie sur un montage d'usinage",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.33592592986412373",
+            "id": "l17912290901500.06818345848787377",
             "groupe": "",
             "onDemande": "Procéder à la mise en route des mouvements nécessaires à l'opération d'usinage",
-            "onExige": "La procédure de mise en route est respectée.",
+            "onExige": "La procédure de mise en route est respectée en toute sécurité.",
             "competence": "C3.41",
-            "blocIdx": 5,
+            "blocIdx": 4,
             "estEntete": false
           },
           {
-            "id": "l17912287443310.16383014144263663",
+            "id": "l17912290901500.5509685868100843",
             "groupe": "",
-            "onDemande": "entailler les éléments",
-            "onExige": "La conduite de l'entaillage est maîtrisée",
+            "onDemande": "Calibrer les pièces sur un montage d'usinage",
+            "onExige": "Le calibrage à la toupie est correctement usiné.",
             "competence": "C3.42",
-            "blocIdx": 5,
+            "blocIdx": 4,
             "estEntete": false
           },
           {
-            "id": "l17912287443310.012522695622789182",
-            "groupe": "",
-            "onDemande": "Contrôler les éléments usinés",
-            "onExige": "Les résultats sont conformes aux spécifications.",
-            "competence": "C3.43",
-            "blocIdx": 5,
-            "estEntete": false
-          },
-          {
-            "id": "h17912287443310.013545586885832073",
+            "id": "h17912290901500.24616918211737526",
             "groupe": "Usiner les assemblages DOMINO",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.004375326250541378",
+            "id": "l17912290901500.8879876827839283",
             "groupe": "",
-            "onDemande": "couper les éléments à 45° à la même longueur",
-            "onExige": "Les pièces sont identiques. l'assemblage est exploitable.",
+            "onDemande": "usiner les assemblages Domino",
+            "onExige": "La conduite des usinages est maîtrisée",
             "competence": "C3.42",
-            "blocIdx": 6,
+            "blocIdx": 5,
             "estEntete": false
           },
           {
-            "id": "l17912287443310.363244265248463",
-            "groupe": "",
-            "onDemande": "Contrôler les éléments usinés",
-            "onExige": "Les résultats sont conformes aux spécifications.",
-            "competence": "C3.43",
-            "blocIdx": 6,
-            "estEntete": false
-          },
-          {
-            "id": "l17912287443310.25907516075783343",
-            "groupe": "",
-            "onDemande": "Effectuer les actions correctives nécessaires",
-            "onExige": "Les actions correctives apportées sont adaptées aux anomalies constatées.",
-            "competence": "C3.44",
-            "blocIdx": 6,
-            "estEntete": false
-          },
-          {
-            "id": "h17912287443310.6460428143904985",
+            "id": "h17912290901500.6917488958451506",
             "groupe": "Coller l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.16606787786791155",
+            "id": "l17912290901500.25613592065955193",
             "groupe": "",
             "onDemande": "Encoller et/ou insérer les pièces et les composants",
             "onExige": "L'encollage est conforme aux prescriptions.",
             "competence": "C3.52",
-            "blocIdx": 7,
+            "blocIdx": 6,
             "estEntete": false
           },
           {
-            "id": "h17912287443310.19277371909179786",
+            "id": "h17912290901500.8880271695692109",
             "groupe": "Serrage de l'assemblage",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.10943694586412966",
+            "id": "l17912290901500.7112914378627264",
             "groupe": "",
             "onDemande": "Cadrer, presser et solidariser les pièces et les composants",
             "onExige": "La méthodologie est respectée.",
             "competence": "C3.53",
-            "blocIdx": 8,
+            "blocIdx": 7,
             "estEntete": false
           },
           {
-            "id": "h17912287443310.067106583366078",
+            "id": "h17912290901500.5055371297423724",
             "groupe": "Finition",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.69193467802361",
+            "id": "l17912290901500.769921758224455",
             "groupe": "",
             "onDemande": "Préparer les surfaces à traiter (ponçage, égrainage…)",
             "onExige": "Les surfaces sont préparées selon le niveau de qualité demandé.",
             "competence": "C3.63",
-            "blocIdx": 9,
+            "blocIdx": 8,
             "estEntete": false
           },
           {
-            "id": "h17912287443310.3097015649722793",
+            "id": "h17912290901500.4453619408517351",
             "groupe": "Ranger et nettoyer",
             "estEntete": true
           },
           {
-            "id": "l17912287443310.27174033725662006",
+            "id": "l17912290901500.4957985388462941",
             "groupe": "",
             "onDemande": "Remettre le poste de travail dans son état initial",
             "onExige": "Le poste de travail est opérationnel.",
             "competence": "C3.66",
-            "blocIdx": 10,
+            "blocIdx": 9,
             "estEntete": false
           }
         ]
