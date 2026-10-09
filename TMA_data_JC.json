@@ -8027,10 +8027,10 @@
       "eleveId": "s1781205445930",
       "classeId": "c3",
       "classeNom": "TTMA",
-      "profId": null,
-      "entrepriseId": null,
-      "entreprise": "",
-      "tuteur": "",
+      "profId": "p2",
+      "entrepriseId": "ent1791536822683",
+      "entreprise": "MENUISERIES ALAIN TOUSSAINT",
+      "tuteur": "Mr Lecroart",
       "date": "2026-09-21",
       "debut": "2026-09-21",
       "fin": "2026-10-09",
@@ -8438,6 +8438,17 @@
       "note": "",
       "id": "ent1779357205381",
       "signatures": []
+    },
+    {
+      "nom": "MENUISERIES ALAIN TOUSSAINT",
+      "chef": "Mr Lecroart",
+      "telBureau": "",
+      "telMobile": "",
+      "adresse": "55 RUE DE BERLAIMONT, 59440, AVESNES-SUR-HELPE",
+      "tuteur": "Mr Lecroart",
+      "telTuteur": "06 72 45 91 88",
+      "note": "",
+      "id": "ent1791536822683"
     },
     {
       "nom": "MVR Carlier",
