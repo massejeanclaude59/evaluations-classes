@@ -270,6 +270,15 @@
       "classId": "c2",
       "statut": "normal",
       "note": ""
+    },
+    {
+      "id": "s1793711793536",
+      "nom": "LEJEUNE",
+      "prenom": "Tia",
+      "genre": "F",
+      "classId": "c1",
+      "statut": "normal",
+      "note": ""
     }
   ],
   "referentiel": {
