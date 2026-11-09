@@ -62,15 +62,6 @@
       "note": ""
     },
     {
-      "id": "s1788013916012",
-      "nom": "DIALLO",
-      "prenom": "Thierno Amadou",
-      "genre": "M",
-      "classId": "c1780086058135",
-      "statut": "normal",
-      "note": ""
-    },
-    {
       "id": "s1788013948523",
       "nom": "HENNEUSE",
       "prenom": "Matheo",
@@ -90,7 +81,7 @@
     },
     {
       "id": "s1788014002444",
-      "nom": "SZMUNDIJ",
+      "nom": "SZMUNDU",
       "prenom": "Youness",
       "genre": "M",
       "classId": "c1780086058135",
@@ -236,6 +227,15 @@
       "id": "s1793623449265",
       "nom": "KONATÉ",
       "prenom": "Hallassane",
+      "genre": "M",
+      "classId": "c1780086058135",
+      "statut": "normal",
+      "note": ""
+    },
+    {
+      "id": "s1794246579498",
+      "nom": "SYLLA",
+      "prenom": "Fodé",
       "genre": "M",
       "classId": "c1780086058135",
       "statut": "normal",
