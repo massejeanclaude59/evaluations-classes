@@ -2079,6 +2079,168 @@
           }
         ]
       }
+    },
+    {
+      "id": "proj1794954432537",
+      "nom": "Pose de tablette",
+      "descriptif": "Pose de tablette en melaminé de niveau",
+      "blocs": [
+        {
+          "capId": "C1",
+          "ctId": "C1.2",
+          "contexte": "",
+          "itemIds": [
+            "C1.22"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C2",
+          "ctId": "C2.4",
+          "contexte": "",
+          "itemIds": [
+            "C2.41",
+            "C2.42"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C3",
+          "ctId": "C3.1",
+          "contexte": "",
+          "itemIds": [
+            "C3.13",
+            "C3.15"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C4",
+          "ctId": "C4.1",
+          "contexte": "",
+          "itemIds": [
+            "C4.11",
+            "C4.12",
+            "C4.17",
+            "C4.18"
+          ],
+          "_open": true
+        },
+        {
+          "capId": "C6",
+          "ctId": "C6.3",
+          "contexte": "",
+          "itemIds": [
+            "C6.32"
+          ],
+          "_open": true
+        }
+      ],
+      "ficheContrat": {
+        "activite": "Pose de tablette",
+        "duree": "6",
+        "objectif": "Pose de tablette en melaminé de niveau",
+        "_srcNom": "Pose de tablette",
+        "_srcDescriptif": "Pose de tablette en melaminé de niveau",
+        "onDonne": [
+          "Les plans de définition",
+          "Les fiches techniques",
+          "Les outillages",
+          "Le parc machine est à votre disposition"
+        ],
+        "lignes": [
+          {
+            "id": "l17949548417700.7903226491784054",
+            "groupe": "",
+            "onDemande": "Identifier et classer les tâches ou les interventions des secteurs d'activités connexes",
+            "onExige": "Le recensement des tâches connexes est correctement effectué.",
+            "competence": "C1.22",
+            "blocIdx": 0,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.6041532410916177",
+            "groupe": "",
+            "onDemande": "Répertorier les phases de la fabrication, de la pose et/ou de la dépose",
+            "onExige": "L'inventaire des phases est complet.",
+            "competence": "C2.41",
+            "blocIdx": 1,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.8527089618190333",
+            "groupe": "",
+            "onDemande": "Recenser les moyens humains et matériels",
+            "onExige": "Les moyens humains sont adaptés.",
+            "competence": "C2.42",
+            "blocIdx": 1,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.9724110644528787",
+            "groupe": "",
+            "onDemande": "Choisir et préparer les outillages et/ou accessoires nécessaires au poste de travail (repérage et débit, usinage, contrôle, montage, mise en forme, finition, conditionnement…)",
+            "onExige": "Les outillages et accessoires préparés sont conformes aux données opératoires.",
+            "competence": "C3.13",
+            "blocIdx": 2,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.832019602229509",
+            "groupe": "",
+            "onDemande": "Disposer rationnellement les supports et les accessoires en amont et en aval des postes de travail",
+            "onExige": "Les règles d'ergonomie sont respectées. Les règles de prévention et de sécurité sont respectées.",
+            "competence": "C3.15",
+            "blocIdx": 2,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.5955416297965439",
+            "groupe": "",
+            "onDemande": "Préparer les matériels, machines électroportatives et outillages adaptés au chantier",
+            "onExige": "Les matériels et les machines préparés correspondent aux besoins.",
+            "competence": "C4.11",
+            "blocIdx": 3,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.9055567716642379",
+            "groupe": "",
+            "onDemande": "Préparer les accessoires de mise en œuvre",
+            "onExige": "L'ensemble est préparé sans erreur.",
+            "competence": "C4.12",
+            "blocIdx": 3,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.08913996898301046",
+            "groupe": "",
+            "onDemande": "Désinstaller le poste de travail",
+            "onExige": "Les matériels sont désinstallés conformément aux procédures et consignes de sécurité.",
+            "competence": "C4.17",
+            "blocIdx": 3,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.34428302828057167",
+            "groupe": "",
+            "onDemande": "Contrôler et ranger les matériels, machines et outillages",
+            "onExige": "Les matériels, machines et outillages sont contrôlés, rangés pour une nouvelle utilisation.",
+            "competence": "C4.18",
+            "blocIdx": 3,
+            "estEntete": false
+          },
+          {
+            "id": "l17949548417700.4925296756183265",
+            "groupe": "",
+            "onDemande": "Exposer et expliciter l'ensemble des informations et des décisions relatives à la gestion du suivi de l'ajustement, de la fabrication et de la pose",
+            "onExige": "Le compte-rendu est clair, précis.",
+            "competence": "C6.32",
+            "blocIdx": 4,
+            "estEntete": false
+          }
+        ]
+      }
     }
   ],
   "referentiel": {
